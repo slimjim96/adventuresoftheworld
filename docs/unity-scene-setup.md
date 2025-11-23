@@ -165,6 +165,11 @@ Select **Main Camera**:
      - Jump Force: 12
      - Ground Layer: Select "Ground"
 
+4. **Add PlayerInput Script**:
+   - Click **Add Component**
+   - Search **PlayerInput**
+   - No configuration needed - it automatically connects input to the cart!
+
 ### D. Create Ground Platform
 
 1. **Right-click in Hierarchy → 2D Object → Sprite → Square**
