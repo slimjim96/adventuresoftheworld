@@ -218,34 +218,53 @@
 
 ---
 
-### Week 7: Final Environments & Advanced Obstacles
+### Week 7: Procedural Generation Foundation
 
-- [ ] **Environment 4: Underwater River**
-  - [ ] Design and create Underwater visual assets
-    - [ ] Background (flowing water, light rays)
-    - [ ] Platform textures (rocks, coral)
-    - [ ] Bubble particles
-  - [ ] Create Underwater Level 10
-  - [ ] Create Underwater Level 11
-  - [ ] Create Underwater Level 12
-  - [ ] Add unique "buoyancy" visual effect
+- [ ] **Procedural Generation System Setup**
+  - [ ] Create ChunkData ScriptableObject
+  - [ ] Build ProceduralLevelGenerator manager
+  - [ ] Implement seeded random generation
+  - [ ] Create LevelSeedManager for reproducible levels
 
-- [ ] **Environment 5: Ocean**
-  - [ ] Design and create Ocean visual assets
-    - [ ] Background (open sea, waves)
-    - [ ] Platform textures (boats, driftwood)
-    - [ ] Wave animations
-  - [ ] Create Ocean Level 13
-  - [ ] Create Ocean Level 14
-  - [ ] Create Ocean Level 15 (epic finale)
+- [ ] **Basic Chunk Library (Month 2 Foundation)**
+  - [ ] Design and build 10 easy chunks
+    - [ ] Flat runs, small gaps, simple layouts
+  - [ ] Design and build 10 medium chunks
+    - [ ] Medium gaps, moderate obstacles
+  - [ ] Design and build 10 hard chunks
+    - [ ] Large gaps, dense obstacles
+  - [ ] Test all chunks are beatable
 
-- [ ] **Advanced Obstacles**
-  - [ ] Implement moving platforms (vertical/horizontal)
-  - [ ] Create pendulum obstacles
-  - [ ] Add collapsing platforms
-  - [ ] Test timing and difficulty
+- [ ] **Chunk Spawning System**
+  - [ ] Implement ChunkSpawner script
+  - [ ] Create difficulty curve algorithm
+  - [ ] Build chunk selection with weighting
+  - [ ] Test chunk connections (entry/exit heights)
 
-**Milestone**: All 15 levels complete with varied obstacles
+**Milestone**: Basic procedural generation working with 30 chunks
+
+---
+
+### Week 8: Dynamic Levels & Static Level Completion
+
+- [ ] **Procedural Generation Polish**
+  - [ ] Implement difficulty scaling (speed, gaps, obstacles)
+  - [ ] Add finish line placement at level end
+  - [ ] Create level length calculation by level number
+  - [ ] Test full procedural level generation
+
+- [ ] **Background Decoration System**
+  - [ ] Background decoration spawning (camera-based)
+  - [ ] Parallax scrolling system (3 layers)
+  - [ ] Environment-specific decoration pools
+  - [ ] Object pooling for decorations
+
+- [ ] **Complete Remaining Static Levels**
+  - [ ] Finish any remaining static levels (1-5)
+  - [ ] Polish static level designs
+  - [ ] Test difficulty progression
+
+**Milestone**: Procedural generation complete, hybrid level system working
 
 ---
 
