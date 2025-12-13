@@ -394,7 +394,6 @@ GameObject:
   - component: {fileID: 1296921780}
   - component: {fileID: 1296921783}
   - component: {fileID: 1296921782}
-  - component: {fileID: 1296921781}
   m_Layer: 9
   m_Name: CartSprite
   m_TagString: Untagged
@@ -469,27 +468,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1296921781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1296921778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dabed6d6eeb0741429ef48fec8ec91ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  jumpForce: 12
-  jumpBufferTime: 0.1
-  groundCheck: {fileID: 0}
-  groundCheckRadius: 0.2
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  gravityScale: 2
 --- !u!61 &1296921782
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -862,7 +840,6 @@ GameObject:
   - component: {fileID: 1932242023}
   - component: {fileID: 1932242022}
   - component: {fileID: 1932242021}
-  - component: {fileID: 1932242024}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -944,26 +921,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1932242024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1932242020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0c51d5b3b6f7b94f8a081d461fe8550, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  offset: {x: 3, y: 2, z: -10}
-  smoothSpeed: 0.125
-  useBounds: 0
-  minX: -100
-  maxX: 100
-  minY: -10
-  maxY: 10
 --- !u!1 &2028379473
 GameObject:
   m_ObjectHideFlags: 0
