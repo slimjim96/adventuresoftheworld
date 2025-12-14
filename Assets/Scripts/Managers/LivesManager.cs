@@ -164,8 +164,27 @@ namespace AdventuresOfTheWorld.Managers
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 if (player != null)
                 {
+                    // Reset position
                     player.transform.position = respawnPoint.position;
+
+                    // Reset velocity (stop falling momentum)
+                    Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+                    if (rb != null)
+                    {
+                        rb.velocity = Vector2.zero;
+                        rb.angularVelocity = 0f;
+                    }
+
+                    Debug.Log($"Respawned at {respawnPoint.position}");
                 }
+                else
+                {
+                    Debug.LogError("Player not found for respawn!");
+                }
+            }
+            else
+            {
+                Debug.LogError("Respawn point not set!");
             }
 
             OnRespawn?.Invoke();
