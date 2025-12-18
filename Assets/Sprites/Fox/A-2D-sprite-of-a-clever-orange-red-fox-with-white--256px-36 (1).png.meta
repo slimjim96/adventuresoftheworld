@@ -1,0 +1,984 @@
+fileFormatVersion: 2
+guid: b481d2da40a5fcb489794f298773ee5b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: VisionOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1385
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10235404d7dd1743b418954cdb14f4b
+      internalID: 1505885875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_1
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1385
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c758dffe2414214478f115c27daf5ac4
+      internalID: 1879242538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_2
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1385
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0830e70fb32afae4589356d5a98fc4ea
+      internalID: -2052567384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_3
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1385
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89b92b086b514b44b9dc716c2d72c17
+      internalID: -1472148215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_4
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1385
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551c2256ec16daa4f81a09467ede6f97
+      internalID: 1623416843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 1385
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e97ce7fb7e5507498d7766bddcc10d0
+      internalID: -2043875863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1108
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60b47c03afe4df44da7aa1ef12d5bdef
+      internalID: 1974821716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_7
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 1108
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa523df314e048449ba9e5245974748
+      internalID: -1836759355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_8
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 1108
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4405ea397e569ae4fabea7d8bdd9d872
+      internalID: 131482019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1108
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce8384636b603c4ca48f3213c3a1541
+      internalID: -399015405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_10
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 1108
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b8372d5a2e4b6499596907ad168842
+      internalID: -2096299042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_11
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 1108
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459b432272ff7e24180e0a2d044c69dd
+      internalID: 358892046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 831
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16786f93c6c802b4c84531a9f0802799
+      internalID: -862634110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_13
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 831
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d3092b7e4c5e44982b605cd5070283
+      internalID: -318883230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_14
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 831
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1b223eefb62ba499173fa613994bbf
+      internalID: -762695460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_15
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 831
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847fb2c397bf35d488214d4be789fce7
+      internalID: -2069277073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_16
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 831
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd049301dfd87c044b0a9aebe25dd32b
+      internalID: 268101435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 831
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27688db3a5ba9074d9fd2a4aad185e50
+      internalID: 427843891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 554
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0bfa3d908bb3e54f868b46e01653f76
+      internalID: -447159860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_19
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 554
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b14dfeac4ab204143880ca1e99822af0
+      internalID: 201619861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_20
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 554
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83572aa7f8075ea428837ead13b34589
+      internalID: -2128851740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_21
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 554
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b0451c2019d04468fc81b313fdb614
+      internalID: 635121018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_22
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 554
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 885a5c19aeea54c4286fd1eb5c41cc8e
+      internalID: -1687848579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_23
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 554
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae7ddf858a4d37b4aaa9f9d580575ee0
+      internalID: 2043295552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 277
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3a5d9893375af4f8b9d7286e2e0a98
+      internalID: -265181641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_25
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 277
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13db051f0ecefe94ead0f73717d290d2
+      internalID: 770729626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_26
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 277
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8edc046442d764cb21c63394658ff4
+      internalID: -642313692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_27
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 277
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2cef03b872f0546a31c3c244580fec
+      internalID: 781310895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_28
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 277
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7e51ae650f79c47b01cf0a912846b0
+      internalID: -1580042390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_29
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 277
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ff40ccd03d3a045a761010be674c38
+      internalID: -1757200296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de119077b59de84fa7a7fad9d08f3a9
+      internalID: 694091329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_31
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 0
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3faf9984564ba0c4f9e058e5f54ace3c
+      internalID: -1965404338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_32
+      rect:
+        serializedVersion: 2
+        x: 772
+        y: 0
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff80792f4a66f0546bab91b9d2464c33
+      internalID: -1723822444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_33
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 0
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138d87b6ebeddd747858d3a49524dfe8
+      internalID: 1743288249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_34
+      rect:
+        serializedVersion: 2
+        x: 1544
+        y: 0
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 366acbf1dffc73349accbb93fdbcdfc2
+      internalID: -1113764224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_35
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 0
+        width: 386
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3b4cd6effc0a84cb9f9f025ee58c20
+      internalID: -216488712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_0: 1505885875
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_1: 1879242538
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_10: -2096299042
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_11: 358892046
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_12: -862634110
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_13: -318883230
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_14: -762695460
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_15: -2069277073
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_16: 268101435
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_17: 427843891
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_18: -447159860
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_19: 201619861
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_2: -2052567384
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_20: -2128851740
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_21: 635121018
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_22: -1687848579
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_23: 2043295552
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_24: -265181641
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_25: 770729626
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_26: -642313692
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_27: 781310895
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_28: -1580042390
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_29: -1757200296
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_3: -1472148215
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_30: 694091329
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_31: -1965404338
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_32: -1723822444
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_33: 1743288249
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_34: -1113764224
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_35: -216488712
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_4: 1623416843
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_5: -2043875863
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_6: 1974821716
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_7: -1836759355
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_8: 131482019
+      A-2D-sprite-of-a-clever-orange-red-fox-with-white--256px-36 (1)_9: -399015405
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
