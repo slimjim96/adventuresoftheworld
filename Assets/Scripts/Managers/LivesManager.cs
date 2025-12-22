@@ -131,11 +131,25 @@ namespace AdventuresOfTheWorld.Managers
         }
 
         /// <summary>
-        /// Sets the respawn point
+        /// Sets the respawn point from a Transform
         /// </summary>
         public void SetRespawnPoint(Transform point)
         {
             respawnPoint = point;
+        }
+
+        /// <summary>
+        /// Sets the respawn point from a position (creates a new point if needed)
+        /// </summary>
+        public void SetRespawnPoint(Vector3 position)
+        {
+            // Create a respawn point object if we don't have one
+            if (respawnPoint == null)
+            {
+                GameObject respawnObj = new GameObject("RespawnPoint");
+                respawnPoint = respawnObj.transform;
+            }
+            respawnPoint.position = position;
         }
 
         #endregion

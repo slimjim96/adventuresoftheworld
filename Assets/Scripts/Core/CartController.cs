@@ -60,6 +60,9 @@ namespace AdventuresOfTheWorld.Core
             _rigidbody = GetComponent<Rigidbody2D>();
             _rigidbody.gravityScale = gravityScale;
 
+            // Lock Z-rotation to prevent cart from flipping over
+            _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
             // Create ground check if not assigned
             if (groundCheck == null)
             {
