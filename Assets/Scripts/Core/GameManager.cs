@@ -156,6 +156,14 @@ namespace AdventuresOfTheWorld.Core
         }
 
         /// <summary>
+        /// Alias for CompleteLevel (used by LevelGoal)
+        /// </summary>
+        public void LevelComplete()
+        {
+            CompleteLevel();
+        }
+
+        /// <summary>
         /// Called when player runs out of lives
         /// </summary>
         public void GameOver()
