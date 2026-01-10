@@ -69,8 +69,7 @@ namespace AdventuresOfTheWorld.UI
         {
             if (CoinManager.Instance != null)
             {
-                CoinManager.Instance.OnSessionCoinsChanged += OnCoinsChanged;
-                CoinManager.Instance.OnTotalCoinsChanged += OnTotalCoinsChanged;
+                CoinManager.Instance.OnCoinsChanged.AddListener(OnCoinsChanged);
             }
         }
 
@@ -78,8 +77,7 @@ namespace AdventuresOfTheWorld.UI
         {
             if (CoinManager.Instance != null)
             {
-                CoinManager.Instance.OnSessionCoinsChanged -= OnCoinsChanged;
-                CoinManager.Instance.OnTotalCoinsChanged -= OnTotalCoinsChanged;
+                CoinManager.Instance.OnCoinsChanged.RemoveListener(OnCoinsChanged);
             }
         }
 
