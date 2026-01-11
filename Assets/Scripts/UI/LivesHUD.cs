@@ -85,9 +85,9 @@ namespace AdventuresOfTheWorld.UI
         {
             if (LivesManager.Instance != null)
             {
-                LivesManager.Instance.OnLivesChanged += UpdateLivesDisplay;
-                LivesManager.Instance.OnRespawn += OnPlayerRespawn;
-                LivesManager.Instance.OnGameOver += OnGameOver;
+                LivesManager.Instance.OnLivesChanged.AddListener(UpdateLivesDisplay);
+                LivesManager.Instance.OnRespawn.AddListener(OnPlayerRespawn);
+                LivesManager.Instance.OnGameOver.AddListener(OnGameOver);
             }
         }
 
@@ -95,9 +95,9 @@ namespace AdventuresOfTheWorld.UI
         {
             if (LivesManager.Instance != null)
             {
-                LivesManager.Instance.OnLivesChanged -= UpdateLivesDisplay;
-                LivesManager.Instance.OnRespawn -= OnPlayerRespawn;
-                LivesManager.Instance.OnGameOver -= OnGameOver;
+                LivesManager.Instance.OnLivesChanged.RemoveListener(UpdateLivesDisplay);
+                LivesManager.Instance.OnRespawn.RemoveListener(OnPlayerRespawn);
+                LivesManager.Instance.OnGameOver.RemoveListener(OnGameOver);
             }
         }
 

@@ -44,6 +44,9 @@ namespace AdventuresOfTheWorld.Core
         private float _jumpBufferCounter;
         private bool _canMove = true;
 
+        // TODO: Limit z rotation to rotate only 30 degrees either side
+        private const float MaxZRotation = 30f;
+
         #endregion
 
         #region Properties
@@ -62,6 +65,10 @@ namespace AdventuresOfTheWorld.Core
 
             // Lock Z-rotation to prevent cart from flipping over
             _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
+            //TODO: Limit z rotation to rotate only 30 degrees either side
+            //_rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
+        
 
             // Create ground check if not assigned
             if (groundCheck == null)
