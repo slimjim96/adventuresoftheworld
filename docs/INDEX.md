@@ -100,10 +100,11 @@ This index organizes all documentation by **development phase**. Start at the be
 
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
-| [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters (Cat, Dog, Elephant, etc.) | Personalities, colors, unlock prices | ✅ Complete |
-| [ai-art-generation-guide.md](05-art-assets/ai-art-generation-guide.md) | Ludo.ai workflow for character sprites | Master prompts, batch generation | ✅ Complete |
-| [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) | 65+ prompts for backgrounds (trees, rocks, clouds) | Forest, Mountain, Desert, Underwater, Ocean | ✅ Complete |
+| [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md) | **🌟 PRIMARY GUIDE** - All 80 assets with Hand-Painted 2.5D style | Cart (1), Animals (13), Environments (65) with exact Ludo.ai settings | ✅ Complete |
+| [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters reference | Personalities, colors, unlock prices | ✅ Complete |
 | [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) | DecorationData ScriptableObject design | Theme, layer, spawn rules for procedural use | ✅ Complete |
+| [ai-art-generation-guide.md](05-art-assets/ai-art-generation-guide.md) | ⚠️ DEPRECATED - Original cartoon style guide | Superseded by 2.5D guide above | 🔄 Reference Only |
+| [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) | ⚠️ DEPRECATED - Original cartoon prompts | Superseded by 2.5D guide above | 🔄 Reference Only |
 
 **Start here if:** Mechanics are solid with placeholder graphics, ready to generate final art.
 
