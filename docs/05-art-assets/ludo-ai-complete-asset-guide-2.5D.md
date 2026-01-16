@@ -1342,18 +1342,23 @@ NEGATIVE: flat colors, 3D render, scary, realistic, ground
 
 ## 📊 Asset Generation Summary
 
-### Total Assets: 80
+### Total Assets: 79 base (or 80 with wheel animation frames)
 
 | Category | Count | Credits (Estimate) |
 |----------|-------|-------------------|
-| **Cart** | 1 | 5-10 credits |
+| **Cart** | 1 base (+ optional 3-4 wheel frames) | 5-10 credits |
 | **Animals** | 13 | 50-75 credits |
 | **Forest** | 13 | 30-50 credits |
 | **Mountain** | 13 | 30-50 credits |
 | **Desert** | 13 | 30-50 credits |
 | **Underwater** | 13 | 30-50 credits |
 | **Ocean** | 13 | 30-50 credits |
-| **TOTAL** | **80** | **200-300 credits** |
+| **TOTAL** | **79 base assets (80 if wheel frames generated)** | **200-300 credits** |
+
+**Asset Count Note:**
+- **79 base assets** = 1 cart + 13 animals + 65 environmental decorations (13 per theme × 5 themes)
+- **Optional:** Generate 3-4 wheel rotation frames for cart animation (+1-4 assets)
+- **Recommended:** Use Unity's rotation script instead of multiple wheel frames to save credits
 
 ---
 

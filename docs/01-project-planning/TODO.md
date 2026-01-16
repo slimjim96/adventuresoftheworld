@@ -507,6 +507,16 @@
 - [ ] Refactor messy scripts
 - [ ] Set up CI/CD pipeline (automated builds)
 
+### Code Enhancement TODOs
+- [ ] **CartController.cs**: Implement cart tilt animation (limit Z rotation to ±30°)
+  - Location: `Assets/Scripts/Core/CartController.cs` lines 47, 69
+  - Currently: Full rotation freeze
+  - Enhancement: Allow subtle tilt during jumps for visual polish
+  - Priority: Low (nice-to-have for polish phase)
+- [ ] **Coin.cs**: Add particle effect prefab for collection animation (line 118)
+- [ ] **FinishLine.cs**: Implement victory UI display (line 110)
+- [ ] **Hazard.cs**: Add optional death animation support (line 47)
+
 ---
 
 ## 📊 Progress Tracking
