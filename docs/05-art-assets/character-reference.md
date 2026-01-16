@@ -78,30 +78,36 @@ The game features **13 adorable animal characters** that players can select to r
 ## Design Specifications
 
 ### Art Style
-- **Style**: Flat, cartoonish, vector-style illustration
-- **Complexity**: Simple shapes, minimal detail
-- **Appeal**: Family-friendly, cute, whimsical
+- **Style**: Hand-Painted 2.5D (Rayman Legends inspired)
+- **Complexity**: Gradient shading, painterly textures, soft highlights
+- **Appeal**: Family-friendly, whimsical, magical atmosphere
 - **Target**: All ages (8+)
+- **Ludo.ai Settings**: Hand-Painted + 2.5D + Platformer perspective
 
 ### Consistency Requirements
 - All characters should be **same size** (head-to-body ratio)
 - **Same level of detail** across all characters
-- **Unified color saturation** and brightness
-- **Similar line weight** and outlines
-- **Consistent shading style** (flat or minimal)
+- **Unified gradient shading style** with soft lighting
+- **Consistent painterly texture** quality
+- **Vibrant colors** with atmospheric depth
 
 ### Technical Requirements
-- **Format**: SVG (vector) or PNG (high-res)
-- **Size**: 512x512 pixels minimum
-- **Background**: Transparent
+- **Format**: PNG with transparency (NOT SVG)
+- **Size**: 512-2048 pixels height recommended
+- **Background**: Transparent (critical)
 - **Orientation**: Facing right (direction of cart movement)
 - **Expression**: Happy, friendly, adventurous
+- **Pose**: Sitting upright in "riding pose" (as if in cart)
 
-### Character Positioning
-- Characters sit **inside the cart**
-- Only head and upper body visible
-- Looking forward with excited/happy expression
-- Slight bounce or idle animation (optional)
+### Character Positioning (Cart+Animal Architecture)
+- **IMPORTANT**: Cart and animals are **SEPARATE assets**
+- Characters **do NOT sit inside the cart** - they are positioned **behind it** in Unity
+- Animals rendered in "riding pose" (sitting upright, ready to ride)
+- One cart asset is reused for all 13 characters
+- Character switching only changes the animal sprite (not the cart)
+- Z-position: Cart at 0, Animal at -0.1 (renders animal in front of cart visually)
+
+**See `ludo-ai-complete-asset-guide-2.5D.md` for detailed prompts and Unity setup.**
 
 ---
 
@@ -120,23 +126,27 @@ For future development, each character may have:
 ## Unlock Progression
 
 ### Starting Character
-- **Dog** (default, free)
+- **Cat** 🐱 (default, FREE - always available)
 
-### Coin-Unlockable (500-1000 coins each)
-- Cat
-- Duck
-- Bunny
-- Mouse
-- Bear
-- Fox
-- Fish
+### Early Unlocks (500-750 coins)
+- Mouse 🐭 - 500 coins
+- Dog 🐶 - 500 coins
+- Duck 🦆 - 600 coins
+- Bunny 🐰 - 700 coins
+- Elephant 🐘 - 750 coins
 
-### Premium Unlocks (IAP or high coin cost)
-- Lion (750 coins)
-- Elephant (1000 coins)
-- Unicorn (1500 coins)
-- Dragon (2000 coins)
-- Snowman (1000 coins - seasonal?)
+### Mid-Tier Unlocks (800-1000 coins)
+- Fish 🐟 - 800 coins
+- Fox 🦊 - 900 coins
+- Bear 🐻 - 1000 coins
+- Snowman ⛄ - 1000 coins
+
+### Premium Unlocks (1200-2000 coins)
+- Unicorn 🦄 - 1200 coins
+- Lion 🦁 - 1500 coins
+- Dragon 🐉 - 2000 coins (most expensive)
+
+**Prices match `ludo-ai-complete-asset-guide-2.5D.md` - see that guide for generation prompts.**
 
 ---
 

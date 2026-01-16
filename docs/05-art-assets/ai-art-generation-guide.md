@@ -1,6 +1,19 @@
-# AI Art Generation Guide - Ludo.ai Prompts
+# ⚠️ DEPRECATED - DO NOT USE THIS GUIDE
 
-This guide provides **consistent prompts** for generating character sprites using Ludo.ai or other AI art generators.
+**This guide has been superseded by [`ludo-ai-complete-asset-guide-2.5D.md`](ludo-ai-complete-asset-guide-2.5D.md)**
+
+**Reason:** Art style changed from flat cartoon to Hand-Painted 2.5D (Rayman Legends inspired) in December 2025.
+
+**Please use the new guide for:**
+- Correct Ludo.ai settings (Hand-Painted + 2.5D + Platformer)
+- Cart+animal architecture (separate assets)
+- All 80 assets with gradient shading and painterly textures
+
+---
+
+# ~~AI Art Generation Guide - Ludo.ai Prompts~~
+
+~~This guide provides **consistent prompts** for generating character sprites using Ludo.ai or other AI art generators.~~
 
 ---
 

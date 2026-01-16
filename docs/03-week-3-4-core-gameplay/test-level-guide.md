@@ -86,6 +86,35 @@ This guide walks through building your **first complete test level** with platfo
 
 ---
 
+**🎨 Character System Architecture (Week 6-7):**
+
+**Important Design Decision:**
+- The **cart** and **animal characters** are SEPARATE assets (not combined)
+- Cart is **reusable** across all 13 characters
+- Animals are rendered **behind the cart** visually (Z-position layering)
+- Character switching only swaps the animal sprite, not the cart
+
+**Implementation (when final art is ready):**
+```
+PlayerCart (GameObject)
+├── CartSprite (SpriteRenderer) ← The wooden cart graphic
+│   └── WheelLeft (optional - for animation)
+│   └── WheelRight (optional - for animation)
+└── AnimalSprite (SpriteRenderer) ← Animal character (Cat, Dog, Lion, etc.)
+    - Position: (0, 0.3, 0) - slightly above cart center
+    - Z-position: -0.1 (renders in front of cart)
+    - No collider (cart handles physics)
+```
+
+**Why this architecture?**
+- Saves ~40-50 Ludo.ai credits (don't need 13 different carts!)
+- Easy character switching in code: `animalSprite.sprite = newAnimalSprite;`
+- One cart animation works for all characters
+
+**See `docs/05-art-assets/ludo-ai-complete-asset-guide-2.5D.md` for asset generation prompts.**
+
+---
+
 ## Part 3: Add Easy Section (X: 10-20)
 
 ### Step 1: Create Second Platform

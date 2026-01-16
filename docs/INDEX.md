@@ -100,23 +100,26 @@ This index organizes all documentation by **development phase**. Start at the be
 
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
-| [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters (Cat, Dog, Elephant, etc.) | Personalities, colors, unlock prices | ✅ Complete |
-| [ai-art-generation-guide.md](05-art-assets/ai-art-generation-guide.md) | Ludo.ai workflow for character sprites | Master prompts, batch generation | ✅ Complete |
-| [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) | 65+ prompts for backgrounds (trees, rocks, clouds) | Forest, Mountain, Desert, Underwater, Ocean | ✅ Complete |
+| [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md) | **🌟 PRIMARY GUIDE** - All 80 assets with Hand-Painted 2.5D style | Cart (1), Animals (13), Environments (65) with exact Ludo.ai settings | ✅ Complete |
+| [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters reference | Personalities, colors, unlock prices | ✅ Complete |
 | [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) | DecorationData ScriptableObject design | Theme, layer, spawn rules for procedural use | ✅ Complete |
+| [ai-art-generation-guide.md](05-art-assets/ai-art-generation-guide.md) | ⚠️ DEPRECATED - Original cartoon style guide | Superseded by 2.5D guide above | 🔄 Reference Only |
+| [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) | ⚠️ DEPRECATED - Original cartoon prompts | Superseded by 2.5D guide above | 🔄 Reference Only |
 
 **Start here if:** Mechanics are solid with placeholder graphics, ready to generate final art.
 
 **Prerequisites:**
-- Ludo.ai account with credits (150-250 credits needed)
+- Ludo.ai account with credits (200-300 credits needed)
 - Week 5 procedural system working (to understand asset needs)
 
 **Credit Budget:**
+- Cart: 1 reusable asset (~5-10 credits)
 - Week 6: Forest environment (13 assets, ~30-50 credits)
 - Week 7: Mountain + Desert (26 assets, ~50-80 credits)
 - Week 8: Underwater + Ocean (26 assets, ~50-80 credits)
-- **Total:** 65 environmental assets (150-250 credits)
-- Characters: 4-13 assets (50-100 credits)
+- **Total:** 65 environmental assets (~150-200 credits)
+- Animals: 13 separate sprites (~50-75 credits)
+- **GRAND TOTAL:** 80 assets (200-300 credits)
 
 ---
 
@@ -170,7 +173,7 @@ This index organizes all documentation by **development phase**. Start at the be
 3. **Continue from where you left off:**
    - **Week 3-4:** Follow guides in [03-week-3-4-core-gameplay/](03-week-3-4-core-gameplay/)
    - **Week 5:** Start with [procedural-generation-unity-setup.md](04-week-5-procedural/procedural-generation-unity-setup.md)
-   - **Week 6+:** Begin art generation using [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md)
+   - **Week 6+:** Begin art generation using [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md)
 
 ---
 
@@ -226,8 +229,8 @@ This index organizes all documentation by **development phase**. Start at the be
 3. [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) → Add backgrounds
 
 ### "Ready to generate final art"
-1. [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) → Generate backgrounds
-2. [character-reference.md](05-art-assets/character-reference.md) → Character specs
+1. [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md) → Generate all 80 assets with Hand-Painted 2.5D style
+2. [character-reference.md](05-art-assets/character-reference.md) → Character personalities and unlock prices
 3. [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) → Create metadata for spawning
 
 ---

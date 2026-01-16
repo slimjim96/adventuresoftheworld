@@ -159,39 +159,39 @@ Environmental decorations appear repeatedly in dynamic levels and must be:
 
 ## 💰 Credit Budget Breakdown
 
-### **Estimated Total: 150-250 credits**
+### **Estimated Total: 200-300 credits**
+
+**Updated for Hand-Painted 2.5D Style with Cart+Animal Architecture**
 
 **Breakdown:**
 
 | Phase | Task | Credits |
 |-------|------|---------|
+| Week 6 | Cart (1 reusable asset) | 5-10 |
 | Week 6 | Prompt testing | 5-10 |
-| Week 6 | Forest (13 assets) | 25-40 |
-| Week 7 | Mountain (13 assets) | 25-40 |
-| Week 7 | Desert (13 assets) | 25-40 |
-| Week 8 | Underwater (13 assets) | 25-40 |
-| Week 8 | Ocean (13 assets) | 25-40 |
-| Week 8 | 4 Characters (optional) | 10-15 |
-| Week 9 | Obstacles/Coins | 15-25 |
-| Week 10 | 9 More Characters (optional) | 20-30 |
-| Week 11 | UI Elements | 10-20 |
-| **TOTAL** | **~150-250 credits** | |
+| Week 6 | Forest (13 assets) | 30-50 |
+| Week 7 | Mountain (13 assets) | 30-50 |
+| Week 7 | Desert (13 assets) | 30-50 |
+| Week 8 | Underwater (13 assets) | 30-50 |
+| Week 8 | Ocean (13 assets) | 30-50 |
+| Week 7-8 | 13 Animals (separate from cart) | 50-75 |
+| **TOTAL** | **80 assets: ~200-300 credits** | |
+
+**Note:** Cart and animals are separate assets. One cart is reused for all 13 characters, with animals positioned behind cart in Unity.
 
 **Budget Tiers:**
 
-**Minimum (150 credits):**
+**Minimum (200 credits):**
+- 1 Cart
 - All 5 environments (65 assets)
-- Core obstacles and coins
-- 4 characters
-- Basic UI
+- 4 core animals (Cat, Dog, Lion, Bunny)
 
-**Recommended (200 credits):**
-- All environments
-- All obstacles/coins
-- 13 characters
-- Full UI package
+**Recommended (250 credits):**
+- 1 Cart
+- All 5 environments (65 assets)
+- All 13 animals
 
-**Premium (250 credits):**
+**Premium (300 credits):**
 - All of the above
 - Multiple variations
 - Iteration budget for perfection
