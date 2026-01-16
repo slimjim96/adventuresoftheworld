@@ -134,15 +134,18 @@ Comprehensive documentation is available in the `/docs/` folder:
 
 ## 🎨 Art Style
 
-**Visual Style**: Cartoon, whimsical, family-friendly
-**Graphics Format**: 2D Vector Graphics (SVG) for scalability
-**Color Palette**: Vibrant and distinct per environment
+**Visual Style**: Hand-Painted 2.5D (Rayman Legends inspired), whimsical, family-friendly
+**Graphics Format**: 2D sprites with gradient shading and painterly textures
+**Color Palette**: Vibrant and distinct per environment with soft lighting effects
 
 ### Character Designs
-- **Lion** 🦁 - Brave and bold (default character)
-- **Bunny** 🐰 - Quick and energetic
-- **Duck** 🦆 - Cheerful and fun
-- **Mouse** 🐭 - Small and clever
+- **Cat** 🐱 - Curious and agile (default character - FREE)
+- **Lion** 🦁 - Brave and bold (1500 coins)
+- **Bunny** 🐰 - Quick and energetic (700 coins)
+- **Duck** 🦆 - Cheerful and fun (600 coins)
+- **Mouse** 🐭 - Small and clever (500 coins)
+
+*Total: 13 playable animals - see [character-reference.md](docs/05-art-assets/character-reference.md) for complete list*
 
 ---
 

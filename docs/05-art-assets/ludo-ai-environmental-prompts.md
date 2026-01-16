@@ -1,6 +1,20 @@
-# Ludo.ai Environmental Asset Prompts
+# ⚠️ DEPRECATED - DO NOT USE THIS GUIDE
 
-**Focus:** Procedurally-spawned decorations with consistent style across environments
+**This guide has been superseded by [`ludo-ai-complete-asset-guide-2.5D.md`](ludo-ai-complete-asset-guide-2.5D.md)**
+
+**Reason:** Art style changed from flat cartoon to Hand-Painted 2.5D (Rayman Legends inspired) in December 2025.
+
+**Please use the new guide for:**
+- Correct Ludo.ai settings (Hand-Painted + 2.5D + Platformer)
+- Gradient shading and painterly textures (NOT flat colors)
+- All 65 environmental decorations with proper 2.5D style
+- Negative prompts updated to avoid cartoon style
+
+---
+
+# ~~Ludo.ai Environmental Asset Prompts~~
+
+~~**Focus:** Procedurally-spawned decorations with consistent style across environments~~
 
 ---
 
