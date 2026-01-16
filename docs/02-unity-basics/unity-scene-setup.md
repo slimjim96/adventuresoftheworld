@@ -170,6 +170,28 @@ Select **Main Camera**:
    - Search **PlayerInput**
    - No configuration needed - it automatically connects input to the cart!
 
+---
+
+**🎨 Character System Note (Week 6-7 Integration):**
+
+When final art is generated, you'll add animal characters as **separate sprites**:
+
+1. **Right-click PlayerCart** → **2D Object** → **Sprite**
+2. Rename to **"AnimalSprite"**
+3. Configure:
+   - Position: (0, 0.3, 0) - Slightly above cart center
+   - Z Position: **-0.1** (renders in front of cart visually)
+   - Sprite: Assign animal character (Cat, Dog, Lion, etc.)
+4. **No collider needed** (collision handled by cart)
+
+**Architecture:**
+- Cart and animals are **separate assets** (not combined)
+- One cart is **reused for all 13 characters**
+- Character switching changes only the AnimalSprite
+- See `docs/05-art-assets/ludo-ai-complete-asset-guide-2.5D.md` for prompts
+
+---
+
 ### D. Create Ground Platform
 
 1. **Right-click in Hierarchy → 2D Object → Sprite → Square**

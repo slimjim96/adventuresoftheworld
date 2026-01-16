@@ -74,19 +74,24 @@ Create an engaging, casual mobile and PC game where players guide adorable anima
 ### 3.2 Visual Design (In Scope)
 
 #### Art Style
-- **Theme**: Cartoon/whimsical, family-friendly
-- **Graphics**: 2D vector graphics (SVG)
-- **Color Palette**: Vibrant, distinct per environment
-- **Character Design**: Cute, simple animal characters
+- **Theme**: Hand-Painted 2.5D (Rayman Legends inspired), whimsical, family-friendly
+- **Graphics**: 2D sprites with gradient shading and painterly textures
+- **Color Palette**: Vibrant, distinct per environment with soft lighting effects
+- **Character Design**: Cute animal characters in riding pose (cart+animal separation)
+
+**Art Style Evolution Note (December 2025):**
+The visual style evolved from flat cartoon to Hand-Painted 2.5D with gradients to achieve a more polished, sophisticated aesthetic while maintaining family-friendly appeal. See `docs/05-art-assets/ludo-ai-complete-asset-guide-2.5D.md` for details.
 
 #### Characters (In Scope)
-Playable animal characters (ride in cart):
-1. **Lion** - Brave and bold
-2. **Bunny** - Quick and energetic
-3. **Duck** - Cheerful and fun
-4. **Mouse** - Small and clever
+**13 playable animal characters** (cart and animals are separate assets):
+1. **Cat** 🐱 - Curious and agile (default, FREE)
+2. **Lion** 🦁 - Brave and bold (1500 coins)
+3. **Bunny** 🐰 - Quick and energetic (700 coins)
+4. **Duck** 🦆 - Cheerful and fun (600 coins)
+5. **Mouse** 🐭 - Small and clever (500 coins)
+... *and 8 more* (Dog, Elephant, Bear, Unicorn, Fish, Fox, Snowman, Dragon)
 
-*Note*: Characters are cosmetic only (no gameplay differences in v1.0)
+*Note*: Characters are cosmetic only (no gameplay differences in v1.0). Cart is reusable across all characters.
 
 #### Environments (5 Themed Worlds)
 1. **Forest** (Levels 1-3)
