@@ -34,8 +34,63 @@ Target: Casual mobile gamers, all ages, United States market.
 
 ---
 
+## 📝 Ludo.ai Prompting Syntax Guide
+
+**Ludo.ai supports three methods for excluding/de-emphasizing elements:**
+
+### Method 1: `--no` Parameter (Recommended)
+**Best for:** Hard exclusions of specific objects or elements
+
+**Syntax:**
+```
+[Your description] --no [element1] --no [element2] --no [element3]
+```
+
+**Example:**
+```
+Forest tree with vibrant leaves --no ground --no roots --no base --no 3D --no isometric
+```
+
+### Method 2: Weighting `::-1`
+**Best for:** Fine control over style attributes and subtle de-emphasis
+
+**Syntax:**
+```
+[Desired element]::1 [Element to reduce]::-1 [Another to reduce]::-1
+```
+
+**Example:**
+```
+Hand-painted tree::1 vibrant gradient::1 flat colors::-1 3D render::-1 vector::-1
+```
+
+### Method 3: Natural Language
+**Best for:** Complex contextual descriptions
+
+**Syntax:**
+```
+[Description], without [unwanted elements], excluding [other elements]
+```
+
+**Example:**
+```
+A wooden cart in Rayman Legends style, without any character inside, without ground or base below
+```
+
+### When to Use Each Method
+
+| Situation | Recommended Method | Example |
+|-----------|-------------------|---------|
+| Exclude objects (ground, cart, base) | `--no` | `--no ground --no base` |
+| Control art style (3D vs 2D, flat vs gradient) | Weighting `::` | `hand-painted::1 3D render::-1` |
+| Complex multi-part exclusions | Natural language | `without character, ground, or rails` |
+| Lighting exclusions | `--no` or Natural | `--no bottom lighting --no harsh shadows` |
+
+---
+
 ## 🛒 Template 1: The Cart
 
+**Using `--no` (Recommended):**
 ```
 Wooden mine cart for 2D platformer game, Rayman Legends style,
 vibrant hand-painted illustration, side view profile,
@@ -43,19 +98,24 @@ rich brown wood with gradient shading, magical fantasy feel,
 sturdy wheels visible, painterly texture,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 warm highlights on top-left wooden planks, rim lighting,
-transparent background PNG, isolated cart element,
-no character inside, no ground, no rails,
-whimsical adventure aesthetic
+transparent background PNG, isolated cart element, whimsical adventure aesthetic,
+empty cart without any character inside
+--no character --no ground --no rails --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+```
 
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-character visible, ground, rails, harsh shadows, bottom lighting,
-flat lighting, multiple light sources
+**Using Weighting:**
+```
+Wooden mine cart, Rayman Legends style, hand-painted::1, brown wood, gradient shading,
+wheels visible, upper-left lighting, transparent PNG, side view, empty
+flat colors::-1 3D render::-1 character::-1 ground::-1 rails::-1
 ```
 
 ---
 
 ## 🐾 Template 2: Animal Characters (Fill in [BRACKETS])
 
+**Using `--no` (Recommended):**
 ```
 [ANIMAL NAME] character for 2D platformer game, Rayman Legends inspired,
 sitting upright in riding pose, side view profile,
@@ -65,12 +125,25 @@ gradient shading, vibrant hand-painted illustration,
 painterly texture, whimsical fantasy style,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 warm highlights on face and left side, subtle rim lighting,
-transparent background PNG, isolated character,
-no cart, no vehicle, no ground, full body visible
+transparent background PNG, isolated character, full body visible
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+```
 
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-standing pose, cart visible, ground, harsh shadows, bottom lighting,
-flat lighting, multiple light sources
+**Using Weighting:**
+```
+[ANIMAL NAME], Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, [COLORS], gradient shading, [EXPRESSION], painterly texture,
+upper-left lighting, transparent PNG, full body
+flat colors::-1 3D render::-1 standing::-1 cart::-1 ground::-1
+```
+
+**Using Natural Language:**
+```
+[ANIMAL NAME] character for 2D platformer, Rayman Legends style, sitting in riding pose,
+[COLORS] with gradient shading, [EXPRESSION], painterly hand-painted illustration,
+upper-left lighting, transparent PNG side view, without any cart or vehicle,
+without ground or base, isolated character only
 ```
 
 ### Animal Character Quick Fill Examples:
@@ -95,6 +168,7 @@ flat lighting, multiple light sources
 
 ## 🌲 Template 3: Environmental Decorations - FAR LAYER
 
+**Using `--no` (Recommended):**
 ```
 [OBJECT - e.g., "Mountain silhouette"] for [THEME] platformer background,
 Rayman Legends style, [THEME COLOR PALETTE],
@@ -102,11 +176,16 @@ hand-painted illustration, painterly texture,
 atmospheric depth, [SPECIFIC DETAILS - e.g., "soft fog effect at base"],
 soft directional lighting from upper-left, gentle shadows to lower-right,
 [LIGHTING NOTES - e.g., "misty atmosphere, dark blue-green gradient"],
-transparent background PNG, side view, isolated element,
-no ground, no base
+transparent background PNG, side view, isolated element
+--no ground --no base --no 3D --no isometric --no harsh edges --no bottom lighting
+```
 
-NEGATIVE: flat colors, 3D render, isometric, harsh edges,
-ground, base, bottom lighting, flat lighting
+**Using Weighting:**
+```
+[OBJECT], [THEME] background, Rayman Legends style, hand-painted::1,
+[COLOR PALETTE], painterly texture, atmospheric depth, [DETAILS],
+upper-left lighting, transparent PNG, side view
+flat colors::-1 3D render::-1 ground::-1 base::-1
 ```
 
 ### Far Layer Examples:
@@ -118,11 +197,8 @@ Rayman Legends style, dark blue-green gradient shading,
 soft fog effect at base, hand-painted illustration,
 painterly texture, atmospheric depth, fantasy landscape,
 soft directional lighting from upper-left, gentle shadows to lower-right,
-transparent background PNG, side view, layered peaks,
-no ground, no base
-
-NEGATIVE: flat colors, 3D render, isometric, harsh edges,
-ground, base, bottom lighting, flat lighting
+transparent background PNG, side view, layered peaks
+--no ground --no base --no 3D --no isometric --no harsh edges
 ```
 
 **Desert Dune:**
@@ -132,16 +208,15 @@ warm orange to pale yellow gradient, soft curves,
 hand-painted illustration, heat shimmer effect,
 atmospheric depth, painterly texture, side view,
 soft directional lighting from upper-left, gentle shadows to lower-right,
-transparent background PNG, rolling dune, no ground line
-
-NEGATIVE: flat colors, 3D render, harsh edges, ground base,
-bottom lighting, flat lighting
+transparent background PNG, rolling dune
+--no ground --no base --no harsh edges --no 3D
 ```
 
 ---
 
 ## 🌳 Template 4: Environmental Decorations - MID LAYER
 
+**Using `--no` (Recommended):**
 ```
 [OBJECT - e.g., "Oak tree"] for [THEME] platformer midground,
 Rayman Legends style, [THEME COLOR PALETTE],
@@ -149,11 +224,15 @@ hand-painted illustration, painterly texture,
 [SPECIFIC DETAILS - e.g., "full leafy canopy, rich brown bark"],
 soft directional lighting from upper-left, gentle shadows to lower-right,
 [LIGHTING NOTES - e.g., "brighter foliage on left, darker gradient on right"],
-transparent background PNG, side view profile, isolated element,
-no ground, no base
+transparent background PNG, side view profile, isolated element
+--no ground --no roots --no base --no 3D --no isometric --no cartoon outlines
+```
 
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-ground, roots, base, bottom lighting, flat lighting
+**Using Weighting:**
+```
+[OBJECT], [THEME] midground, Rayman Legends style, hand-painted::1,
+[COLORS], painterly texture, [DETAILS], upper-left lighting, side view
+flat colors::-1 3D render::-1 ground::-1 roots::-1
 ```
 
 ### Mid Layer Examples:
@@ -168,10 +247,8 @@ magical forest atmosphere, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 brighter foliage on left side, darker gradient on right,
 warm highlights on top-left branches,
-transparent background PNG, isolated tree, no ground, no roots
-
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-ground, roots, bottom lighting, flat lighting
+transparent background PNG, isolated tree
+--no ground --no roots --no 3D --no isometric --no cartoon outlines
 ```
 
 **Mountain Rock:**
@@ -182,16 +259,15 @@ hand-painted illustration, cool blue-gray tones,
 painterly texture, side view profile, rugged appearance,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 highlighted top-left surface, darker lower-right,
-transparent background PNG, isolated rock formation, no ground
-
-NEGATIVE: flat colors, 3D render, cartoon outlines, ground,
-bottom lighting, flat lighting
+transparent background PNG, isolated rock formation
+--no ground --no 3D --no cartoon outlines
 ```
 
 ---
 
 ## 🌿 Template 5: Environmental Decorations - NEAR LAYER
 
+**Using `--no` (Recommended):**
 ```
 [OBJECT - e.g., "Bush"] for [THEME] platformer foreground,
 Rayman Legends style, [THEME COLOR PALETTE],
@@ -199,11 +275,15 @@ hand-painted illustration, painterly texture,
 [SPECIFIC DETAILS - e.g., "leafy clusters, rounded organic shape"],
 soft directional lighting from upper-left, gentle shadows to lower-right,
 [LIGHTING NOTES - e.g., "warm highlights on left, soft shadow on right"],
-transparent background PNG, side view profile, isolated element,
-no ground, no base
+transparent background PNG, side view profile, isolated element
+--no ground --no base --no 3D --no cartoon outlines
+```
 
-NEGATIVE: flat colors, 3D render, cartoon outlines,
-ground, base, bottom lighting, flat lighting
+**Using Weighting:**
+```
+[OBJECT], [THEME] foreground, Rayman Legends style, hand-painted::1,
+[COLORS], painterly texture, [DETAILS], upper-left lighting, side view
+flat colors::-1 3D render::-1 ground::-1 base::-1
 ```
 
 ### Near Layer Examples:
@@ -217,10 +297,8 @@ soft highlights and shadows, painterly texture,
 rounded organic shape, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 warm highlights on top-left leaves, darker gradient on right,
-transparent background PNG, isolated bush, no ground
-
-NEGATIVE: flat colors, 3D render, cartoon outlines, ground,
-bottom lighting, flat lighting
+transparent background PNG, isolated bush
+--no ground --no 3D --no cartoon outlines
 ```
 
 **Desert Rock:**
@@ -231,10 +309,8 @@ hand-painted illustration, warm tones, painterly texture,
 side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 highlighted top-left surface, darker lower-right side,
-transparent background PNG, no ground, no sand
-
-NEGATIVE: flat colors, 3D render, cartoon outlines, ground, sand,
-bottom lighting, flat lighting
+transparent background PNG
+--no ground --no sand --no 3D --no cartoon outlines
 ```
 
 ---
@@ -283,23 +359,30 @@ Highlight: #FF7F50 (coral orange)
 
 ---
 
-## 📝 Universal Negative Prompts (Add to ALL)
+## 📝 Universal Exclusions (Use with ALL Assets)
 
+### Basic Exclusions (Use `--no`)
+
+**Add to every prompt:**
 ```
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-ground, base, harsh shadows, bottom lighting, flat lighting,
-multiple light sources
+--no ground --no base --no 3D --no isometric --no cartoon outlines
 ```
 
-### Expanded Negative Prompts (For Problematic Generations)
+### Comprehensive Exclusions (For Problematic Generations)
 
+**When getting unwanted results, use:**
 ```
-NEGATIVE: flat colors, solid fills, 3D render, isometric view,
-thick cartoon outlines, vector style, harsh edges, geometric shapes,
-ground, base, floor, shadow below, realistic photographic style,
-bottom lighting, flat lighting, no shadows, harsh shadows,
-multiple light sources, rim lighting from right, top-down lighting,
-anime style, cel-shaded, low quality, blurry
+--no ground --no base --no floor --no 3D --no isometric --no cartoon outlines
+--no harsh shadows --no bottom lighting --no flat lighting --no vector style
+--no realistic --no anime --no cel-shaded
+```
+
+### Using Weighting for Style Control
+
+**Alternative approach:**
+```
+hand-painted gradient::1 painterly texture::1 soft edges::1
+flat colors::-1 3D render::-1 vector::-1 outlines::-1 ground::-1
 ```
 
 ---
@@ -311,12 +394,11 @@ Before submitting prompt, verify:
 - [ ] Ludo.ai settings: Hand-Painted + 2.5D + Platformer
 - [ ] Upper-left lighting phrase included
 - [ ] "transparent background PNG" included
-- [ ] "isolated element, no ground, no base" included
 - [ ] "side view profile" included
 - [ ] Theme color palette referenced (if environmental)
 - [ ] Rayman Legends style mentioned
-- [ ] Negative prompts included
-- [ ] Specific details unique to this asset
+- [ ] `--no` exclusions added (at minimum: `--no ground --no base --no 3D`)
+- [ ] Specific details unique to this asset included
 
 ---
 
@@ -360,24 +442,40 @@ white bark with dark markings, light green gradient leaves...
 ## 💡 Troubleshooting Common Issues
 
 ### Issue: Getting 3D/Isometric Results
-**Fix:** Add to negative prompts: `3D render, isometric, 3/4 view, perspective, depth angle`
-**Add to main prompt:** `pure 2D side view, flat side profile, no perspective`
+**Fix using `--no`:**
+```
+--no 3D --no isometric --no 3/4 view --no perspective --no depth angle
+```
+**Strengthen in main prompt:** `pure 2D side view, flat side profile`
 
 ### Issue: Getting Ground/Base Under Objects
-**Fix:** Strengthen in prompt: `isolated element, floating, no ground, no base, no floor, no shadow below`
-**Add to negative:** `ground, base, floor, platform, terrain, soil, dirt, grass base, shadow below`
+**Fix using `--no`:**
+```
+--no ground --no base --no floor --no platform --no terrain --no shadow below
+```
+**Strengthen in main prompt:** `isolated element, floating`
 
 ### Issue: Flat Vector Style (Not Painterly)
-**Fix:** Add to prompt: `painterly brushstrokes, gradient shading, soft texture, traditional painting feel`
-**Add to negative:** `flat colors, solid fills, vector graphics, hard edges, digital flat style`
+**Fix using weighting:**
+```
+painterly brushstrokes::1 gradient shading::1 soft texture::1
+flat colors::-1 vector graphics::-1 hard edges::-1
+```
+**Strengthen in main prompt:** `hand-painted illustration, traditional painting feel`
 
 ### Issue: Wrong Lighting Direction
-**Fix:** Strengthen in prompt: `IMPORTANT: light source from upper-left at 45 degrees, shadows cast to lower-right`
-**Add to negative:** `bottom lighting, right-side lighting, top-down lighting, flat lighting, no shadows`
+**Fix using `--no`:**
+```
+--no bottom lighting --no right-side lighting --no top-down lighting --no flat lighting
+```
+**Strengthen in main prompt:** `IMPORTANT: light source from upper-left at 45 degrees, shadows cast to lower-right`
 
 ### Issue: Thick Cartoon Outlines
-**Fix:** Add to prompt: `no outlines, soft edges, blended transitions`
-**Add to negative:** `thick outlines, cartoon outlines, black borders, vector lines, comic book style`
+**Fix using `--no`:**
+```
+--no outlines --no cartoon outlines --no black borders --no vector lines
+```
+**Strengthen in main prompt:** `soft edges, blended transitions`
 
 ---
 

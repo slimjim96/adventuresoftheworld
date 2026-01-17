@@ -32,6 +32,40 @@ Genre: Platformer
 
 ## 🎨 Universal Art Direction Standards
 
+### Ludo.ai Prompting Syntax Guide
+
+**Ludo.ai uses three methods to exclude or de-emphasize elements:**
+
+#### Method 1: `--no` Parameter (Recommended for Hard Exclusions)
+```
+[Your prompt description] --no [elements to exclude]
+```
+**Example:**
+```
+A fantasy forest tree with vibrant leaves --no ground --no roots --no base
+```
+
+#### Method 2: Weighting Syntax (For Fine Control)
+```
+[Desired Element]::1 [Element to reduce]::-1
+```
+**Example:**
+```
+Hand-painted tree::1 3D render::-1 vector style::-1
+```
+
+#### Method 3: Natural Language (For Descriptive Control)
+```
+A wooden cart, without any character inside or ground below
+```
+
+**When to use each:**
+- **`--no`**: Hard exclusions (ground, base, specific objects)
+- **Weighting**: Style control (flat colors vs gradients, 3D vs 2D)
+- **Natural language**: Complex contextual descriptions
+
+---
+
 ### Lighting System (NON-NEGOTIABLE)
 
 **Global Light Source:** Upper-Left (Northwest, 45° from top-left)
@@ -54,15 +88,9 @@ soft directional lighting from upper-left, gentle shadows to lower-right,
 painterly highlights on top-left surfaces, warm rim lighting
 ```
 
-**Negative prompts (lighting):**
-```
-bottom lighting, flat lighting, no shadows, harsh shadows,
-multiple light sources, rim lighting from right, top-down lighting
-```
-
 ### Visual Style Requirements
 
-**Always include:**
+**Always include in prompts:**
 - Vibrant, saturated colors with gradient shading
 - Painterly textures (brushstroke feel)
 - Soft, organic shapes (whimsical, not geometric)
@@ -71,13 +99,14 @@ multiple light sources, rim lighting from right, top-down lighting
 - Side view profile (pure 2D side-on view)
 - Isolated element only (no ground, no base, no context)
 
-**Always exclude (negative prompts):**
-- Flat colors, solid fills
-- 3D render, isometric view
-- Thick cartoon outlines, vector style
-- Harsh edges, geometric shapes
-- Ground, base, floor, shadow below
-- Realistic photographic style
+**Always exclude using `--no` or weighting:**
+```
+--no ground --no base --no floor --no 3D --no isometric --no cartoon outlines
+```
+**OR with weighting:**
+```
+hand-painted gradient::1 flat colors::-1 3D render::-1 vector style::-1
+```
 
 ---
 
@@ -200,12 +229,18 @@ gradient shading, friendly expression, whimsical fantasy style,
 painterly texture,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 warm highlights on face and left side, subtle rim lighting,
-transparent background PNG, isolated character,
-no cart, no vehicle, no ground, full body visible
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+```
 
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-standing pose, cart visible, ground, harsh shadows, bottom lighting,
-flat lighting, multiple light sources
+**Alternative with weighting:**
+```
+[ANIMAL] character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, [COLORS], gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
 ```
 
 ### The 13 Playable Characters
@@ -249,13 +284,17 @@ rich brown wood with gradient shading, magical fantasy feel,
 sturdy wheels visible, painterly texture,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 warm highlights on top-left wooden planks, rim lighting,
-transparent background PNG, isolated cart element,
-no character inside, no ground, no rails,
-whimsical adventure aesthetic
+transparent background PNG, isolated cart element, whimsical adventure aesthetic,
+empty cart without any character inside, without ground or rails below
+--no character --no ground --no rails --no 3D --no isometric --no cartoon outlines
+--no harsh shadows --no bottom lighting
+```
 
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-character visible, ground, rails, harsh shadows, bottom lighting,
-flat lighting, multiple light sources
+**Alternative with weighting:**
+```
+Wooden mine cart, Rayman Legends style, hand-painted::1, brown wood, gradient shading,
+wheels visible, upper-left lighting, transparent PNG, side view, empty cart
+flat colors::-1 3D render::-1 character inside::-1 ground::-1 rails::-1
 ```
 
 ---
@@ -273,6 +312,7 @@ flat lighting, multiple light sources
 
 ### Environmental Asset Prompt Template
 
+**Method 1: Using `--no` (Recommended):**
 ```
 [OBJECT NAME] for [THEME] platformer [LAYER - far/midground/foreground],
 Rayman Legends style, vibrant hand-painted illustration,
@@ -280,12 +320,24 @@ Rayman Legends style, vibrant hand-painted illustration,
 painterly texture, [SPECIFIC DETAILS],
 soft directional lighting from upper-left, gentle shadows to lower-right,
 [LAYER-SPECIFIC LIGHTING NOTES],
-transparent background PNG, isolated element,
-no ground, no base, side view
+transparent background PNG, isolated element, side view
+--no ground --no base --no 3D --no isometric --no cartoon outlines
+--no harsh shadows --no bottom lighting
+```
 
-NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-ground, base, harsh shadows, bottom lighting, flat lighting,
-multiple light sources
+**Method 2: Using weighting:**
+```
+[OBJECT NAME], [THEME] platformer [LAYER], Rayman Legends style,
+hand-painted::1, [COLORS], gradient shading, painterly texture,
+[DETAILS], upper-left lighting, transparent PNG, side view
+flat colors::-1 3D render::-1 ground::-1 base::-1
+```
+
+**Method 3: Natural language (for complex contexts):**
+```
+[OBJECT NAME] for [THEME] platformer background, hand-painted in Rayman Legends style,
+[COLORS] with gradient shading, painterly texture, soft upper-left lighting,
+transparent PNG, side view, floating without any ground or base below
 ```
 
 ### Lighting by Asset Type
