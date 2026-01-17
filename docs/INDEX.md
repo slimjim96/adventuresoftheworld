@@ -151,6 +151,9 @@ This index organizes all documentation by **development phase**. Start at the be
 | [folder-structure.md](06-unity-setup/folder-structure.md) | Complete Assets folder blueprint | 80+ folder structure with auto-creation script, Import workflow for Ludo.ai assets, Prefab organization strategy | ✅ Complete |
 | [asset-naming-conventions.md](06-unity-setup/asset-naming-conventions.md) | Consistent file naming standards | Naming patterns for all asset types, Search optimization, Ludo.ai file renaming workflow | ✅ Complete |
 | [import-checklist.md](06-unity-setup/import-checklist.md) | Step-by-step asset import workflow | Pre-import prep, Unity import settings, Sprite configuration, Prefab creation, ScriptableObject setup, Testing | ✅ Complete |
+| [how-to-import-scripts.md](06-unity-setup/how-to-import-scripts.md) | Script import troubleshooting guide | Manual copy instructions, No namespaces needed, Folder organization, Common issues | ✅ Complete |
+| [unity-project-structure.md](06-unity-setup/unity-project-structure.md) | **Current Unity project structure** | Actual Assets folder layout (24 custom scripts), Script locations and purposes, Dependencies and namespaces | ✅ Complete |
+| [CLEANUP-SUMMARY.md](06-unity-setup/CLEANUP-SUMMARY.md) | Project cleanup report (2026-01-17) | Duplicates removed, TODOs identified, Current script inventory, Verification checklist | ✅ Complete |
 
 ### Unity Scripts Library (Ready-to-Copy)
 
