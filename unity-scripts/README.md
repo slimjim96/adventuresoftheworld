@@ -2,7 +2,22 @@
 
 **Complete collection of ready-to-use C# scripts for Adventures of the World**
 
-This directory contains fully implemented Unity C# scripts that you can copy directly into your Unity project's `Assets/Scripts/` folder.
+⚠️ **IMPORTANT:** These scripts are **template files in the repository**. You need to **manually copy** them to your Unity project's `Assets/Scripts/` folder.
+
+📖 **New to Unity or having import issues?** → See [how-to-import-scripts.md](/docs/06-unity-setup/how-to-import-scripts.md)
+
+---
+
+## ⚡ Quick Start
+
+**These files are NOT automatically in Unity. You must copy them:**
+
+1. **Copy** each `.cs` file from this folder (`/unity-scripts/`)
+2. **Paste** into your Unity project's `Assets/Scripts/` folder (see organization below)
+3. **Wait** for Unity to auto-compile
+4. **Use** the scripts in your game
+
+**No namespaces needed** - Unity finds classes automatically once files are in `Assets/` folder.
 
 ---
 
