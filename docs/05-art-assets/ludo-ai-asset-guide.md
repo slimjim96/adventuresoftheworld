@@ -2,6 +2,8 @@
 
 **Complete prompts for all 80 game assets** - Hand-Painted 2.5D style inspired by Rayman Legends
 
+> **📋 Quick Start:** See [`/ludo/ludo-ai-project-brief.md`](../../ludo/ludo-ai-project-brief.md) for a consolidated single-page reference with all critical settings, color palettes, and prompt templates. Use that document when starting new Ludo.ai sessions for consistent context.
+
 ---
 
 ## 🎨 Global Ludo.ai Settings

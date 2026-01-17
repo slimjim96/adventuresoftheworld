@@ -98,9 +98,19 @@ This index organizes all documentation by **development phase**. Start at the be
 
 **Purpose:** Generate consistent 2D vector graphics using Ludo.ai and replace placeholder art.
 
+### Ludo.ai Resources (Primary)
+
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
-| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | **🌟 PRIMARY GUIDE** - Complete prompts for all 80 assets | Cart (1), Animals (13), Environments (65) with Hand-Painted 2.5D style, upper-left lighting, exact Ludo.ai settings | ✅ Complete |
+| [📋 /ludo/ludo-ai-project-brief.md](../ludo/ludo-ai-project-brief.md) | **⭐ START HERE** - Single-page reference for asset generation | All critical settings, color palettes, lighting standards, prompt templates, quality checklist | ✅ Complete |
+| [📝 /ludo/prompt-templates.md](../ludo/prompt-templates.md) | Copy-paste ready templates | Cart, animals, environmental decoration templates with troubleshooting | ✅ Complete |
+| [/ludo/README.md](../ludo/README.md) | Ludo.ai resources overview | Directory guide, quick start, workflow | ✅ Complete |
+
+### Detailed Asset Documentation
+
+| Document | Description | What's Inside | Status |
+|----------|-------------|---------------|--------|
+| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | Complete prompts for all 80 assets | Cart (1), Animals (13), Environments (65) with detailed specifications | ✅ Complete |
 | [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters reference | Personalities, colors, unlock prices | ✅ Complete |
 | [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) | DecorationData ScriptableObject design | Theme, layer, spawn rules for procedural use | ✅ Complete |
 
@@ -227,9 +237,11 @@ This index organizes all documentation by **development phase**. Start at the be
 3. [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) → Add backgrounds
 
 ### "Ready to generate final art"
-1. [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) → Generate all 80 assets with Hand-Painted 2.5D style and upper-left lighting
-2. [character-reference.md](05-art-assets/character-reference.md) → Character personalities and unlock prices
-3. [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) → Create metadata for spawning
+1. [/ludo/ludo-ai-project-brief.md](../ludo/ludo-ai-project-brief.md) → **START HERE** - Single-page reference for Ludo.ai
+2. [/ludo/prompt-templates.md](../ludo/prompt-templates.md) → Copy-paste ready templates for all asset types
+3. [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) → Detailed prompts for all 80 assets
+4. [character-reference.md](05-art-assets/character-reference.md) → Character personalities and unlock prices
+5. [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) → Create metadata for spawning
 
 ---
 

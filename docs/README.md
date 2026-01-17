@@ -41,10 +41,16 @@ docs/
 │   ├── procedural-generation-unity-setup.md
 │   └── parallax-background-setup.md
 │
-└── 05-art-assets/                    ← Ludo.ai graphics (Weeks 6-8)
-    ├── ludo-ai-asset-guide.md        ← PRIMARY: All 80 assets with prompts
-    ├── character-reference.md
-    └── asset-metadata-system.md
+├── 05-art-assets/                    ← Ludo.ai graphics (Weeks 6-8)
+│   ├── ludo-ai-asset-guide.md        ← Detailed: All 80 assets with prompts
+│   ├── character-reference.md
+│   └── asset-metadata-system.md
+│
+└── ../ludo/                          ← Ludo.ai project resources
+    ├── ludo-ai-project-brief.md      ← ⭐ START HERE: Single-page reference
+    ├── prompt-templates.md           ← Copy-paste ready templates
+    ├── project-concept.txt           ← Original game concept export
+    └── README.md                     ← Ludo.ai resources guide
 ```
 
 ---
