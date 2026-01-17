@@ -131,7 +131,7 @@ public class CartDebugVisualizer : MonoBehaviour
         // FPS
         if (devSettings.showFPS)
         {
-            Color fpsColor = fps >= 60 ? "#00ff00" : (fps >= 30 ? "#ffff00" : "#ff0000");
+            string fpsColor = fps >= 60 ? "#00ff00" : (fps >= 30 ? "#ffff00" : "#ff0000");
             GUILayout.Label($"<b>FPS:</b> <color={fpsColor}>{fps:F1}</color>", hudStyle);
         }
 
