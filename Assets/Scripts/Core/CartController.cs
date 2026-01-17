@@ -1,206 +1,194 @@
+using AdventuresOfTheWorld.Core;
 using UnityEngine;
 
-namespace AdventuresOfTheWorld.Core
+/// <summary>
+/// Controls the cart movement, jumping, and loads the selected character sprite.
+/// This script is on the Cart prefab used in all 12 level scenes.
+/// </summary>
+[RequireComponent(typeof(Rigidbody2D))]
+public class CartController : MonoBehaviour
 {
-    /// <summary>
-    /// Controls the player's cart movement and jumping mechanics.
-    /// The cart automatically scrolls forward at a constant speed.
-    /// </summary>
-    [RequireComponent(typeof(Rigidbody2D))]
-    [RequireComponent(typeof(BoxCollider2D))]
-    public class CartController : MonoBehaviour
+    [Header("Movement Settings")]
+    [Tooltip("Constant auto-scroll speed")]
+    public float moveSpeed = 5f;
+
+    [Tooltip("Jump force (higher = jump higher)")]
+    public float jumpForce = 10f;
+
+    [Header("Ground Detection")]
+    [Tooltip("Check if cart is touching ground")]
+    public Transform groundCheck;
+
+    [Tooltip("Radius of ground check circle")]
+    public float groundCheckRadius = 0.2f;
+
+    [Tooltip("Layer(s) considered as ground")]
+    public LayerMask groundLayer;
+
+    [Header("Character References")]
+    [Tooltip("SpriteRenderer that displays the selected animal")]
+    public SpriteRenderer animalSpriteRenderer;
+
+    // Private variables
+    private Rigidbody2D rb;
+    private bool isGrounded;
+    private CharacterData currentCharacter;
+
+    void Start()
     {
-        #region Serialized Fields
+        rb = GetComponent<Rigidbody2D>();
 
-        [Header("Movement Settings")]
-        [SerializeField] private float moveSpeed = 5f;
-        [Tooltip("Current cart speed - can be adjusted per level")]
+        // Load selected character from GameManager
+        LoadSelectedCharacter();
+    }
 
-        [Header("Jump Settings")]
-        [SerializeField] private float jumpForce = 12f;
-        [Tooltip("Vertical force applied when jumping")]
+    void Update()
+    {
+        // Auto-scroll to the right
+        transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
 
-        [SerializeField] private float jumpBufferTime = 0.1f;
-        [Tooltip("Time window to buffer jump inputs")]
+        // Check if on ground
+        CheckGroundStatus();
 
-        [Header("Ground Detection")]
-        [SerializeField] private Transform groundCheck;
-        [Tooltip("Position to check if cart is grounded")]
-
-        [SerializeField] private float groundCheckRadius = 0.2f;
-        [SerializeField] private LayerMask groundLayer;
-        [Tooltip("What counts as ground for landing")]
-
-        [Header("Physics")]
-        [SerializeField] private float gravityScale = 2f;
-        [Tooltip("Gravity multiplier for cart physics")]
-
-        #endregion
-
-        #region Private Fields
-
-        private Rigidbody2D _rigidbody;
-        private bool _isGrounded;
-        private float _jumpBufferCounter;
-        private bool _canMove = true;
-
-        // TODO: Limit z rotation to rotate only 30 degrees either side
-        private const float MaxZRotation = 30f;
-
-        #endregion
-
-        #region Properties
-
-        public bool IsGrounded => _isGrounded;
-        public float CurrentSpeed => moveSpeed;
-
-        #endregion
-
-        #region Unity Lifecycle
-
-        private void Awake()
+        // Jump input
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            _rigidbody = GetComponent<Rigidbody2D>();
-            _rigidbody.gravityScale = gravityScale;
-
-            // Lock Z-rotation to prevent cart from flipping over
-            _rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation;
-
-            //TODO: Limit z rotation to rotate only 30 degrees either side
-            //_rigidbody.constraints = RigidbodyConstraints2D.FreezeRotation | RigidbodyConstraints2D.FreezePositionY;
-        
-
-            // Create ground check if not assigned
-            if (groundCheck == null)
-            {
-                GameObject groundCheckObj = new GameObject("GroundCheck");
-                groundCheckObj.transform.SetParent(transform);
-                groundCheckObj.transform.localPosition = new Vector3(0, -0.5f, 0);
-                groundCheck = groundCheckObj.transform;
-            }
+            Jump();
         }
 
-        private void Update()
+        // Mobile jump (tap anywhere on screen)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && isGrounded)
         {
-            CheckGrounded();
-            HandleJumpBuffer();
+            Jump();
+        }
+    }
+
+    /// <summary>
+    /// Load the character selected in GameManager and apply sprite
+    /// </summary>
+    void LoadSelectedCharacter()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.selectedCharacter != null)
+        {
+            currentCharacter = GameManager.Instance.selectedCharacter;
+            animalSpriteRenderer.sprite = currentCharacter.characterSprite;
+
+            // Apply character-specific stats (if using)
+            jumpForce *= currentCharacter.jumpBoostMultiplier;
+            moveSpeed *= currentCharacter.speedMultiplier;
+
+            Debug.Log($"Loaded character: {currentCharacter.characterName}");
+        }
+        else
+        {
+            Debug.LogWarning("No character selected! Using default sprite.");
+        }
+    }
+
+    /// <summary>
+    /// Check if cart is touching the ground
+    /// </summary>
+    void CheckGroundStatus()
+    {
+        if (groundCheck != null)
+        {
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+        }
+    }
+
+    /// <summary>
+    /// Make the cart jump
+    /// </summary>
+    void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        isGrounded = false;
+        Debug.Log("Jump!");
+
+        // Play jump sound (if AudioManager exists)
+        // AudioManager.Instance.PlaySFX("Jump");
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if hit ground
+        if (((1 << collision.gameObject.layer) & groundLayer) != 0)
+        {
+            isGrounded = true;
         }
 
-        private void FixedUpdate()
+        // Check if hit obstacle
+        if (collision.gameObject.CompareTag("Obstacle"))
         {
-            if (_canMove)
-            {
-                MoveForward();
-            }
+            OnHitObstacle();
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // Collect coins
+        if (other.CompareTag("Coin"))
+        {
+            CollectCoin(other.gameObject);
+        }
+    }
+
+    /// <summary>
+    /// Handle hitting an obstacle
+    /// </summary>
+    void OnHitObstacle()
+    {
+        Debug.Log("Hit obstacle!");
+
+        // Lose a life
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.LoseLife();
         }
 
-        #endregion
+        // Play death sound
+        // AudioManager.Instance.PlaySFX("Death");
 
-        #region Public Methods
-
-        /// <summary>
-        /// Attempts to make the cart jump
-        /// </summary>
-        public void Jump()
+        // Restart level or game over (handled by GameManager)
+        if (GameManager.Instance.currentLives > 0)
         {
-            if (_isGrounded)
-            {
-                PerformJump();
-            }
-            else
-            {
-                // Buffer the jump input
-                _jumpBufferCounter = jumpBufferTime;
-            }
+            RestartLevel();
+        }
+    }
+
+    /// <summary>
+    /// Collect a coin
+    /// </summary>
+    void CollectCoin(GameObject coin)
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddCoins(1);
         }
 
-        /// <summary>
-        /// Sets the cart's movement speed (useful for different levels)
-        /// </summary>
-        public void SetSpeed(float speed)
+        // Play coin sound
+        // AudioManager.Instance.PlaySFX("CoinCollect");
+
+        Destroy(coin);
+    }
+
+    /// <summary>
+    /// Restart the current level
+    /// </summary>
+    void RestartLevel()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().name
+        );
+    }
+
+    // Draw ground check gizmo in editor
+    void OnDrawGizmosSelected()
+    {
+        if (groundCheck != null)
         {
-            moveSpeed = speed;
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
-
-        /// <summary>
-        /// Stops cart movement (for game over or level complete)
-        /// </summary>
-        public void StopMovement()
-        {
-            _canMove = false;
-            _rigidbody.velocity = Vector2.zero;
-        }
-
-        /// <summary>
-        /// Resumes cart movement
-        /// </summary>
-        public void ResumeMovement()
-        {
-            _canMove = true;
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private void MoveForward()
-        {
-            // Maintain constant horizontal velocity
-            Vector2 velocity = _rigidbody.velocity;
-            velocity.x = moveSpeed;
-            _rigidbody.velocity = velocity;
-        }
-
-        private void CheckGrounded()
-        {
-            // Check if cart is touching ground using overlap circle
-            _isGrounded = Physics2D.OverlapCircle(
-                groundCheck.position,
-                groundCheckRadius,
-                groundLayer
-            );
-        }
-
-        private void HandleJumpBuffer()
-        {
-            // Handle buffered jump input
-            if (_jumpBufferCounter > 0)
-            {
-                _jumpBufferCounter -= Time.deltaTime;
-
-                if (_isGrounded)
-                {
-                    PerformJump();
-                    _jumpBufferCounter = 0;
-                }
-            }
-        }
-
-        private void PerformJump()
-        {
-            // Apply vertical force for jump
-            Vector2 velocity = _rigidbody.velocity;
-            velocity.y = jumpForce;
-            _rigidbody.velocity = velocity;
-
-            // Optional: Play jump sound
-            // AudioManager.Instance?.PlaySFX("Jump");
-        }
-
-        #endregion
-
-        #region Debug
-
-        private void OnDrawGizmosSelected()
-        {
-            // Visualize ground check in editor
-            if (groundCheck != null)
-            {
-                Gizmos.color = _isGrounded ? Color.green : Color.red;
-                Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-            }
-        }
-
-        #endregion
     }
 }
