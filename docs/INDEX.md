@@ -94,7 +94,7 @@ This index organizes all documentation by **development phase**. Start at the be
 
 ---
 
-## 🎨 05. Art Assets (Weeks 6-8)
+## 🎨 05. Art Assets (Weeks 6-9)
 
 **Purpose:** Generate consistent 2D vector graphics using Ludo.ai and replace placeholder art.
 
@@ -104,30 +104,39 @@ This index organizes all documentation by **development phase**. Start at the be
 |----------|-------------|---------------|--------|
 | [📋 /ludo/ludo-ai-project-brief.md](../ludo/ludo-ai-project-brief.md) | **⭐ START HERE** - Single-page reference for asset generation | All critical settings, color palettes, lighting standards, prompt templates, quality checklist | ✅ Complete |
 | [📝 /ludo/prompt-templates.md](../ludo/prompt-templates.md) | Copy-paste ready templates | Cart, animals, environmental decoration templates with troubleshooting | ✅ Complete |
+| [🎮 /ludo/ui-assets-guide.md](../ludo/ui-assets-guide.md) | **NEW** - UI & platform assets guide | Platform borders (15), player icons (14), menu UI (8-10), welcome screen (2) | ✅ Complete |
 | [/ludo/README.md](../ludo/README.md) | Ludo.ai resources overview | Directory guide, quick start, workflow | ✅ Complete |
 
 ### Detailed Asset Documentation
 
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
-| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | Complete prompts for all 80 assets | Cart (1), Animals (13), Environments (65) with detailed specifications | ✅ Complete |
+| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | Complete prompts for all 80 gameplay assets | Cart (1), Animals (13), Environments (65) with detailed specifications | ✅ Complete |
 | [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters reference | Personalities, colors, unlock prices | ✅ Complete |
 | [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) | DecorationData ScriptableObject design | Theme, layer, spawn rules for procedural use | ✅ Complete |
 
 **Start here if:** Mechanics are solid with placeholder graphics, ready to generate final art.
 
 **Prerequisites:**
-- Ludo.ai account with credits (200-300 credits needed)
+- Ludo.ai account with credits (275-410 credits needed)
 - Week 5 procedural system working (to understand asset needs)
 
 **Credit Budget:**
+
+**Gameplay Assets (Weeks 6-8):**
 - Cart: 1 reusable asset (~5-10 credits)
-- Week 6: Forest environment (13 assets, ~30-50 credits)
-- Week 7: Mountain + Desert (26 assets, ~50-80 credits)
-- Week 8: Underwater + Ocean (26 assets, ~50-80 credits)
-- **Total:** 65 environmental assets (~150-200 credits)
 - Animals: 13 separate sprites (~50-75 credits)
-- **GRAND TOTAL:** 80 assets (200-300 credits)
+- Environments: 65 decorations (~150-200 credits)
+- **Subtotal:** 79-80 assets (200-300 credits)
+
+**UI & Menu Assets (Weeks 8-9):**
+- Platform Borders: 15 tileable patterns (~30-40 credits)
+- Player Icons: 14 character portraits (~20-30 credits)
+- Menu UI: 8-10 elements (~15-25 credits)
+- Welcome Screen: 2 backgrounds (~10-15 credits)
+- **Subtotal:** 39-41 assets (75-110 credits)
+
+**GRAND TOTAL:** 118-121 assets (275-410 credits)
 
 ---
 

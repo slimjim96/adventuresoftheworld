@@ -49,6 +49,25 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
+### 🎮 `ui-assets-guide.md`
+
+**Purpose:** Complete prompts for UI elements, platform borders, and menu systems
+
+**Use this when:**
+- Generating platform border patterns (tileable)
+- Creating player select icons for character menu
+- Designing menu UI elements (buttons, panels, frames)
+- Creating welcome/title screen backgrounds
+
+**Contains:**
+- 15 platform border patterns (3 per theme, seamless tiling)
+- 14 player select icons (13 animals + cart)
+- 8-10 menu UI elements (9-slice compatible)
+- Welcome screen (desktop + mobile versions)
+- Total: 39-41 UI assets (~75-110 credits)
+
+---
+
 ### 📄 `project-concept.txt`
 
 **Purpose:** Plain text export of complete game concept from Ludo.ai
@@ -119,6 +138,7 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ## 💰 Credit Budget Overview
 
+### Gameplay Assets
 **Total Assets:** 79-80
 **Estimated Credits:** 200-300
 
@@ -131,6 +151,21 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 | Desert | 13 | 30-50 |
 | Underwater | 13 | 30-50 |
 | Ocean | 13 | 30-50 |
+
+### UI & Menu Assets (NEW)
+**Total Assets:** 39-41
+**Estimated Credits:** 75-110
+
+| Category | Assets | Credits |
+|----------|--------|---------|
+| Platform Borders | 15 (3 per theme) | 30-40 |
+| Player Select Icons | 14 (13 animals + cart) | 20-30 |
+| Menu UI Elements | 8-10 | 15-25 |
+| Welcome Screen | 2 (desktop + mobile) | 10-15 |
+
+### Grand Total
+**Total Assets:** 118-121
+**Estimated Credits:** 275-410
 
 **Recommendation:** Generate cart + 2-3 test animals first (~20-30 credits) to validate style before committing to full production.
 
@@ -157,33 +192,57 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ## 📊 Generation Workflow
 
-### Phase 1: Validation (Week 6 Day 1)
+### Gameplay Assets (Weeks 6-8)
+
+#### Phase 1: Validation (Week 6 Day 1)
 - Generate cart (1 asset)
 - Test in Unity
 - Verify style matches vision
 
-### Phase 2: Character Test (Week 6 Days 2-3)
+#### Phase 2: Character Test (Week 6 Days 2-3)
 - Generate Cat, Dog, Lion, Bunny (4 animals)
 - Test in Unity with cart
 - Validate consistency
 - **DECISION POINT:** If style correct, proceed. If not, adjust prompts.
 
-### Phase 3: Character Production (Week 7)
+#### Phase 3: Character Production (Week 7)
 - Generate remaining 9 animals
 - Test each in Unity
 - Ensure all 13 match
 
-### Phase 4: Environment Test (Week 7)
+#### Phase 4: Environment Test (Week 7)
 - Generate Forest environment (13 assets)
 - Test parallax system in Unity
 - Verify layering works
 
-### Phase 5: Environment Production (Week 8)
+#### Phase 5: Environment Production (Week 8)
 - Generate Mountain (13 assets)
 - Generate Desert (13 assets)
 - Generate Underwater (13 assets)
 - Generate Ocean (13 assets)
 - Final Unity integration
+
+### UI & Menu Assets (Weeks 8-9)
+
+#### Phase 6: Platform Borders (Week 8)
+- Generate Forest borders (3 variations) - test tiling
+- Import to Unity, verify seamless repeat
+- Batch generate remaining 4 themes (12 more)
+
+#### Phase 7: Player Icons (Week 9)
+- Generate Cat + Dog + Cart icons (3 test icons)
+- Verify consistent framing at small size
+- Batch generate remaining 11 animal icons
+
+#### Phase 8: Menu UI (Week 9)
+- Generate Button + Panel (2 core elements)
+- Test 9-slice scaling in Unity
+- Generate remaining UI elements (6-8 more)
+
+#### Phase 9: Welcome Screen (Week 9)
+- Generate Desktop version (16:9)
+- Test composition with logo overlay
+- Generate Mobile version (9:16)
 
 ---
 
