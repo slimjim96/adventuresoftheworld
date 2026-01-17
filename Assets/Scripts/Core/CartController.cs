@@ -119,7 +119,7 @@ public class CartController : MonoBehaviour
     public void Jump()
     {
         // Check if enough time has passed since last jump (prevents air jumps)
-        if (Time.time - lastJumpTime < jumpCooldown)
+        if (Time.time - lastJumpTime < jumpCooldown || !isGrounded)
         {
             return; // Too soon to jump again
         }
