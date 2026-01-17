@@ -21,6 +21,79 @@ Genre: Platformer
 
 ---
 
+## 💡 Lighting Direction Standards
+
+**Global Light Source: Upper-Left (Northwest, ~45° from top-left)**
+
+### Why Upper-Left?
+
+1. **Rayman Legends Inspiration:** The Hand-Painted 2.5D style traditionally uses soft upper-left lighting for artistic, painterly feel
+2. **Movement Harmony:** Cart moves left→right; upper-left lighting creates natural rim lighting on right edges as objects pass
+3. **Character Appeal:** Front-left lighting flatters character designs, creates warm highlights on animal faces
+4. **Atmospheric Depth:** Enhances parallax layers with consistent shadow direction (lower-right)
+5. **Unique Identity:** Less common than corporate upper-right, more whimsical and artistic
+
+### Lighting Specifications for Ludo.ai
+
+**Add to ALL prompts:**
+```
+soft directional lighting from upper-left, gentle shadows to lower-right,
+painterly highlights on top-left surfaces, warm rim lighting
+```
+
+**Shadow Guidelines:**
+- **Direction:** Shadows cast toward lower-right (45° down-right)
+- **Softness:** Soft edges, painterly (not harsh vector shadows)
+- **Intensity:** Subtle - this is whimsical, not dramatic noir
+- **Color:** Warm dark browns/purples (not pure black)
+
+**Per-Asset Type:**
+
+| Asset Type | Lighting Notes |
+|-----------|----------------|
+| **Cart** | Highlight on top-left wooden planks, soft shadow under right edge |
+| **Animals** | Face/front illuminated, subtle rim light on right ear/back |
+| **Trees/Bushes** | Left side of foliage brighter, right side has gentle gradient to shadow |
+| **Rocks** | Top-left surface catches light, lower-right in soft shadow |
+| **Mountains** | Left slope illuminated, right slope darker (atmospheric perspective applies) |
+| **Clouds** | Bright puffy tops on left, soft gray undersides on right |
+
+### Example Prompt Integration
+
+**Before (no lighting specified):**
+```
+Tree for forest level, hand-painted, vibrant green leaves
+```
+
+**After (with lighting):**
+```
+Tree for forest level, hand-painted, vibrant green leaves,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+painterly highlights on top-left branches, warm rim lighting on left foliage
+```
+
+### Environment-Specific Lighting Variations
+
+While maintaining upper-left as base direction:
+
+- **Forest:** Dappled morning light, softer shadows (canopy filtering)
+- **Mountain:** Crisp alpine light, slightly stronger contrast
+- **Desert:** Warm golden-hour glow, soft but visible shadows
+- **Underwater:** Diffused upper lighting, very soft shadows (water scatter)
+- **Ocean:** Sunset/sunrise tones, warm highlights, cool shadows
+
+**IMPORTANT:** These are *tonal* variations, not direction changes. Light source remains upper-left for all environments.
+
+### Negative Prompts (Avoid)
+
+Always include in negative prompts:
+```
+NEGATIVE: bottom lighting, flat lighting, no shadows, harsh shadows,
+multiple light sources, rim lighting from right, top-down lighting
+```
+
+---
+
 ## 🛒 Part 1: The Cart (1 Asset)
 
 **Priority:** Generate first - this is your reusable base for all characters.
@@ -39,13 +112,16 @@ Genre: Platformer
 Wooden mine cart for 2D platformer game, Rayman Legends style,
 vibrant hand-painted illustration, side view profile,
 rich brown wood with gradient shading, magical fantasy feel,
-sturdy wheels visible, painterly texture, soft highlights,
+sturdy wheels visible, painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on top-left wooden planks, rim lighting,
 transparent background PNG, isolated cart element,
 no character inside, no ground, no rails,
 whimsical adventure aesthetic
 
 NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-character visible, ground, rails, shadows
+character visible, ground, rails, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 **Expected Result:**
@@ -110,13 +186,16 @@ Genre: Platformer
 [ANIMAL] character for 2D platformer game, Rayman Legends inspired,
 sitting upright in riding pose, side view profile,
 [COLOR DESCRIPTION], vibrant hand-painted illustration,
-gradient shading, soft highlights, friendly expression,
-whimsical fantasy style, painterly texture,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
 transparent background PNG, isolated character,
 no cart, no vehicle, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, cartoon outlines,
-standing pose, cart visible, ground, shadow
+standing pose, cart visible, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -134,13 +213,15 @@ Cat character for 2D platformer game, Rayman Legends style,
 sitting upright in riding pose, side view profile,
 orange tabby fur with white belly, gradient shading on fur,
 vibrant hand-painted illustration, green eyes, friendly smile,
-cute whiskers, soft highlights, painterly texture,
-whimsical adventure aesthetic,
+cute whiskers, painterly texture, whimsical adventure aesthetic,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left ear, subtle rim lighting on back,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow
+standing, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -521,10 +602,14 @@ NEGATIVE: flat colors, 3D render, isometric, cartoon outlines, ground, roots
 Tall pine tree for forest platformer midground,
 darker green gradient needles, brown trunk, conical shape,
 hand-painted illustration, Rayman Legends inspired,
-painterly texture, soft shading, side view profile,
+painterly texture, side view profile,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+brighter foliage on left side, darker gradient on right,
+warm highlights on top-left branches,
 transparent background PNG, isolated tree, no ground
 
-NEGATIVE: flat colors, 3D render, thick outlines, ground
+NEGATIVE: flat colors, 3D render, thick outlines, ground,
+harsh shadows, bottom lighting, flat lighting
 ```
 
 #### Forest_Tree_Mid_03
@@ -600,11 +685,14 @@ NEGATIVE: flat colors, 3D render, ground
 ```
 Mossy rock boulder for forest platformer foreground,
 gray stone with gradient shading, green moss patches,
-hand-painted illustration, painterly texture,
-soft highlights, side view profile,
+hand-painted illustration, painterly texture, side view profile,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+highlighted top-left surface, darker lower-right side,
+warm rim lighting on left edge,
 transparent background PNG, isolated rock, no ground
 
-NEGATIVE: flat colors, 3D render, cartoon outlines, ground, shadow
+NEGATIVE: flat colors, 3D render, cartoon outlines, ground,
+harsh shadows, bottom lighting, flat lighting, multiple light sources
 ```
 
 #### Forest_Flower_Near_01
