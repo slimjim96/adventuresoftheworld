@@ -28,10 +28,15 @@ public class CartController : MonoBehaviour
     [Tooltip("SpriteRenderer that displays the selected animal")]
     public SpriteRenderer animalSpriteRenderer;
 
+    [Header("Jump Settings")]
+    [Tooltip("Cooldown time between jumps (prevents air jumps)")]
+    public float jumpCooldown = 0.2f;
+
     // Private variables
     private Rigidbody2D rb;
     private bool isGrounded;
     private CharacterData currentCharacter;
+    private float lastJumpTime;
 
     void Start()
     {
@@ -94,7 +99,17 @@ public class CartController : MonoBehaviour
     {
         if (groundCheck != null)
         {
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+            // Only set grounded to true if we're moving downward or stationary (prevents air jumps)
+            bool touchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
+
+            if (touchingGround && rb.velocity.y <= 0.1f)
+            {
+                isGrounded = true;
+            }
+            else if (!touchingGround)
+            {
+                isGrounded = false;
+            }
         }
     }
 
@@ -103,8 +118,15 @@ public class CartController : MonoBehaviour
     /// </summary>
     public void Jump()
     {
+        // Check if enough time has passed since last jump (prevents air jumps)
+        if (Time.time - lastJumpTime < jumpCooldown)
+        {
+            return; // Too soon to jump again
+        }
+
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         isGrounded = false;
+        lastJumpTime = Time.time; // Record jump time
         Debug.Log("Jump!");
 
         // Play jump sound (if AudioManager exists)
