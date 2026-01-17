@@ -53,7 +53,7 @@ public class CartController : MonoBehaviour
 
     // Private variables
     private Rigidbody2D rb;
-    private bool isGrounded;
+    public bool isGrounded { get; private set; } // Public read-only for debug visualizer
     private CharacterData currentCharacter;
     private float lastJumpTime;
     private float targetRotationAngle; // Smooth rotation target
