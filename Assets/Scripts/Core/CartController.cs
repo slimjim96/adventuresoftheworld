@@ -32,6 +32,21 @@ public class CartController : MonoBehaviour
     [Tooltip("Cooldown time between jumps (prevents air jumps)")]
     public float jumpCooldown = 0.2f;
 
+    [Header("Terrain Following (Experimental)")]
+    [Tooltip("Enable cart rotation to follow terrain angles")]
+    public bool followTerrainRotation = false;
+
+    [Tooltip("Maximum rotation angle in degrees (prevents flipping)")]
+    [Range(0f, 90f)]
+    public float maxRotationAngle = 45f;
+
+    [Tooltip("How quickly cart rotates to match terrain (higher = faster)")]
+    [Range(1f, 20f)]
+    public float rotationSpeed = 10f;
+
+    [Tooltip("Distance ahead to raycast for terrain detection")]
+    public float terrainCheckDistance = 1f;
+
     // Private variables
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -68,6 +83,24 @@ public class CartController : MonoBehaviour
     {
         // Auto-scroll using physics (maintains constant forward velocity)
         rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
+
+        // Terrain following rotation (if enabled)
+        if (followTerrainRotation && isGrounded)
+        {
+            FollowTerrainRotation();
+        }
+        else if (!followTerrainRotation)
+        {
+            // Reset rotation to upright when terrain following is disabled
+            float currentRotation = transform.rotation.eulerAngles.z;
+            if (currentRotation > 180f) currentRotation -= 360f; // Convert to -180 to 180 range
+
+            if (Mathf.Abs(currentRotation) > 0.1f)
+            {
+                float targetRotation = Mathf.MoveTowards(currentRotation, 0f, rotationSpeed * Time.fixedDeltaTime * 50f);
+                transform.rotation = Quaternion.Euler(0f, 0f, targetRotation);
+            }
+        }
     }
 
     /// <summary>
@@ -110,6 +143,42 @@ public class CartController : MonoBehaviour
             {
                 isGrounded = false;
             }
+        }
+    }
+
+    /// <summary>
+    /// Rotate cart to follow terrain angle (experimental feature)
+    /// </summary>
+    void FollowTerrainRotation()
+    {
+        // Raycast downward from cart position to detect terrain
+        Vector2 rayOrigin = transform.position;
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.down, terrainCheckDistance, groundLayer);
+
+        if (hit.collider != null)
+        {
+            // Calculate angle from terrain surface normal
+            Vector2 surfaceNormal = hit.normal;
+            float terrainAngle = Mathf.Atan2(surfaceNormal.y, surfaceNormal.x) * Mathf.Rad2Deg - 90f;
+
+            // Clamp angle to prevent flipping (±maxRotationAngle)
+            terrainAngle = Mathf.Clamp(terrainAngle, -maxRotationAngle, maxRotationAngle);
+
+            // Smoothly rotate to target angle
+            float currentAngle = transform.rotation.eulerAngles.z;
+            if (currentAngle > 180f) currentAngle -= 360f; // Convert to -180 to 180 range
+
+            float newAngle = Mathf.LerpAngle(currentAngle, terrainAngle, rotationSpeed * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
+        }
+        else
+        {
+            // No ground detected, gradually return to upright
+            float currentAngle = transform.rotation.eulerAngles.z;
+            if (currentAngle > 180f) currentAngle -= 360f;
+
+            float newAngle = Mathf.LerpAngle(currentAngle, 0f, rotationSpeed * Time.fixedDeltaTime);
+            transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
         }
     }
 
@@ -213,6 +282,15 @@ public class CartController : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+        }
+
+        // Draw terrain detection raycast (when terrain following is enabled)
+        if (followTerrainRotation)
+        {
+            Gizmos.color = Color.yellow;
+            Vector3 rayStart = transform.position;
+            Vector3 rayEnd = rayStart + Vector3.down * terrainCheckDistance;
+            Gizmos.DrawLine(rayStart, rayEnd);
         }
     }
 }
