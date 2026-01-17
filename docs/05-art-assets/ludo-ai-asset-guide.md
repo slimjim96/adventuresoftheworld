@@ -1,6 +1,6 @@
-# Ludo.ai Complete Asset Generation Guide - 2.5D Hand-Painted Style
+# Ludo.ai Asset Generation Guide
 
-**Updated for Hand-Painted 2.5D aesthetic inspired by Rayman Legends**
+**Complete prompts for all 80 game assets** - Hand-Painted 2.5D style inspired by Rayman Legends
 
 ---
 

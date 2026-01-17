@@ -78,9 +78,7 @@ Create an engaging, casual mobile and PC game where players guide adorable anima
 - **Graphics**: 2D sprites with gradient shading and painterly textures
 - **Color Palette**: Vibrant, distinct per environment with soft lighting effects
 - **Character Design**: Cute animal characters in riding pose (cart+animal separation)
-
-**Art Style Evolution Note (December 2025):**
-The visual style evolved from flat cartoon to Hand-Painted 2.5D with gradients to achieve a more polished, sophisticated aesthetic while maintaining family-friendly appeal. See `docs/05-art-assets/ludo-ai-complete-asset-guide-2.5D.md` for details.
+- **Lighting**: Universal upper-left directional lighting for visual consistency
 
 #### Characters (In Scope)
 **13 playable animal characters** (cart and animals are separate assets):

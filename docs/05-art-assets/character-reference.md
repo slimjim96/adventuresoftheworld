@@ -107,7 +107,7 @@ The game features **13 adorable animal characters** that players can select to r
 - Character switching only changes the animal sprite (not the cart)
 - Z-position: Cart at 0, Animal at -0.1 (renders animal in front of cart visually)
 
-**See `ludo-ai-complete-asset-guide-2.5D.md` for detailed prompts and Unity setup.**
+**See `ludo-ai-asset-guide.md` for detailed prompts and Unity setup.**
 
 ---
 
@@ -146,7 +146,7 @@ For future development, each character may have:
 - Lion 🦁 - 1500 coins
 - Dragon 🐉 - 2000 coins (most expensive)
 
-**Prices match `ludo-ai-complete-asset-guide-2.5D.md` - see that guide for generation prompts.**
+**Prices match `ludo-ai-asset-guide.md` - see that guide for generation prompts.**
 
 ---
 
