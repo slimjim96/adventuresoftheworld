@@ -78,7 +78,7 @@ This index organizes all documentation by **development phase**. Start at the be
 |----------|-------------|-------------------|--------|
 | [procedural-generation-design.md](04-week-5-procedural/procedural-generation-design.md) | Architecture: chunks, seeding, difficulty scaling | System design overview | ✅ Complete |
 | [procedural-generation-unity-setup.md](04-week-5-procedural/procedural-generation-unity-setup.md) | Step-by-step Unity implementation | ChunkData, LevelGenerator.cs | 🚧 Rough Draft |
-| [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) | 3-layer parallax with dynamic decoration spawning | ParallaxLayer.cs, BackgroundSpawner.cs | 🚧 Rough Draft |
+| [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) | Enhanced depth-based parallax with atmospheric effects | ParallaxLayer.cs (depth-based), BackgroundSpawner.cs | ✅ Complete |
 
 **Start here if:** Core gameplay is complete (Week 3-4) and you're ready for dynamic level generation.
 

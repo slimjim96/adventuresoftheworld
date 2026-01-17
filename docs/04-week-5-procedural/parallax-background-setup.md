@@ -2,6 +2,8 @@
 
 **Week 5-6 Implementation Guide** - Creating layered parallax backgrounds with dynamic decoration spawning.
 
+**🌟 NEW (2026-01-17):** This guide now uses the **enhanced depth-based parallax system** with atmospheric perspective, brightness adjustment, and X/Y axis fading capabilities. All Ludo.ai assets should be generated at full color - Unity handles atmospheric effects automatically!
+
 ---
 
 ## Prerequisites
@@ -50,92 +52,44 @@
 
 ---
 
-## Part 2: Parallax Layer Controller
+## Part 2: Universal Parallax System with Depth-Based Effects
 
-### Step 1: Create ParallaxLayer Script
+### 🌟 NEW: Enhanced Parallax Approach
 
-Create `Assets/Scripts/Environment/ParallaxLayer.cs`:
+**Key Innovation:** Instead of manually setting parallax speed, we use a **single depth parameter (0.0-1.0)** that controls:
+- ✅ Parallax movement speed (near = fast, far = slow)
+- ✅ Atmospheric color fading (near = dark, far = light)
+- ✅ Brightness adjustment (near = normal, far = lighter)
+- ✅ X/Y axis transparency fading (for dynamic spawning)
 
+**Benefits:**
+- 🎨 All Ludo.ai assets generated at full color (no need for pre-faded variations)
+- 💰 Saves credits (same asset can be used at different depths)
+- 🔄 Real-time adjustment in Unity editor
+- 📐 Professional atmospheric perspective (Rayman Legends style)
+
+### Step 1: ParallaxLayer.cs Script (Already Created!)
+
+The enhanced `Assets/Scripts/Environment/ParallaxLayer.cs` script is already in the project with these features:
+
+**Core Parameters:**
 ```csharp
-using UnityEngine;
-
-namespace AdventuresOfTheWorld.Environment
-{
-    /// <summary>
-    /// Controls parallax scrolling for a single background layer.
-    /// Moves layer at a fraction of the camera's speed to create depth effect.
-    /// </summary>
-    public class ParallaxLayer : MonoBehaviour
-    {
-        [Header("Parallax Settings")]
-        [SerializeField] private Transform cameraTransform;
-        [SerializeField] private float parallaxMultiplier = 0.5f;
-        [Tooltip("0 = static, 1 = moves with camera, 0.5 = half camera speed")]
-
-        [Header("Vertical Parallax (Optional)")]
-        [SerializeField] private bool enableVerticalParallax = false;
-        [SerializeField] private float verticalMultiplier = 0.3f;
-
-        [Header("Auto-Repeat (Infinite Scroll)")]
-        [SerializeField] private bool enableAutoRepeat = false;
-        [SerializeField] private float repeatWidth = 20f;
-
-        private Vector3 _lastCameraPosition;
-        private Vector3 _startPosition;
-
-        private void Start()
-        {
-            // Auto-find camera if not assigned
-            if (cameraTransform == null)
-            {
-                Camera mainCamera = Camera.main;
-                if (mainCamera != null)
-                {
-                    cameraTransform = mainCamera.transform;
-                }
-                else
-                {
-                    Debug.LogError("ParallaxLayer: No camera assigned and Camera.main not found!");
-                }
-            }
-
-            _lastCameraPosition = cameraTransform.position;
-            _startPosition = transform.position;
-        }
-
-        private void LateUpdate()
-        {
-            if (cameraTransform == null)
-                return;
-
-            // Calculate camera movement since last frame
-            Vector3 deltaMovement = cameraTransform.position - _lastCameraPosition;
-
-            // Apply parallax effect
-            float parallaxX = deltaMovement.x * parallaxMultiplier;
-            float parallaxY = enableVerticalParallax ? deltaMovement.y * verticalMultiplier : 0f;
-
-            transform.position += new Vector3(parallaxX, parallaxY, 0f);
-
-            // Auto-repeat for infinite scrolling
-            if (enableAutoRepeat)
-            {
-                float distanceFromStart = transform.position.x - _startPosition.x;
-                if (Mathf.Abs(distanceFromStart) >= repeatWidth)
-                {
-                    transform.position = new Vector3(
-                        _startPosition.x,
-                        transform.position.y,
-                        transform.position.z
-                    );
-                }
-            }
-
-            _lastCameraPosition = cameraTransform.position;
-        }
-    }
-}
+[Range(0f, 1f)] float depth = 0.5f;
+// 0.0 = Foreground (near, fast movement, dark)
+// 1.0 = Background (far, slow movement, light/faded)
 ```
+
+**Animation Curves (Default Values):**
+- **Speed Curve**: Near (0.0) = 0.8x camera speed, Far (1.0) = 0.2x camera speed
+- **Atmospheric Fade**: Near (0.0) = 0% fade, Far (1.0) = 50% fade to sky color
+- **Brightness Curve**: Near (0.0) = 1.0x brightness, Far (1.0) = 1.3x brightness
+
+**Optional Features:**
+- **X-Axis Fade**: Horizontal transparency blending (for assets entering/exiting screen)
+- **Y-Axis Fade**: Vertical transparency blending (for top/bottom boundaries)
+- **Public API**: `SetDepth()`, `SetXAxisFade()`, `SetYAxisFade()`, `ConfigureParallax()`
+
+**See script for full implementation:** `Assets/Scripts/Environment/ParallaxLayer.cs`
 
 ---
 
@@ -155,9 +109,14 @@ namespace AdventuresOfTheWorld.Environment
 3. **Position**: (0, 0, 10) ← Z position keeps it behind everything
 4. **Add Component** → `ParallaxLayer`
 5. Configure:
-   - Camera Transform: Drag Main Camera
-   - Parallax Multiplier: **0.2**
-   - Enable Auto Repeat: Unchecked (for now)
+   - **Camera Transform**: Drag Main Camera (or leave null for auto-find)
+   - **Depth**: **0.9** ← Far background (slow movement, lighter/faded)
+   - **Enable Atmospheric Fade**: ✅ Checked
+   - **Atmospheric Color**: Light blue-gray (RGB: 217, 230, 255)
+   - **Enable Brightness Adjust**: ✅ Checked
+   - **Enable X/Y Axis Fade**: ❌ Unchecked (use later for dynamic spawning)
+
+**Expected Result:** Assets on this layer move at ~0.22x camera speed and appear lighter/faded.
 
 ### Step 3: Create Mid Background Layer
 
@@ -166,7 +125,11 @@ namespace AdventuresOfTheWorld.Environment
 3. **Position**: (0, 0, 5)
 4. **Add Component** → `ParallaxLayer`
 5. Configure:
-   - Parallax Multiplier: **0.5**
+   - **Depth**: **0.5** ← Mid background (medium movement, slight fade)
+   - **Enable Atmospheric Fade**: ✅ Checked
+   - **Enable Brightness Adjust**: ✅ Checked
+
+**Expected Result:** Assets move at ~0.5x camera speed with moderate atmospheric fade.
 
 ### Step 4: Create Near Background Layer
 
@@ -175,11 +138,87 @@ namespace AdventuresOfTheWorld.Environment
 3. **Position**: (0, 0, 1)
 4. **Add Component** → `ParallaxLayer`
 5. Configure:
-   - Parallax Multiplier: **0.8**
+   - **Depth**: **0.1** ← Near background (fast movement, minimal fade)
+   - **Enable Atmospheric Fade**: ✅ Checked
+   - **Enable Brightness Adjust**: ✅ Checked
+
+**Expected Result:** Assets move at ~0.72x camera speed with minimal fade (nearly full color).
 
 ---
 
-## Part 4: Adding Placeholder Background Elements
+## Part 4: Understanding the Depth-Based System
+
+### How Depth Works
+
+**Depth Range: 0.0 (near) to 1.0 (far)**
+
+| Depth | Layer Type | Movement Speed | Atmospheric Fade | Brightness | Visual Effect |
+|-------|-----------|----------------|------------------|------------|---------------|
+| **0.0-0.2** | Foreground | 0.72-0.8x (fast) | 0-10% fade | 1.0-1.06x | Nearly full color, moves with cart |
+| **0.3-0.6** | Midground | 0.44-0.62x (medium) | 15-30% fade | 1.09-1.18x | Moderate fade, moderate speed |
+| **0.7-1.0** | Background | 0.2-0.32x (slow) | 35-50% fade | 1.21-1.3x | Heavy fade, slow movement |
+
+**Recommended Depth Values:**
+- **Near Layer**: depth = 0.1 (bushes, grass, near rocks)
+- **Mid Layer**: depth = 0.5 (trees, mid-distance features)
+- **Far Layer**: depth = 0.9 (mountains, clouds, distant features)
+
+### Animation Curves (Customizable)
+
+All mappings use **AnimationCurves** that you can edit in Unity Inspector:
+
+1. **Speed Curve** (Depth → Parallax Speed):
+   - Default: Linear from 0.8 (near) to 0.2 (far)
+   - Customize: Make exponential for more dramatic depth
+
+2. **Fade Curve** (Depth → Atmospheric Fade):
+   - Default: Ease In/Out from 0% (near) to 50% (far)
+   - Customize: Adjust max fade for different atmospheric density
+
+3. **Brightness Curve** (Depth → Brightness Multiplier):
+   - Default: Linear from 1.0x (near) to 1.3x (far)
+   - Customize: Increase for stronger atmospheric perspective
+
+### Asset Generation Strategy
+
+**🎨 IMPORTANT: Generate All Ludo.ai Assets at FULL COLOR**
+
+Do NOT pre-generate faded/lighter variations. Instead:
+- ✅ Generate all environmental assets at full saturation and darkness
+- ✅ Let Unity's ParallaxLayer script apply atmospheric effects via depth parameter
+- ✅ Reuse same asset at different depths for variety
+- 💰 **Saves 50-100 Ludo.ai credits** (no need for 3x color variations)
+
+**Example:**
+```
+Forest_Tree_01.png (full color, vibrant green)
+  ├─ Used on Layer_Near (depth=0.1) → appears full color
+  ├─ Used on Layer_Mid (depth=0.5) → appears slightly faded
+  └─ Used on Layer_Far (depth=0.9) → appears light/faded
+```
+
+Same asset, three different atmospheric effects, zero extra credits!
+
+### X/Y Axis Fading (Advanced - For Later)
+
+**When to use:**
+- Dynamic procedural spawning (assets entering/exiting camera view)
+- Smooth blending at level boundaries
+- Vertical transitions (underground/sky boundaries)
+
+**How to configure (via code):**
+```csharp
+ParallaxLayer layer = decorationObject.AddComponent<ParallaxLayer>();
+layer.SetDepth(0.5f);
+layer.SetXAxisFade(true, startX: 0f, endX: 10f); // Fade from x=0 to x=10
+layer.SetYAxisFade(true, startY: 5f, endY: -2f); // Fade from y=5 to y=-2
+```
+
+**For now:** Leave X/Y axis fading disabled. You'll use this in Phase 5+ for dynamic levels.
+
+---
+
+## Part 5: Adding Placeholder Background Elements
 
 ### Step 1: Create Sky Gradient (Far Layer)
 
@@ -241,30 +280,42 @@ namespace AdventuresOfTheWorld.Environment
 
 ---
 
-## Part 5: Testing Parallax Effect
+## Part 6: Testing Depth-Based Parallax
 
 ### Test 1: Visual Parallax Check
 
 1. **Play** the scene
 2. Observe as cart moves forward:
-   - ✅ Far mountains move SLOWLY
-   - ✅ Mid trees move MEDIUM speed
-   - ✅ Near bushes move FAST
-   - ✅ Creates depth illusion
+   - ✅ **Far mountains** (depth=0.9) move SLOWLY and appear lighter/faded
+   - ✅ **Mid trees** (depth=0.5) move MEDIUM speed with moderate fade
+   - ✅ **Near bushes** (depth=0.1) move FAST and appear nearly full color
+   - ✅ Creates depth illusion + atmospheric perspective
 
-### Test 2: Adjust Multipliers
+### Test 2: Adjust Depth Values
 
-Experiment with different values:
-- Far: 0.1 - 0.3 (very slow)
-- Mid: 0.4 - 0.6 (medium)
-- Near: 0.7 - 0.9 (almost camera speed)
+Experiment with depth parameter in Unity Inspector (no code changes needed!):
+- **Far Layer**: Try 0.8 - 1.0 (very slow, heavy fade)
+- **Mid Layer**: Try 0.4 - 0.6 (medium speed, moderate fade)
+- **Near Layer**: Try 0.0 - 0.2 (fast, minimal fade)
 
-**Too subtle?** Increase multiplier differences
-**Too exaggerated?** Reduce multiplier differences
+**Too subtle?** Increase depth differences (e.g., 0.1, 0.5, 0.95)
+**Too exaggerated?** Reduce depth differences (e.g., 0.3, 0.5, 0.7)
+**Too faded?** Adjust Fade Curve in Inspector (reduce max value from 0.5 to 0.3)
+**Too dark far away?** Adjust Brightness Curve (increase max value from 1.3 to 1.5)
+
+### Test 3: Real-Time Atmospheric Tuning
+
+**While in Play Mode:**
+1. Select `Layer_Far` → ParallaxLayer component
+2. Adjust **Atmospheric Color** (e.g., light blue, pink sunset, purple night)
+3. Modify **Fade Curve** to control fade intensity
+4. Watch changes apply in real-time!
+
+**Pro Tip:** Copy component values after tuning, then paste when stopped to save settings.
 
 ---
 
-## Part 6: Dynamic Decoration Spawning
+## Part 7: Dynamic Decoration Spawning
 
 ### Step 1: Create DecorationData ScriptableObject
 
@@ -549,7 +600,7 @@ namespace AdventuresOfTheWorld.Environment
 
 ---
 
-## Part 7: Unity Setup for Dynamic Spawning
+## Part 8: Unity Setup for Dynamic Spawning
 
 ### Step 1: Add BackgroundSpawner Component
 
@@ -589,7 +640,7 @@ Select `BackgroundLayers` → `BackgroundSpawner` component:
 
 ---
 
-## Part 8: Editor Tool for Background Spawning
+## Part 9: Editor Tool for Background Spawning
 
 Create `Assets/Editor/BackgroundSpawnerEditor.cs`:
 
@@ -626,7 +677,7 @@ public class BackgroundSpawnerEditor : Editor
 
 ---
 
-## Part 9: Integration with Procedural Generation
+## Part 10: Integration with Procedural Generation
 
 ### Option 1: Spawn After Level Generation
 
@@ -661,7 +712,7 @@ backgroundSpawner.SpawnDecorations();
 
 ---
 
-## Part 10: Troubleshooting
+## Part 11: Troubleshooting
 
 ### Parallax not working?
 
@@ -688,7 +739,7 @@ backgroundSpawner.SpawnDecorations();
 
 ---
 
-## Part 11: Next Steps (Week 6+)
+## Part 12: Next Steps (Week 6+)
 
 1. ✅ Parallax system working
 2. ⏭️ Replace placeholder decorations with Ludo.ai-generated assets
@@ -719,6 +770,6 @@ Now you have depth, atmosphere, and dynamic decoration spawning. In Week 6, you'
 
 ---
 
-*Last Updated: 2025-11-23*
+*Last Updated: 2026-01-17*
 *Phase: Week 5-6 - Parallax Backgrounds*
-*Status: ROUGH DRAFT - Test and refine as you implement*
+*Status: ✅ COMPLETE - Enhanced depth-based system implemented*
