@@ -47,11 +47,16 @@ public class CartController : MonoBehaviour
     [Tooltip("Distance ahead to raycast for terrain detection")]
     public float terrainCheckDistance = 1f;
 
+    [Tooltip("Minimum angle change to trigger rotation (prevents jitter)")]
+    [Range(0f, 5f)]
+    public float rotationDeadzone = 1f;
+
     // Private variables
     private Rigidbody2D rb;
     private bool isGrounded;
     private CharacterData currentCharacter;
     private float lastJumpTime;
+    private float targetRotationAngle; // Smooth rotation target
 
     void Start()
     {
@@ -164,22 +169,25 @@ public class CartController : MonoBehaviour
             // Clamp angle to prevent flipping (±maxRotationAngle)
             terrainAngle = Mathf.Clamp(terrainAngle, -maxRotationAngle, maxRotationAngle);
 
-            // Smoothly rotate to target angle
-            float currentAngle = transform.rotation.eulerAngles.z;
-            if (currentAngle > 180f) currentAngle -= 360f; // Convert to -180 to 180 range
-
-            float newAngle = Mathf.LerpAngle(currentAngle, terrainAngle, rotationSpeed * Time.fixedDeltaTime);
-            transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
+            // Apply deadzone to prevent jitter from small angle changes
+            float angleDifference = Mathf.Abs(terrainAngle - targetRotationAngle);
+            if (angleDifference > rotationDeadzone)
+            {
+                targetRotationAngle = terrainAngle;
+            }
         }
         else
         {
             // No ground detected, gradually return to upright
-            float currentAngle = transform.rotation.eulerAngles.z;
-            if (currentAngle > 180f) currentAngle -= 360f;
-
-            float newAngle = Mathf.LerpAngle(currentAngle, 0f, rotationSpeed * Time.fixedDeltaTime);
-            transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
+            targetRotationAngle = 0f;
         }
+
+        // Smoothly interpolate to target angle (prevents sudden snaps and jitter)
+        float currentAngle = transform.rotation.eulerAngles.z;
+        if (currentAngle > 180f) currentAngle -= 360f; // Convert to -180 to 180 range
+
+        float newAngle = Mathf.LerpAngle(currentAngle, targetRotationAngle, rotationSpeed * Time.fixedDeltaTime);
+        transform.rotation = Quaternion.Euler(0f, 0f, newAngle);
     }
 
     /// <summary>
