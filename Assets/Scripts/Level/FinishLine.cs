@@ -77,7 +77,8 @@ namespace AdventuresOfTheWorld.Level
                 CartController cart = player.GetComponent<CartController>();
                 if (cart != null)
                 {
-                    cart.StopMovement();
+                    //TODO: Stop cart
+                    //cart.StopMovement();
                 }
                 else
                 {
@@ -97,14 +98,15 @@ namespace AdventuresOfTheWorld.Level
                 _spriteRenderer.color = finishColor;
             }
 
-            // Notify GameManager
-            if (GameManager.Instance != null)
+             // Notify level manager
+            LevelManager levelManager = FindObjectOfType<LevelManager>();
+            if (levelManager != null)
             {
-                GameManager.Instance.LevelComplete();
+                levelManager.OnGoalReached();
             }
             else
             {
-                Debug.LogWarning("GameManager instance not found! Level completion not registered.");
+                Debug.LogWarning("LevelManager not found!");
             }
 
             // TODO: Show victory UI, display final score, unlock next level, etc.

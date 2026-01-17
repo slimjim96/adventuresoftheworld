@@ -87,7 +87,7 @@ public class CartController : MonoBehaviour
     /// <summary>
     /// Check if cart is touching the ground
     /// </summary>
-    void CheckGroundStatus()
+    public void CheckGroundStatus()
     {
         if (groundCheck != null)
         {
@@ -98,7 +98,7 @@ public class CartController : MonoBehaviour
     /// <summary>
     /// Make the cart jump
     /// </summary>
-    void Jump()
+    public void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         isGrounded = false;
@@ -108,7 +108,7 @@ public class CartController : MonoBehaviour
         // AudioManager.Instance.PlaySFX("Jump");
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
         // Check if hit ground
         if (((1 << collision.gameObject.layer) & groundLayer) != 0)
