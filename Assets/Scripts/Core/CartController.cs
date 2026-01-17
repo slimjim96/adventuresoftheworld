@@ -43,9 +43,6 @@ public class CartController : MonoBehaviour
 
     void Update()
     {
-        // Auto-scroll to the right
-        transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-
         // Check if on ground
         CheckGroundStatus();
 
@@ -60,6 +57,12 @@ public class CartController : MonoBehaviour
         {
             Jump();
         }
+    }
+
+    void FixedUpdate()
+    {
+        // Auto-scroll using physics (maintains constant forward velocity)
+        rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
     }
 
     /// <summary>
