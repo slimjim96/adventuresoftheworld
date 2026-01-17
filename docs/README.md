@@ -10,6 +10,7 @@ All project documentation is organized in **[INDEX.md](INDEX.md)**.
 - **[03-week-3-4-core-gameplay/](03-week-3-4-core-gameplay/)** - Lives, coins, obstacles
 - **[04-week-5-procedural/](04-week-5-procedural/)** - Procedural generation & parallax
 - **[05-art-assets/](05-art-assets/)** - Ludo.ai prompts & asset metadata
+- **[06-unity-setup/](06-unity-setup/)** - **NEW** Scene architecture & UI setup
 
 ## Structure
 
@@ -45,6 +46,10 @@ docs/
 │   ├── ludo-ai-asset-guide.md        ← Detailed: All 80 gameplay assets
 │   ├── character-reference.md
 │   └── asset-metadata-system.md
+│
+├── 06-unity-setup/                   ← Unity scene & UI setup (NEW)
+│   ├── scene-architecture-guide.md   ← ⭐ Scene flow, global cart system
+│   └── unity-basics-setup.md         ← Component setup, inspector guide
 │
 └── ../ludo/                          ← Ludo.ai project resources
     ├── ludo-ai-project-brief.md      ← ⭐ START HERE: Single-page reference
