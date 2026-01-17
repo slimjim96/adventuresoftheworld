@@ -239,12 +239,15 @@ Dog character for 2D platformer game, Rayman Legends inspired,
 sitting upright in riding pose, side view profile,
 brown fur with cream chest, floppy ears, gradient shading,
 vibrant hand-painted illustration, happy expression with tongue out,
-soft highlights, painterly texture, friendly adventure vibe,
+painterly texture, friendly adventure vibe,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left ear, subtle rim lighting on back,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow
+standing, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -262,13 +265,15 @@ Elephant character for 2D platformer game, Rayman Legends style,
 sitting upright in riding pose, side view profile,
 gray body with pink inner ears, trunk raised playfully,
 gradient shading on wrinkled skin, vibrant hand-painted illustration,
-kind eyes, soft highlights, painterly texture,
-whimsical fantasy aesthetic,
+kind eyes, painterly texture, whimsical fantasy aesthetic,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting on trunk,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow, realistic
+standing, cart, ground, harsh shadows, realistic, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -286,13 +291,15 @@ Bear character for 2D platformer game, Rayman Legends inspired,
 sitting upright in riding pose, side view profile,
 brown fluffy fur with tan muzzle, gradient shading on fur,
 vibrant hand-painted illustration, friendly smile, round ears,
-soft highlights, painterly texture, huggable appearance,
-whimsical adventure style,
+painterly texture, huggable appearance, whimsical adventure style,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left ear, subtle rim lighting on fluffy fur,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow, scary
+standing, cart, ground, harsh shadows, scary, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -310,13 +317,16 @@ Unicorn character for 2D platformer game, Rayman Legends style,
 sitting upright in riding pose, side view profile,
 white coat with iridescent sheen, rainbow colored mane and tail,
 golden horn, gradient shading, vibrant hand-painted illustration,
-magical sparkle effect, kind eyes, soft highlights,
-painterly texture, whimsical fantasy aesthetic,
+magical sparkle effect, kind eyes, painterly texture,
+whimsical fantasy aesthetic,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and golden horn, subtle rim lighting on mane,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow, realistic horse
+standing, cart, ground, harsh shadows, realistic horse, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -334,13 +344,16 @@ Fish character for 2D platformer game, Rayman Legends inspired,
 sitting upright in riding pose (with fins), side view profile,
 bright orange body with blue fins, gradient shading with shimmer,
 vibrant hand-painted illustration, big happy eyes, smiling,
-water droplets around, soft highlights, painterly texture,
+water droplets around, painterly texture,
 whimsical underwater charm, magical atmosphere,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and top fins, subtle rim lighting on scales,
 transparent background PNG, isolated character,
 no cart, no bowl, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-swimming, water tank, cart, ground, shadow
+swimming, water tank, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -359,13 +372,15 @@ sitting upright in riding pose, side view profile,
 orange-red fur with white chest and black paw tips,
 bushy tail with white tip, gradient shading on fur,
 vibrant hand-painted illustration, clever smile, bright eyes,
-soft highlights, painterly texture, adventure ready,
-whimsical fantasy aesthetic,
+painterly texture, adventure ready, whimsical fantasy aesthetic,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left ear, subtle rim lighting on bushy tail,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow
+standing, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -383,13 +398,16 @@ Duck character for 2D platformer game, Rayman Legends inspired,
 sitting upright in riding pose, side view profile,
 bright yellow feathers with orange beak and feet,
 gradient shading on fluffy feathers, vibrant hand-painted illustration,
-cheerful expression, wings tucked at sides, soft highlights,
-painterly texture, whimsical charm,
+cheerful expression, wings tucked at sides, painterly texture,
+whimsical charm,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting on fluffy feathers,
 transparent background PNG, isolated character,
 no cart, no water, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-swimming, pond, cart, ground, shadow
+swimming, pond, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -407,14 +425,16 @@ Lion character for 2D platformer game, Rayman Legends style,
 sitting upright in riding pose, side view profile,
 golden yellow fur with magnificent orange-red mane,
 gradient shading on fur and mane, vibrant hand-painted illustration,
-noble expression, confident smile, soft highlights,
-painterly texture, majestic but friendly,
-whimsical fantasy aesthetic,
+noble expression, confident smile, painterly texture,
+majestic but friendly, whimsical fantasy aesthetic,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and mane, subtle rim lighting on left side,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cart, ground, shadow, scary, realistic
+standing, cart, ground, harsh shadows, scary, realistic, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -433,13 +453,15 @@ sitting upright in riding pose, side view profile,
 fluffy white fur with pink inner ears, cotton tail visible,
 gradient shading on soft fur, vibrant hand-painted illustration,
 happy expression with buckteeth showing, big eyes,
-soft highlights, painterly texture, adorable charm,
-whimsical adventure style,
+painterly texture, adorable charm, whimsical adventure style,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left ear, subtle rim lighting on fluffy fur,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, hopping, cart, ground, shadow
+standing, hopping, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -457,14 +479,16 @@ Mouse character for 2D platformer game, Rayman Legends style,
 sitting upright in riding pose, side view profile,
 gray fur with pink ears, nose and tail, round ears,
 gradient shading on fur, vibrant hand-painted illustration,
-determined cute expression, whiskers visible, soft highlights,
-painterly texture, tiny but brave appearance,
-whimsical fantasy aesthetic,
+determined cute expression, whiskers visible, painterly texture,
+tiny but brave appearance, whimsical fantasy aesthetic,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left ear, subtle rim lighting on tail,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, cheese, cart, ground, shadow
+standing, cheese, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -483,12 +507,15 @@ sitting upright in riding pose (snow body with stick arms), side view,
 white snow body with orange carrot nose, black coal buttons and eyes,
 colorful scarf around neck, gradient shading with icy shimmer,
 vibrant hand-painted illustration, happy smile, stick arms,
-soft highlights, painterly texture, magical winter charm,
+painterly texture, magical winter charm,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on left side of snow body, subtle rim lighting creating icy glow,
 transparent background PNG, isolated character,
 no cart, no ground, no snow pile, full body visible
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-standing, melting, cart, ground, shadow
+standing, melting, cart, ground, harsh shadows, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
@@ -507,13 +534,16 @@ sitting upright in riding pose (with wings folded), side view,
 purple scales with green wings, small friendly dragon,
 gradient shading on scales with iridescent shine,
 vibrant hand-painted illustration, cute friendly expression,
-tiny horns, soft highlights, painterly texture,
-magical fantasy charm, whimsical not scary,
+tiny horns, painterly texture, magical fantasy charm,
+whimsical not scary,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and horns, subtle rim lighting on wings and scales,
 transparent background PNG, isolated character,
 no cart, no ground, full body visible, wings folded
 
 NEGATIVE: flat colors, 3D render, isometric, thick outlines,
-flying, scary, realistic, cart, ground, shadow, fire
+flying, scary, realistic, cart, ground, harsh shadows, fire, bottom lighting,
+flat lighting, multiple light sources
 ```
 
 ---
