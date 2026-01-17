@@ -142,12 +142,22 @@ This index organizes all documentation by **development phase**. Start at the be
 
 ## 🛠️ 06. Unity Setup & Architecture (NEW)
 
-**Purpose:** Step-by-step guides for setting up Unity scenes, UI flow, and global systems.
+**Purpose:** Step-by-step guides for setting up Unity scenes, UI flow, global systems, and ready-to-use scripts.
 
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
 | [scene-architecture-guide.md](06-unity-setup/scene-architecture-guide.md) | **⭐ ESSENTIAL** - Complete scene setup guide | Scene flow (Start → Character Select → Level Select → Gameplay), Global cart/character system, UI setup for all 4 menu scenes, Level scene template, Prefab organization | ✅ Complete |
 | [unity-basics-setup.md](06-unity-setup/unity-basics-setup.md) | Unity component configuration reference | Project settings, Sprite import, Canvas/UI elements, Prefab creation, Component setup (Rigidbody2D, Colliders, etc.), Build settings, Inspector tips | ✅ Complete |
+| [folder-structure.md](06-unity-setup/folder-structure.md) | Complete Assets folder blueprint | 80+ folder structure with auto-creation script, Import workflow for Ludo.ai assets, Prefab organization strategy | ✅ Complete |
+| [asset-naming-conventions.md](06-unity-setup/asset-naming-conventions.md) | Consistent file naming standards | Naming patterns for all asset types, Search optimization, Ludo.ai file renaming workflow | ✅ Complete |
+| [import-checklist.md](06-unity-setup/import-checklist.md) | Step-by-step asset import workflow | Pre-import prep, Unity import settings, Sprite configuration, Prefab creation, ScriptableObject setup, Testing | ✅ Complete |
+
+### Unity Scripts Library (Ready-to-Copy)
+
+| Location | Description | Scripts Included | Status |
+|----------|-------------|------------------|--------|
+| [📂 /unity-scripts/](../unity-scripts/) | **16 complete C# scripts** ready to copy into Unity | GameManager, CartController, CharacterData, UI scripts (CharacterSlot, LevelSlot, HUDManager), Gameplay scripts (CoinCollector, Hazard, GoalTrigger, LevelManager), Environment scripts (ParallaxLayer, BackgroundSpawner), ScriptableObjects (LevelData, DecorationData) | ✅ Complete |
+| [unity-scripts/README.md](../unity-scripts/README.md) | Script library guide | Setup instructions, Script organization by folder, Dependencies & prerequisites, Customization tips, Troubleshooting | ✅ Complete |
 
 **Start here if:** Setting up scenes, creating UI flow, or configuring the global cart that persists across all 12 levels.
 
@@ -157,6 +167,8 @@ This index organizes all documentation by **development phase**. Start at the be
 - **Cart Prefab:** One cart prefab used in all 12 levels, loads selected character from GameManager
 - **UI Patterns:** Character selection grid, Level selection grid, HUD setup
 - **Common Setups:** Cinemachine camera, Parallax backgrounds, Coin collection
+- **Ready-to-Use Scripts:** Complete implementations for all core systems
+- **Asset Organization:** Folder structure, naming conventions, import workflow
 
 ---
 

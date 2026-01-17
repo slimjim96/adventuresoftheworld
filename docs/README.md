@@ -49,14 +49,36 @@ docs/
 │
 ├── 06-unity-setup/                   ← Unity scene & UI setup (NEW)
 │   ├── scene-architecture-guide.md   ← ⭐ Scene flow, global cart system
-│   └── unity-basics-setup.md         ← Component setup, inspector guide
+│   ├── unity-basics-setup.md         ← Component setup, inspector guide
+│   ├── folder-structure.md           ← Complete folder blueprint + auto-creation script
+│   ├── asset-naming-conventions.md   ← File naming standards for consistency
+│   └── import-checklist.md           ← Step-by-step Ludo.ai asset import workflow
 │
-└── ../ludo/                          ← Ludo.ai project resources
-    ├── ludo-ai-project-brief.md      ← ⭐ START HERE: Single-page reference
-    ├── prompt-templates.md           ← Copy-paste ready templates
-    ├── ui-assets-guide.md            ← 🎮 NEW: UI & platform assets (39-41 assets)
-    ├── project-concept.txt           ← Original game concept export
-    └── README.md                     ← Ludo.ai resources guide
+├── ../ludo/                          ← Ludo.ai project resources
+│   ├── ludo-ai-project-brief.md      ← ⭐ START HERE: Single-page reference
+│   ├── prompt-templates.md           ← Copy-paste ready templates
+│   ├── ui-assets-guide.md            ← 🎮 NEW: UI & platform assets (39-41 assets)
+│   ├── project-concept.txt           ← Original game concept export
+│   └── README.md                     ← Ludo.ai resources guide
+│
+└── ../unity-scripts/                ← **Ready-to-copy C# scripts (16 scripts)**
+    ├── README.md                     ← Script library guide
+    ├── GameManager.cs                ← Global singleton, persists across scenes
+    ├── CartController.cs             ← Cart movement, character loading
+    ├── CharacterData.cs              ← ScriptableObject for characters
+    ├── LevelData.cs                  ← ScriptableObject for levels
+    ├── DecorationData.cs             ← ScriptableObject for decorations
+    ├── CharacterSlot.cs              ← Character selection UI slot
+    ├── CharacterSelectManager.cs     ← Character selection scene manager
+    ├── LevelSlot.cs                  ← Level selection UI slot
+    ├── HUDManager.cs                 ← In-game HUD (lives, coins, pause)
+    ├── StartButton.cs                ← Main menu start button
+    ├── LevelManager.cs               ← Per-level logic & completion
+    ├── CoinCollector.cs              ← Collectible coin script
+    ├── Hazard.cs                     ← Generic obstacle/hazard
+    ├── GoalTrigger.cs                ← Level finish line trigger
+    ├── ParallaxLayer.cs              ← Parallax scrolling background
+    └── BackgroundSpawner.cs          ← Procedural decoration spawner
 ```
 
 ---
