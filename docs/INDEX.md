@@ -154,6 +154,12 @@ This index organizes all documentation by **development phase**. Start at the be
 | [how-to-import-scripts.md](06-unity-setup/how-to-import-scripts.md) | Script import troubleshooting guide | Manual copy instructions, No namespaces needed, Folder organization, Common issues | ✅ Complete |
 | [unity-project-structure.md](06-unity-setup/unity-project-structure.md) | **Current Unity project structure** | Actual Assets folder layout (24 custom scripts), Script locations and purposes, Dependencies and namespaces | ✅ Complete |
 | [CLEANUP-SUMMARY.md](06-unity-setup/CLEANUP-SUMMARY.md) | Project cleanup report (2026-01-17) | Duplicates removed, TODOs identified, Current script inventory, Verification checklist | ✅ Complete |
+| [cart-prefab-setup.md](06-unity-setup/cart-prefab-setup.md) | **⭐ Cart Prefab Complete Setup** | Step-by-step cart creation, Component configuration, GroundCheck setup, Debug system integration, Troubleshooting | ✅ Complete |
+| [cart-physics-setup.md](06-unity-setup/cart-physics-setup.md) | Cart physics configuration | Fix bouncing on terrain, Rigidbody2D settings, Physics Material setup, Smooth movement | ✅ Complete |
+| [fix-air-jump-bug.md](06-unity-setup/fix-air-jump-bug.md) | Prevent mid-air jumping | Jump cooldown system, Velocity-based ground detection, Configuration guide | ✅ Complete |
+| [terrain-following-rotation.md](06-unity-setup/terrain-following-rotation.md) | Experimental terrain following | Cart rotation on slopes, Angle limits, Toggle on/off, Testing guide | ✅ Complete |
+| [fix-rotation-jitter.md](06-unity-setup/fix-rotation-jitter.md) | Fix rotation stuttering | Rotation deadzone, Smooth interpolation, Landing stability | ✅ Complete |
+| [developer-debug-system.md](06-unity-setup/developer-debug-system.md) | **⭐ Developer Debug Tools** | Jump distance visualization, HUD overlay, Level design calculations, Keyboard shortcuts (F12/F11/F10) | ✅ Complete |
 
 ### Unity Scripts Library (Ready-to-Copy)
 
