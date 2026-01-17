@@ -1,221 +1,161 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-namespace AdventuresOfTheWorld.Core
+/// <summary>
+/// Global game manager that persists across all scenes.
+/// Handles character selection, level unlocking, and game state.
+/// </summary>
+public class GameManager : MonoBehaviour
 {
-    /// <summary>
-    /// Main game manager - handles game state, pausing, and scene management.
-    /// Singleton pattern for global access.
-    /// </summary>
-    public class GameManager : MonoBehaviour
+    public static GameManager Instance { get; private set; }
+
+    [Header("Player Selection")]
+    public CharacterData selectedCharacter; // Currently selected character
+
+    [Header("Level Progress")]
+    public int currentLevel = 1;
+    public int highestUnlockedLevel = 1;
+
+    [Header("Game Stats")]
+    public int totalCoins = 0;
+    public int currentLives = 3;
+    public int maxLives = 3;
+
+    void Awake()
     {
-        #region Singleton
-
-        private static GameManager _instance;
-        public static GameManager Instance
+        // Singleton pattern - only one GameManager exists
+        if (Instance == null)
         {
-            get
-            {
-                if (_instance == null)
-                {
-                    _instance = FindObjectOfType<GameManager>();
-                    if (_instance == null)
-                    {
-                        GameObject go = new GameObject("GameManager");
-                        _instance = go.AddComponent<GameManager>();
-                    }
-                }
-                return _instance;
-            }
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Persists across scene loads
+            Debug.Log("GameManager initialized");
+        }
+        else
+        {
+            Destroy(gameObject); // Destroy duplicate
+        }
+    }
+
+    /// <summary>
+    /// Select a character for gameplay
+    /// </summary>
+    public void SelectCharacter(CharacterData character)
+    {
+        if (character != null && character.isUnlocked)
+        {
+            selectedCharacter = character;
+            Debug.Log($"Character selected: {character.characterName}");
+        }
+        else
+        {
+            Debug.LogWarning("Character is locked or null!");
+        }
+    }
+
+    /// <summary>
+    /// Load a specific level by number
+    /// </summary>
+    public void LoadLevel(int levelNumber)
+    {
+        currentLevel = levelNumber;
+        string sceneName = $"Level{levelNumber:00}";
+
+        Debug.Log($"Loading level: {sceneName}");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    /// <summary>
+    /// Unlock the next level
+    /// </summary>
+    public void UnlockNextLevel()
+    {
+        highestUnlockedLevel = Mathf.Max(highestUnlockedLevel, currentLevel + 1);
+        Debug.Log($"Level {highestUnlockedLevel} unlocked!");
+    }
+
+    /// <summary>
+    /// Add coins to player's total
+    /// </summary>
+    public void AddCoins(int amount)
+    {
+        totalCoins += amount;
+        Debug.Log($"Coins collected: {amount}. Total: {totalCoins}");
+    }
+
+    /// <summary>
+    /// Try to unlock a character (if player has enough coins)
+    /// </summary>
+    public bool TryUnlockCharacter(CharacterData character)
+    {
+        if (character.isUnlocked)
+        {
+            Debug.Log($"{character.characterName} already unlocked");
+            return true;
         }
 
-        #endregion
-
-        #region Game State
-
-        public enum GameState
+        if (totalCoins >= character.unlockCost)
         {
-            MainMenu,
-            Playing,
-            Paused,
-            LevelComplete,
-            GameOver
+            totalCoins -= character.unlockCost;
+            character.isUnlocked = true;
+            Debug.Log($"{character.characterName} unlocked for {character.unlockCost} coins!");
+            return true;
         }
-
-        private GameState _currentState = GameState.MainMenu;
-        public GameState CurrentState => _currentState;
-
-        #endregion
-
-        #region Properties
-
-        public bool IsPaused => _currentState == GameState.Paused;
-        public bool IsPlaying => _currentState == GameState.Playing;
-
-        #endregion
-
-        #region Unity Lifecycle
-
-        private void Awake()
+        else
         {
-            // Singleton setup
-            if (_instance != null && _instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
-
-            _instance = this;
-            DontDestroyOnLoad(gameObject);
+            Debug.Log($"Not enough coins. Need {character.unlockCost}, have {totalCoins}");
+            return false;
         }
+    }
 
-        private void Start()
+    /// <summary>
+    /// Lose a life
+    /// </summary>
+    public void LoseLife()
+    {
+        currentLives--;
+        Debug.Log($"Life lost. Lives remaining: {currentLives}");
+
+        if (currentLives <= 0)
         {
-            // Initialize game
-            Application.targetFrameRate = 60; // Target 60 FPS
+            GameOver();
         }
+    }
 
-        private void Update()
-        {
-            HandlePauseInput();
-        }
+    /// <summary>
+    /// Reset lives to maximum
+    /// </summary>
+    public void ResetLives()
+    {
+        currentLives = maxLives;
+    }
 
-        #endregion
+    /// <summary>
+    /// Handle game over
+    /// </summary>
+    void GameOver()
+    {
+        Debug.Log("Game Over!");
+        // Return to level select or show game over screen
+        UnityEngine.SceneManagement.SceneManager.LoadScene("LevelSelectScene");
+    }
 
-        #region Public Methods
+    /// <summary>
+    /// Save game data (TODO: Implement PlayerPrefs or JSON save)
+    /// </summary>
+    public void SaveGame()
+    {
+        // PlayerPrefs.SetInt("HighestUnlockedLevel", highestUnlockedLevel);
+        // PlayerPrefs.SetInt("TotalCoins", totalCoins);
+        // PlayerPrefs.Save();
+        Debug.Log("Game saved (not yet implemented)");
+    }
 
-        /// <summary>
-        /// Starts a new game level
-        /// </summary>
-        public void StartLevel(string levelName)
-        {
-            Time.timeScale = 1f;
-            _currentState = GameState.Playing;
-            SceneManager.LoadScene(levelName);
-        }
-
-        /// <summary>
-        /// Starts a level by build index
-        /// </summary>
-        public void StartLevel(int levelIndex)
-        {
-            Time.timeScale = 1f;
-            _currentState = GameState.Playing;
-            SceneManager.LoadScene(levelIndex);
-        }
-
-        /// <summary>
-        /// Pauses the game
-        /// </summary>
-        public void PauseGame()
-        {
-            if (_currentState == GameState.Playing)
-            {
-                _currentState = GameState.Paused;
-                Time.timeScale = 0f;
-
-                // Optional: Show pause menu
-                // UIManager.Instance?.ShowPauseMenu();
-            }
-        }
-
-        /// <summary>
-        /// Resumes the game from pause
-        /// </summary>
-        public void ResumeGame()
-        {
-            if (_currentState == GameState.Paused)
-            {
-                _currentState = GameState.Playing;
-                Time.timeScale = 1f;
-
-                // Optional: Hide pause menu
-                // UIManager.Instance?.HidePauseMenu();
-            }
-        }
-
-        /// <summary>
-        /// Restarts the current level
-        /// </summary>
-        public void RestartLevel()
-        {
-            Time.timeScale = 1f;
-            _currentState = GameState.Playing;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
-        /// <summary>
-        /// Called when level is completed
-        /// </summary>
-        public void CompleteLevel()
-        {
-            _currentState = GameState.LevelComplete;
-
-            // Optional: Show level complete screen
-            // UIManager.Instance?.ShowLevelCompleteScreen();
-        }
-
-        /// <summary>
-        /// Alias for CompleteLevel (used by LevelGoal)
-        /// </summary>
-        public void LevelComplete()
-        {
-            CompleteLevel();
-        }
-
-        /// <summary>
-        /// Called when player runs out of lives
-        /// </summary>
-        public void GameOver()
-        {
-            _currentState = GameState.GameOver;
-
-            // Optional: Show game over screen
-            // UIManager.Instance?.ShowGameOverScreen();
-        }
-
-        /// <summary>
-        /// Loads the main menu
-        /// </summary>
-        public void LoadMainMenu()
-        {
-            Time.timeScale = 1f;
-            _currentState = GameState.MainMenu;
-            SceneManager.LoadScene("MainMenu");
-        }
-
-        /// <summary>
-        /// Quits the game
-        /// </summary>
-        public void QuitGame()
-        {
-            #if UNITY_EDITOR
-                UnityEditor.EditorApplication.isPlaying = false;
-            #else
-                Application.Quit();
-            #endif
-        }
-
-        #endregion
-
-        #region Private Methods
-
-        private void HandlePauseInput()
-        {
-            // ESC key to pause/unpause
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (_currentState == GameState.Playing)
-                {
-                    PauseGame();
-                }
-                else if (_currentState == GameState.Paused)
-                {
-                    ResumeGame();
-                }
-            }
-        }
-
-        #endregion
+    /// <summary>
+    /// Load game data (TODO: Implement PlayerPrefs or JSON load)
+    /// </summary>
+    public void LoadGame()
+    {
+        // highestUnlockedLevel = PlayerPrefs.GetInt("HighestUnlockedLevel", 1);
+        // totalCoins = PlayerPrefs.GetInt("TotalCoins", 0);
+        Debug.Log("Game loaded (not yet implemented)");
     }
 }
