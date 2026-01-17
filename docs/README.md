@@ -42,9 +42,8 @@ docs/
 │   └── parallax-background-setup.md
 │
 └── 05-art-assets/                    ← Ludo.ai graphics (Weeks 6-8)
+    ├── ludo-ai-asset-guide.md        ← PRIMARY: All 80 assets with prompts
     ├── character-reference.md
-    ├── ai-art-generation-guide.md
-    ├── ludo-ai-environmental-prompts.md
     └── asset-metadata-system.md
 ```
 

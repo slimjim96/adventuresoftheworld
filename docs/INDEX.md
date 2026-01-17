@@ -78,7 +78,7 @@ This index organizes all documentation by **development phase**. Start at the be
 |----------|-------------|-------------------|--------|
 | [procedural-generation-design.md](04-week-5-procedural/procedural-generation-design.md) | Architecture: chunks, seeding, difficulty scaling | System design overview | ✅ Complete |
 | [procedural-generation-unity-setup.md](04-week-5-procedural/procedural-generation-unity-setup.md) | Step-by-step Unity implementation | ChunkData, LevelGenerator.cs | 🚧 Rough Draft |
-| [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) | 3-layer parallax with dynamic decoration spawning | ParallaxLayer.cs, BackgroundSpawner.cs | 🚧 Rough Draft |
+| [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) | Enhanced depth-based parallax with atmospheric effects | ParallaxLayer.cs (depth-based), BackgroundSpawner.cs | ✅ Complete |
 
 **Start here if:** Core gameplay is complete (Week 3-4) and you're ready for dynamic level generation.
 
@@ -100,11 +100,9 @@ This index organizes all documentation by **development phase**. Start at the be
 
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
-| [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md) | **🌟 PRIMARY GUIDE** - All 80 assets with Hand-Painted 2.5D style | Cart (1), Animals (13), Environments (65) with exact Ludo.ai settings | ✅ Complete |
+| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | **🌟 PRIMARY GUIDE** - Complete prompts for all 80 assets | Cart (1), Animals (13), Environments (65) with Hand-Painted 2.5D style, upper-left lighting, exact Ludo.ai settings | ✅ Complete |
 | [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters reference | Personalities, colors, unlock prices | ✅ Complete |
 | [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) | DecorationData ScriptableObject design | Theme, layer, spawn rules for procedural use | ✅ Complete |
-| [ai-art-generation-guide.md](05-art-assets/ai-art-generation-guide.md) | ⚠️ DEPRECATED - Original cartoon style guide | Superseded by 2.5D guide above | 🔄 Reference Only |
-| [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) | ⚠️ DEPRECATED - Original cartoon prompts | Superseded by 2.5D guide above | 🔄 Reference Only |
 
 **Start here if:** Mechanics are solid with placeholder graphics, ready to generate final art.
 
@@ -173,7 +171,7 @@ This index organizes all documentation by **development phase**. Start at the be
 3. **Continue from where you left off:**
    - **Week 3-4:** Follow guides in [03-week-3-4-core-gameplay/](03-week-3-4-core-gameplay/)
    - **Week 5:** Start with [procedural-generation-unity-setup.md](04-week-5-procedural/procedural-generation-unity-setup.md)
-   - **Week 6+:** Begin art generation using [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md)
+   - **Week 6+:** Begin art generation using [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md)
 
 ---
 
@@ -193,7 +191,7 @@ This index organizes all documentation by **development phase**. Start at the be
 - Parallax not working: [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) Part 10
 
 **Ludo.ai Art Issues:**
-- Getting 3D/isometric instead of 2D: See [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) negative prompts
+- Getting 3D/isometric instead of 2D: See [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) negative prompts and settings
 
 ---
 
@@ -229,7 +227,7 @@ This index organizes all documentation by **development phase**. Start at the be
 3. [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) → Add backgrounds
 
 ### "Ready to generate final art"
-1. [ludo-ai-complete-asset-guide-2.5D.md](05-art-assets/ludo-ai-complete-asset-guide-2.5D.md) → Generate all 80 assets with Hand-Painted 2.5D style
+1. [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) → Generate all 80 assets with Hand-Painted 2.5D style and upper-left lighting
 2. [character-reference.md](05-art-assets/character-reference.md) → Character personalities and unlock prices
 3. [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) → Create metadata for spawning
 
@@ -247,7 +245,7 @@ This index organizes all documentation by **development phase**. Start at the be
 - Verify prerequisites are completed
 
 **AI Art Generation:**
-- [ludo-ai-environmental-prompts.md](05-art-assets/ludo-ai-environmental-prompts.md) has tested prompt templates
+- [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) has complete tested prompts with upper-left lighting
 - Use negative prompts to avoid 3D/isometric results
 
 ---
