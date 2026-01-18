@@ -2325,7 +2325,7 @@ MonoBehaviour:
   groundCheckRadius: 0.5
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 128
   animalSpriteRenderer: {fileID: 0}
   jumpCooldown: 0.2
   followTerrainRotation: 1
