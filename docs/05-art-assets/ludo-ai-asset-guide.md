@@ -117,7 +117,7 @@ Genre: Platformer
 **Prompt:**
 ```
 Wooden mine cart for 2D platformer game, Rayman Legends style,
-vibrant hand-painted illustration, side view profile,
+vibrant hand-painted illustration, looking to the right/East, side view profile,
 rich brown wood with gradient shading, magical fantasy feel,
 sturdy wheels visible, painterly texture,
 soft directional lighting from upper-left, gentle shadows to lower-right,
@@ -191,7 +191,7 @@ Genre: Platformer
 **Template:**
 ```
 [ANIMAL] character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 [COLOR DESCRIPTION], vibrant hand-painted illustration,
 gradient shading, friendly expression, whimsical fantasy style,
 painterly texture,
@@ -217,7 +217,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Cat character for 2D platformer game, Rayman Legends style,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 orange tabby fur with white belly, gradient shading on fur,
 vibrant hand-painted illustration, green eyes, friendly smile,
 cute whiskers, painterly texture, whimsical adventure aesthetic,
@@ -243,7 +243,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Dog character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 brown fur with cream chest, floppy ears, gradient shading,
 vibrant hand-painted illustration, happy expression with tongue out,
 painterly texture, friendly adventure vibe,
@@ -269,7 +269,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Elephant character for 2D platformer game, Rayman Legends style,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 gray body with pink inner ears, trunk raised playfully,
 gradient shading on wrinkled skin, vibrant hand-painted illustration,
 kind eyes, painterly texture, whimsical fantasy aesthetic,
@@ -295,7 +295,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Bear character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 brown fluffy fur with tan muzzle, gradient shading on fur,
 vibrant hand-painted illustration, friendly smile, round ears,
 painterly texture, huggable appearance, whimsical adventure style,
@@ -321,7 +321,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Unicorn character for 2D platformer game, Rayman Legends style,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 white coat with iridescent sheen, rainbow colored mane and tail,
 golden horn, gradient shading, vibrant hand-painted illustration,
 magical sparkle effect, kind eyes, painterly texture,
@@ -348,7 +348,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Fish character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose (with fins), side view profile,
+sitting upright in riding pose (with fins), looking to the right/East, side view profile,
 bright orange body with blue fins, gradient shading with shimmer,
 vibrant hand-painted illustration, big happy eyes, smiling,
 water droplets around, painterly texture,
@@ -375,7 +375,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Fox character for 2D platformer game, Rayman Legends style,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 orange-red fur with white chest and black paw tips,
 bushy tail with white tip, gradient shading on fur,
 vibrant hand-painted illustration, clever smile, bright eyes,
@@ -402,7 +402,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Duck character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 bright yellow feathers with orange beak and feet,
 gradient shading on fluffy feathers, vibrant hand-painted illustration,
 cheerful expression, wings tucked at sides, painterly texture,
@@ -429,7 +429,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Lion character for 2D platformer game, Rayman Legends style,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 golden yellow fur with magnificent orange-red mane,
 gradient shading on fur and mane, vibrant hand-painted illustration,
 noble expression, confident smile, painterly texture,
@@ -456,7 +456,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Bunny character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 fluffy white fur with pink inner ears, cotton tail visible,
 gradient shading on soft fur, vibrant hand-painted illustration,
 happy expression with buckteeth showing, big eyes,
@@ -483,7 +483,7 @@ flat lighting, multiple light sources
 **Prompt:**
 ```
 Mouse character for 2D platformer game, Rayman Legends style,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 gray fur with pink ears, nose and tail, round ears,
 gradient shading on fur, vibrant hand-painted illustration,
 determined cute expression, whiskers visible, painterly texture,
@@ -626,7 +626,7 @@ Large oak tree for forest platformer midground,
 Rayman Legends style, vibrant green gradient leaves from dark to bright,
 rich brown bark with texture gradient, full leafy canopy,
 hand-painted illustration, soft highlights, painterly texture,
-magical forest atmosphere, side view profile,
+magical forest atmosphere, looking to the right/East, side view profile,
 transparent background PNG, isolated tree, no ground
 
 NEGATIVE: flat colors, 3D render, isometric, cartoon outlines, ground, roots
@@ -639,7 +639,7 @@ NEGATIVE: flat colors, 3D render, isometric, cartoon outlines, ground, roots
 Tall pine tree for forest platformer midground,
 darker green gradient needles, brown trunk, conical shape,
 hand-painted illustration, Rayman Legends inspired,
-painterly texture, side view profile,
+painterly texture, looking to the right/East, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 brighter foliage on left side, darker gradient on right,
 warm highlights on top-left branches,
@@ -656,7 +656,7 @@ harsh shadows, bottom lighting, flat lighting
 Birch tree for forest platformer midground,
 white bark with dark markings, light green gradient leaves,
 hand-painted style, soft highlights, painterly texture,
-side view profile, whimsical forest aesthetic,
+looking to the right/East, side view profile, whimsical forest aesthetic,
 transparent background PNG, isolated tree, no ground
 
 NEGATIVE: flat colors, 3D render, ground, roots
@@ -683,7 +683,7 @@ Large fantasy mushroom for forest platformer midground,
 red cap with white spots, gradient shading on cap,
 cream colored stem, hand-painted illustration,
 Rayman Legends style, magical atmosphere, painterly texture,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground
 ```
@@ -698,7 +698,7 @@ Lush bush for forest platformer foreground,
 vibrant bright green gradient foliage, leafy clusters,
 hand-painted illustration, Rayman Legends inspired,
 soft highlights and shadows, painterly texture,
-rounded organic shape, side view profile,
+rounded organic shape, looking to the right/East, side view profile,
 transparent background PNG, isolated bush, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground
@@ -722,7 +722,7 @@ NEGATIVE: flat colors, 3D render, ground
 ```
 Mossy rock boulder for forest platformer foreground,
 gray stone with gradient shading, green moss patches,
-hand-painted illustration, painterly texture, side view profile,
+hand-painted illustration, painterly texture, looking to the right/East, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 highlighted top-left surface, darker lower-right side,
 warm rim lighting on left edge,
@@ -751,7 +751,7 @@ NEGATIVE: flat colors, 3D render, ground
 ```
 Grass tuft for forest platformer foreground,
 bright green blades with gradient shading, wispy strands,
-hand-painted style, painterly texture, side view profile,
+hand-painted style, painterly texture, looking to the right/East, side view profile,
 transparent background PNG, isolated grass, no ground base
 
 NEGATIVE: flat colors, 3D render, ground, soil
@@ -816,7 +816,7 @@ NEGATIVE: flat colors, 3D render, thick, puffy
 Large rocky outcrop for mountain platformer midground,
 gray stone with gradient shading, angular facets,
 hand-painted illustration, cool blue-gray tones,
-painterly texture, side view profile, rugged appearance,
+painterly texture, looking to the right/East, side view profile, rugged appearance,
 transparent background PNG, isolated rock formation, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground
@@ -829,7 +829,7 @@ NEGATIVE: flat colors, 3D render, cartoon outlines, ground
 Hardy pine tree for mountain platformer midground,
 dark green gradient needles, brown trunk, windswept shape,
 hand-painted style, Rayman Legends inspired, painterly texture,
-sparse foliage, side view profile,
+sparse foliage, looking to the right/East, side view profile,
 transparent background PNG, isolated tree, no ground
 
 NEGATIVE: flat colors, 3D render, thick outlines, ground
@@ -854,7 +854,7 @@ NEGATIVE: flat colors, 3D render, ground
 Cliff face for mountain platformer midground,
 layered gray stone with gradient shading, stratified rock,
 hand-painted style, cool tones, painterly texture,
-side view profile, vertical emphasis,
+looking to the right/East, side view profile, vertical emphasis,
 transparent background PNG, no ground below
 
 NEGATIVE: flat colors, 3D render, ground base
@@ -881,7 +881,7 @@ NEGATIVE: flat colors, 3D render, ground, flat base
 Boulder for mountain platformer foreground,
 gray stone with gradient shading, angular shape,
 hand-painted illustration, cool tones, painterly texture,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground, shadow
 ```
@@ -905,7 +905,7 @@ NEGATIVE: flat colors, 3D render, ground
 Hardy shrub for mountain platformer foreground,
 dark green-gray gradient foliage, tough appearance,
 hand-painted illustration, painterly texture, compact shape,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, ground
 ```
@@ -994,7 +994,7 @@ NEGATIVE: flat colors, 3D render, realistic, sky background
 Tall saguaro cactus for desert platformer midground,
 dark to sage green gradient, classic arms shape,
 hand-painted illustration, Rayman Legends style,
-painterly texture, side view profile,
+painterly texture, looking to the right/East, side view profile,
 transparent background PNG, isolated cactus, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground, sand
@@ -1019,7 +1019,7 @@ NEGATIVE: flat colors, 3D render, ground
 Desert rock formation for platformer midground,
 orange-brown to tan gradient, weathered stone,
 hand-painted illustration, warm tones, painterly texture,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, ground
 ```
@@ -1031,7 +1031,7 @@ NEGATIVE: flat colors, 3D render, ground
 Dead twisted tree for desert platformer midground,
 gray-brown gradient bare branches, weathered wood texture,
 hand-painted style, dramatic silhouette, painterly texture,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, leaves, ground
 ```
@@ -1057,7 +1057,7 @@ NEGATIVE: flat colors, 3D render, harsh edges, ground base
 Desert rock for platformer foreground,
 orange-red with gradient shading, angular shape,
 hand-painted illustration, warm tones, painterly texture,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground, sand
 ```
@@ -1169,7 +1169,7 @@ NEGATIVE: flat colors, 3D render, straight, ground
 Brain coral for underwater platformer midground,
 vibrant coral pink to orange gradient, rounded bumpy texture,
 hand-painted illustration, Rayman Legends inspired,
-magical glow, painterly texture, side view profile,
+magical glow, painterly texture, looking to the right/East, side view profile,
 transparent background PNG, isolated coral, no ocean floor
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground
@@ -1194,7 +1194,7 @@ NEGATIVE: flat colors, 3D render, ground
 Seaweed kelp for underwater platformer midground,
 green to teal gradient, flowing organic shape,
 hand-painted illustration, painterly texture, wavy motion,
-side view profile, transparent background PNG, no ocean floor
+looking to the right/East, side view profile, transparent background PNG, no ocean floor
 
 NEGATIVE: flat colors, 3D render, straight, rigid, ground
 ```
@@ -1232,7 +1232,7 @@ NEGATIVE: flat colors, 3D render, cartoon outlines, ground
 ```
 Seashell for underwater platformer foreground,
 pink-orange gradient with pearl sheen, spiral conch shape,
-hand-painted illustration, painterly texture, side view profile,
+hand-painted illustration, painterly texture, looking to the right/East, side view profile,
 transparent background PNG, no ocean floor
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground, sand
@@ -1344,7 +1344,7 @@ NEGATIVE: flat colors, 3D render, ground, water surface
 Palm tree for ocean platformer midground,
 tropical green gradient fronds, brown trunk texture,
 hand-painted illustration, Rayman Legends style,
-curved swaying shape, painterly texture, side view profile,
+curved swaying shape, painterly texture, looking to the right/East, side view profile,
 transparent background PNG, isolated tree, no ground
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground, sand
@@ -1369,7 +1369,7 @@ NEGATIVE: flat colors, 3D render, ground
 Beach rock formation for ocean platformer midground,
 tan to gray gradient, weathered stone with tide pools,
 hand-painted illustration, warm tones, painterly texture,
-side view profile, transparent background PNG, no ground
+looking to the right/East, side view profile, transparent background PNG, no ground
 
 NEGATIVE: flat colors, 3D render, ground
 ```
@@ -1408,7 +1408,7 @@ NEGATIVE: flat colors, 3D render, ground, water
 Large seashell for ocean platformer foreground,
 pink-orange gradient with mother of pearl sheen,
 spiral conch shape, hand-painted illustration,
-painterly texture, side view profile,
+painterly texture, looking to the right/East, side view profile,
 transparent background PNG, no sand
 
 NEGATIVE: flat colors, 3D render, cartoon outlines, ground, sand
@@ -1457,7 +1457,7 @@ NEGATIVE: flat colors, 3D render, ground
 Friendly crab for ocean platformer foreground,
 red-orange gradient shell, cartoon eyes, cute expression,
 hand-painted illustration, whimsical charm,
-painterly texture, side view profile,
+painterly texture, looking to the right/East, side view profile,
 transparent background PNG, no sand
 
 NEGATIVE: flat colors, 3D render, scary, realistic, ground

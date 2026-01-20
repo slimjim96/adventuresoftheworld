@@ -93,7 +93,7 @@ A wooden cart in Rayman Legends style, without any character inside, without gro
 **Using `--no` (Recommended):**
 ```
 Wooden mine cart for 2D platformer game, Rayman Legends style,
-vibrant hand-painted illustration, side view profile,
+vibrant hand-painted illustration, looking to the right/East, side view profile,
 rich brown wood with gradient shading, magical fantasy feel,
 sturdy wheels visible, painterly texture,
 soft directional lighting from upper-left, gentle shadows to lower-right,
@@ -118,7 +118,7 @@ flat colors::-1 3D render::-1 character::-1 ground::-1 rails::-1
 **Using `--no` (Recommended):**
 ```
 [ANIMAL NAME] character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 [COLOR DESCRIPTION - e.g., "orange tabby fur with white belly"],
 gradient shading, vibrant hand-painted illustration,
 [EXPRESSION - e.g., "friendly smile, green eyes"],
@@ -224,7 +224,7 @@ hand-painted illustration, painterly texture,
 [SPECIFIC DETAILS - e.g., "full leafy canopy, rich brown bark"],
 soft directional lighting from upper-left, gentle shadows to lower-right,
 [LIGHTING NOTES - e.g., "brighter foliage on left, darker gradient on right"],
-transparent background PNG, side view profile, isolated element
+transparent background PNG, looking to the right/East, side view profile, isolated element
 --no ground --no roots --no base --no 3D --no isometric --no cartoon outlines
 ```
 
@@ -243,7 +243,7 @@ Large oak tree for forest platformer midground,
 Rayman Legends style, vibrant green gradient leaves from dark to bright,
 rich brown bark with texture gradient, full leafy canopy,
 hand-painted illustration, soft highlights, painterly texture,
-magical forest atmosphere, side view profile,
+magical forest atmosphere, looking to the right/East, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 brighter foliage on left side, darker gradient on right,
 warm highlights on top-left branches,
@@ -256,7 +256,7 @@ transparent background PNG, isolated tree
 Large rocky outcrop for mountain platformer midground,
 gray stone with gradient shading, angular facets,
 hand-painted illustration, cool blue-gray tones,
-painterly texture, side view profile, rugged appearance,
+painterly texture, looking to the right/East, side view profile, rugged appearance,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 highlighted top-left surface, darker lower-right,
 transparent background PNG, isolated rock formation
@@ -275,7 +275,7 @@ hand-painted illustration, painterly texture,
 [SPECIFIC DETAILS - e.g., "leafy clusters, rounded organic shape"],
 soft directional lighting from upper-left, gentle shadows to lower-right,
 [LIGHTING NOTES - e.g., "warm highlights on left, soft shadow on right"],
-transparent background PNG, side view profile, isolated element
+transparent background PNG, looking to the right/East, side view profile, isolated element
 --no ground --no base --no 3D --no cartoon outlines
 ```
 
@@ -294,7 +294,7 @@ Lush bush for forest platformer foreground,
 vibrant bright green gradient foliage, leafy clusters,
 hand-painted illustration, Rayman Legends inspired,
 soft highlights and shadows, painterly texture,
-rounded organic shape, side view profile,
+rounded organic shape, looking to the right/East, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 warm highlights on top-left leaves, darker gradient on right,
 transparent background PNG, isolated bush
@@ -306,7 +306,7 @@ transparent background PNG, isolated bush
 Desert rock for platformer foreground,
 orange-red with gradient shading, angular shape,
 hand-painted illustration, warm tones, painterly texture,
-side view profile,
+looking to the right/East, side view profile,
 soft directional lighting from upper-left, gentle shadows to lower-right,
 highlighted top-left surface, darker lower-right side,
 transparent background PNG
