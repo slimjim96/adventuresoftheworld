@@ -75,6 +75,29 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
+### 🧱 `platform-patterns-prompts.md` ⭐ **NEW**
+
+**Purpose:** Tileable patterns and vector-style curved platforms for all themes
+
+**Use this when:**
+- Creating seamless tileable textures for platform surfaces
+- Designing curved or non-rectangular platforms
+- Need material wrapping for varied platform shapes
+- Want vector-clean edges for scalable platform assets
+
+**Contains:**
+- **Tileable Surface Patterns (25 prompts):**
+  - 5 seamless patterns per theme (stone, wood, organic, decorative)
+  - Designed to wrap horizontally without visible seams
+- **Vector-Style Curved Platforms (25 prompts):**
+  - 5 curved platform shapes per theme (arches, bridges, slopes, domes)
+  - Clean vector edges for scalable design
+  - Built-in pattern fills matching theme aesthetic
+- **Pattern Modifiers:** Weathering, glow, and density variations
+- **Implementation Notes:** Unity integration guidance
+
+---
+
 ### 🎮 `ui-assets-guide.md`
 
 **Purpose:** Complete prompts for UI elements, platform borders, and menu systems
