@@ -94,30 +94,90 @@ This index organizes all documentation by **development phase**. Start at the be
 
 ---
 
-## 🎨 05. Art Assets (Weeks 6-8)
+## 🎨 05. Art Assets (Weeks 6-9)
 
 **Purpose:** Generate consistent 2D vector graphics using Ludo.ai and replace placeholder art.
 
+### Ludo.ai Resources (Primary)
+
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
-| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | **🌟 PRIMARY GUIDE** - Complete prompts for all 80 assets | Cart (1), Animals (13), Environments (65) with Hand-Painted 2.5D style, upper-left lighting, exact Ludo.ai settings | ✅ Complete |
+| [📋 /ludo/ludo-ai-project-brief.md](../ludo/ludo-ai-project-brief.md) | **⭐ START HERE** - Single-page reference for asset generation | All critical settings, color palettes, lighting standards, prompt templates, quality checklist | ✅ Complete |
+| [📝 /ludo/prompt-templates.md](../ludo/prompt-templates.md) | Copy-paste ready templates | Cart, animals, environmental decoration templates with troubleshooting | ✅ Complete |
+| [🎮 /ludo/ui-assets-guide.md](../ludo/ui-assets-guide.md) | **NEW** - UI & platform assets guide | Platform borders (15), player icons (14), menu UI (8-10), welcome screen (2) | ✅ Complete |
+| [/ludo/README.md](../ludo/README.md) | Ludo.ai resources overview | Directory guide, quick start, workflow | ✅ Complete |
+
+### Detailed Asset Documentation
+
+| Document | Description | What's Inside | Status |
+|----------|-------------|---------------|--------|
+| [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) | Complete prompts for all 80 gameplay assets | Cart (1), Animals (13), Environments (65) with detailed specifications | ✅ Complete |
 | [character-reference.md](05-art-assets/character-reference.md) | 13 playable characters reference | Personalities, colors, unlock prices | ✅ Complete |
 | [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) | DecorationData ScriptableObject design | Theme, layer, spawn rules for procedural use | ✅ Complete |
 
 **Start here if:** Mechanics are solid with placeholder graphics, ready to generate final art.
 
 **Prerequisites:**
-- Ludo.ai account with credits (200-300 credits needed)
+- Ludo.ai account with credits (275-410 credits needed)
 - Week 5 procedural system working (to understand asset needs)
 
 **Credit Budget:**
+
+**Gameplay Assets (Weeks 6-8):**
 - Cart: 1 reusable asset (~5-10 credits)
-- Week 6: Forest environment (13 assets, ~30-50 credits)
-- Week 7: Mountain + Desert (26 assets, ~50-80 credits)
-- Week 8: Underwater + Ocean (26 assets, ~50-80 credits)
-- **Total:** 65 environmental assets (~150-200 credits)
 - Animals: 13 separate sprites (~50-75 credits)
-- **GRAND TOTAL:** 80 assets (200-300 credits)
+- Environments: 65 decorations (~150-200 credits)
+- **Subtotal:** 79-80 assets (200-300 credits)
+
+**UI & Menu Assets (Weeks 8-9):**
+- Platform Borders: 15 tileable patterns (~30-40 credits)
+- Player Icons: 14 character portraits (~20-30 credits)
+- Menu UI: 8-10 elements (~15-25 credits)
+- Welcome Screen: 2 backgrounds (~10-15 credits)
+- **Subtotal:** 39-41 assets (75-110 credits)
+
+**GRAND TOTAL:** 118-121 assets (275-410 credits)
+
+---
+
+## 🛠️ 06. Unity Setup & Architecture (NEW)
+
+**Purpose:** Step-by-step guides for setting up Unity scenes, UI flow, global systems, and ready-to-use scripts.
+
+| Document | Description | What's Inside | Status |
+|----------|-------------|---------------|--------|
+| [scene-architecture-guide.md](06-unity-setup/scene-architecture-guide.md) | **⭐ ESSENTIAL** - Complete scene setup guide | Scene flow (Start → Character Select → Level Select → Gameplay), Global cart/character system, UI setup for all 4 menu scenes, Level scene template, Prefab organization | ✅ Complete |
+| [unity-basics-setup.md](06-unity-setup/unity-basics-setup.md) | Unity component configuration reference | Project settings, Sprite import, Canvas/UI elements, Prefab creation, Component setup (Rigidbody2D, Colliders, etc.), Build settings, Inspector tips | ✅ Complete |
+| [folder-structure.md](06-unity-setup/folder-structure.md) | Complete Assets folder blueprint | 80+ folder structure with auto-creation script, Import workflow for Ludo.ai assets, Prefab organization strategy | ✅ Complete |
+| [asset-naming-conventions.md](06-unity-setup/asset-naming-conventions.md) | Consistent file naming standards | Naming patterns for all asset types, Search optimization, Ludo.ai file renaming workflow | ✅ Complete |
+| [import-checklist.md](06-unity-setup/import-checklist.md) | Step-by-step asset import workflow | Pre-import prep, Unity import settings, Sprite configuration, Prefab creation, ScriptableObject setup, Testing | ✅ Complete |
+| [how-to-import-scripts.md](06-unity-setup/how-to-import-scripts.md) | Script import troubleshooting guide | Manual copy instructions, No namespaces needed, Folder organization, Common issues | ✅ Complete |
+| [unity-project-structure.md](06-unity-setup/unity-project-structure.md) | **Current Unity project structure** | Actual Assets folder layout (24 custom scripts), Script locations and purposes, Dependencies and namespaces | ✅ Complete |
+| [CLEANUP-SUMMARY.md](06-unity-setup/CLEANUP-SUMMARY.md) | Project cleanup report (2026-01-17) | Duplicates removed, TODOs identified, Current script inventory, Verification checklist | ✅ Complete |
+| [cart-prefab-setup.md](06-unity-setup/cart-prefab-setup.md) | **⭐ Cart Prefab Complete Setup** | Step-by-step cart creation, Component configuration, GroundCheck setup, Debug system integration, Troubleshooting | ✅ Complete |
+| [cart-physics-setup.md](06-unity-setup/cart-physics-setup.md) | Cart physics configuration | Fix bouncing on terrain, Rigidbody2D settings, Physics Material setup, Smooth movement | ✅ Complete |
+| [fix-air-jump-bug.md](06-unity-setup/fix-air-jump-bug.md) | Prevent mid-air jumping | Jump cooldown system, Velocity-based ground detection, Configuration guide | ✅ Complete |
+| [terrain-following-rotation.md](06-unity-setup/terrain-following-rotation.md) | Experimental terrain following | Cart rotation on slopes, Angle limits, Toggle on/off, Testing guide | ✅ Complete |
+| [fix-rotation-jitter.md](06-unity-setup/fix-rotation-jitter.md) | Fix rotation stuttering | Rotation deadzone, Smooth interpolation, Landing stability | ✅ Complete |
+| [developer-debug-system.md](06-unity-setup/developer-debug-system.md) | **⭐ Developer Debug Tools** | Jump distance visualization, HUD overlay, Level design calculations, Keyboard shortcuts (F12/F11/F10) | ✅ Complete |
+
+### Unity Scripts Library (Ready-to-Copy)
+
+| Location | Description | Scripts Included | Status |
+|----------|-------------|------------------|--------|
+| [📂 /unity-scripts/](../unity-scripts/) | **16 complete C# scripts** ready to copy into Unity | GameManager, CartController, CharacterData, UI scripts (CharacterSlot, LevelSlot, HUDManager), Gameplay scripts (CoinCollector, Hazard, GoalTrigger, LevelManager), Environment scripts (ParallaxLayer, BackgroundSpawner), ScriptableObjects (LevelData, DecorationData) | ✅ Complete |
+| [unity-scripts/README.md](../unity-scripts/README.md) | Script library guide | Setup instructions, Script organization by folder, Dependencies & prerequisites, Customization tips, Troubleshooting | ✅ Complete |
+
+**Start here if:** Setting up scenes, creating UI flow, or configuring the global cart that persists across all 12 levels.
+
+**Key Topics:**
+- **Scene Flow:** StartScene → CharacterSelectScene → LevelSelectScene → Level01-12
+- **Global Systems:** GameManager (DontDestroyOnLoad), Character selection persistence
+- **Cart Prefab:** One cart prefab used in all 12 levels, loads selected character from GameManager
+- **UI Patterns:** Character selection grid, Level selection grid, HUD setup
+- **Common Setups:** Cinemachine camera, Parallax backgrounds, Coin collection
+- **Ready-to-Use Scripts:** Complete implementations for all core systems
+- **Asset Organization:** Folder structure, naming conventions, import workflow
 
 ---
 
@@ -227,9 +287,11 @@ This index organizes all documentation by **development phase**. Start at the be
 3. [parallax-background-setup.md](04-week-5-procedural/parallax-background-setup.md) → Add backgrounds
 
 ### "Ready to generate final art"
-1. [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) → Generate all 80 assets with Hand-Painted 2.5D style and upper-left lighting
-2. [character-reference.md](05-art-assets/character-reference.md) → Character personalities and unlock prices
-3. [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) → Create metadata for spawning
+1. [/ludo/ludo-ai-project-brief.md](../ludo/ludo-ai-project-brief.md) → **START HERE** - Single-page reference for Ludo.ai
+2. [/ludo/prompt-templates.md](../ludo/prompt-templates.md) → Copy-paste ready templates for all asset types
+3. [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) → Detailed prompts for all 80 assets
+4. [character-reference.md](05-art-assets/character-reference.md) → Character personalities and unlock prices
+5. [asset-metadata-system.md](05-art-assets/asset-metadata-system.md) → Create metadata for spawning
 
 ---
 

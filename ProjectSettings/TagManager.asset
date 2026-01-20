@@ -17,13 +17,13 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - Ground
   - Player
+  - Ground
   - Obstacles
   - Collectibles
-  - UI
+  - Background_Far
+  - Background_Mid
+  - Background_Near
   - 
   - 
   - 

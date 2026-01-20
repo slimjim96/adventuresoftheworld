@@ -168,7 +168,7 @@ namespace AdventuresOfTheWorld.Core
 
             // Calculate look ahead based on cart velocity
             CartController cart = target.GetComponent<CartController>();
-            if (cart != null && cart.CurrentSpeed > 0)
+            if (cart != null && cart.moveSpeed > 0)
             {
                 _currentLookAhead = Mathf.Lerp(_currentLookAhead, lookAheadDistance, Time.deltaTime * lookAheadSpeed);
             }

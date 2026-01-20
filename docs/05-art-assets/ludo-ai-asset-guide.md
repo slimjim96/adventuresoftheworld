@@ -2,6 +2,13 @@
 
 **Complete prompts for all 80 game assets** - Hand-Painted 2.5D style inspired by Rayman Legends
 
+> **📋 Quick Start:** See [`/ludo/ludo-ai-project-brief.md`](../../ludo/ludo-ai-project-brief.md) for a consolidated single-page reference with all critical settings, color palettes, and prompt templates. Use that document when starting new Ludo.ai sessions for consistent context.
+
+> **⚠️ IMPORTANT - Ludo.ai Syntax:** The prompts in this guide use older Midjourney-style `NEGATIVE:` syntax. **For Ludo.ai, convert to:**
+> - Replace `NEGATIVE: ground, base, 3D` with `--no ground --no base --no 3D`
+> - OR use weighting: `hand-painted::1 flat colors::-1 3D render::-1`
+> - See [`/ludo/prompt-templates.md`](../../ludo/prompt-templates.md) for correct Ludo.ai syntax examples.
+
 ---
 
 ## 🎨 Global Ludo.ai Settings
