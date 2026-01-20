@@ -49,6 +49,32 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
+### 🌲 `background-assets-prompts.md` ⭐ **NEW - COMPREHENSIVE**
+
+**Purpose:** Detailed prompts for ALL background/environmental assets with variety and cross-theme reusability
+
+**Use this when:**
+- Generating background assets for any of the 5 themes
+- Need variety in environmental decorations
+- Want to reuse assets across multiple themes (boulders, cliffs, clouds)
+- Creating large far-distance elements
+
+**Contains:**
+- **Cross-Theme Reusable Assets:**
+  - 4 Boulder variations (Forest, Mountain, Desert, Ocean compatible)
+  - 3 Cliff variations (Mountain, Desert, Ocean compatible)
+  - 4 Cloud variations (all above-water themes)
+  - 3 Generic rock variations (all themes)
+- **Per-Theme Assets (5 themes × 3 layers):**
+  - 5 Far Layer prompts per theme (large distant elements)
+  - 7 Mid Layer prompts per theme (trees, structures, formations)
+  - 7 Near Layer prompts per theme (bushes, rocks, details)
+- **Total:** 100+ detailed, copy-paste ready prompts
+- Asset variation tips for color adjustments
+- Quick reference tables for compatibility
+
+---
+
 ### 🎮 `ui-assets-guide.md`
 
 **Purpose:** Complete prompts for UI elements, platform borders, and menu systems
@@ -259,6 +285,6 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
-**Last Updated:** 2026-01-17
+**Last Updated:** 2026-01-20
 **Project:** Adventures of the World - Unity 2022.3 LTS
 **Style:** Hand-Painted 2.5D (Rayman Legends Inspired)
