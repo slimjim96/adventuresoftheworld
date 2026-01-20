@@ -1,0 +1,233 @@
+Cat character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Orange tabby, white belly, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Cat character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Orange tabby, white belly, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Dog character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Brown, cream chest, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Dog character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Brown, cream chest, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Elephant character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Gray, pink ears, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Elephant character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Gray, pink ears, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Bear character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Brown, tan muzzle, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Bear character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Brown, tan muzzle, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Unicorn character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+White, rainbow mane, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Unicorn character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, White, rainbow mane, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Fish character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Orange, blue fins, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Fish character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Orange, blue fins, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Fox character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Orange-red, white chest, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Fox character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Orange-red, white chest, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Duck character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Yellow, orange beak, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Duck character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Yellow, orange beak, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Lion character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Golden, red mane, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Lion character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Golden, red mane, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Bunny character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+White, pink ears, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Bunny character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, White, pink ears, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Mouse character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Gray, pink features, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Mouse character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Gray, pink features, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Snowman character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+White, carrot nose, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Snowman character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, White, carrot nose, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
+
+Dragon character for 2D platformer game, Rayman Legends inspired,
+sitting upright in riding pose, looking to the right/East, side view profile,
+Purple, green wings, vibrant hand-painted illustration,
+gradient shading, friendly expression, whimsical fantasy style,
+painterly texture,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+warm highlights on face and left side, subtle rim lighting,
+transparent background PNG, isolated character, full body visible,
+without any cart or vehicle, without ground or base
+--no cart --no vehicle --no ground --no standing pose --no 3D --no isometric
+--no cartoon outlines --no harsh shadows --no bottom lighting
+Alternative with weighting:
+
+Dragon character, Rayman Legends style, hand-painted::1, sitting riding pose::1,
+side view, Purple, green wings, gradient shading, friendly expression, painterly texture,
+upper-left lighting, transparent PNG
+flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1

@@ -223,7 +223,7 @@ hand-painted gradient::1 flat colors::-1 3D render::-1 vector style::-1
 **Character Prompt Template:**
 ```
 [ANIMAL] character for 2D platformer game, Rayman Legends inspired,
-sitting upright in riding pose, side view profile,
+sitting upright in riding pose, looking to the right/East, side view profile,
 [COLOR DESCRIPTION], vibrant hand-painted illustration,
 gradient shading, friendly expression, whimsical fantasy style,
 painterly texture,
@@ -279,7 +279,7 @@ flat colors::-1 3D render::-1 standing::-1 cart visible::-1 ground::-1
 **Cart Prompt:**
 ```
 Wooden mine cart for 2D platformer game, Rayman Legends style,
-vibrant hand-painted illustration, side view profile,
+vibrant hand-painted illustration, looking to the right/East, side view profile,
 rich brown wood with gradient shading, magical fantasy feel,
 sturdy wheels visible, painterly texture,
 soft directional lighting from upper-left, gentle shadows to lower-right,
