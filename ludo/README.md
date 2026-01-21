@@ -49,6 +49,74 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
+### 🌲 `background-assets-prompts.md` ⭐ **NEW - COMPREHENSIVE**
+
+**Purpose:** Detailed prompts for ALL background/environmental assets with variety and cross-theme reusability
+
+**Use this when:**
+- Generating background assets for any of the 5 themes
+- Need variety in environmental decorations
+- Want to reuse assets across multiple themes (boulders, cliffs, clouds)
+- Creating large far-distance elements
+
+**Contains:**
+- **Cross-Theme Reusable Assets:**
+  - 4 Boulder variations (Forest, Mountain, Desert, Ocean compatible)
+  - 3 Cliff variations (Mountain, Desert, Ocean compatible)
+  - 4 Cloud variations (all above-water themes)
+  - 3 Generic rock variations (all themes)
+- **Per-Theme Assets (5 themes × 3 layers):**
+  - 5 Far Layer prompts per theme (large distant elements)
+  - 7 Mid Layer prompts per theme (trees, structures, formations)
+  - 7 Near Layer prompts per theme (bushes, rocks, details)
+- **Total:** 100+ detailed, copy-paste ready prompts
+- Asset variation tips for color adjustments
+- Quick reference tables for compatibility
+
+---
+
+### 🧱 `platform-patterns-prompts.md` ⭐ **NEW**
+
+**Purpose:** Tileable patterns and vector-style curved platforms for all themes
+
+**Use this when:**
+- Creating seamless tileable textures for platform surfaces
+- Designing curved or non-rectangular platforms
+- Need material wrapping for varied platform shapes
+- Want vector-clean edges for scalable platform assets
+
+**Contains:**
+- **Tileable Surface Patterns (25 prompts):**
+  - 5 seamless patterns per theme (stone, wood, organic, decorative)
+  - Designed to wrap horizontally without visible seams
+- **Vector-Style Curved Platforms (25 prompts):**
+  - 5 curved platform shapes per theme (arches, bridges, slopes, domes)
+  - Clean vector edges for scalable design
+  - Built-in pattern fills matching theme aesthetic
+- **Pattern Modifiers:** Weathering, glow, and density variations
+- **Implementation Notes:** Unity integration guidance
+
+---
+
+### 🎬 `character-animation-prompts.md` ⭐ **NEW**
+
+**Purpose:** Looping animation prompts for character select screen
+
+**Use this when:**
+- Creating animated characters for player selection UI
+- Need "pick me" style idle animations
+- Want personality-driven character animations
+
+**Contains:**
+- **13 Character-Specific Animations:**
+  - Each with unique personality-driven actions
+  - All animations loop seamlessly back to starting pose
+  - Descriptive action sequences (blink, wave, gesture, etc.)
+- **Generic Template:** Adaptable base prompt with looping
+- **Quick Reference Table:** Starting poses and key actions per character
+
+---
+
 ### 🎮 `ui-assets-guide.md`
 
 **Purpose:** Complete prompts for UI elements, platform borders, and menu systems
@@ -259,6 +327,6 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
-**Last Updated:** 2026-01-17
+**Last Updated:** 2026-01-20
 **Project:** Adventures of the World - Unity 2022.3 LTS
 **Style:** Hand-Painted 2.5D (Rayman Legends Inspired)
