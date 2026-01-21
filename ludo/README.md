@@ -98,6 +98,25 @@ This directory contains all resources related to Ludo.ai asset generation for Ad
 
 ---
 
+### 🎬 `character-animation-prompts.md` ⭐ **NEW**
+
+**Purpose:** Looping animation prompts for character select screen
+
+**Use this when:**
+- Creating animated characters for player selection UI
+- Need "pick me" style idle animations
+- Want personality-driven character animations
+
+**Contains:**
+- **13 Character-Specific Animations:**
+  - Each with unique personality-driven actions
+  - All animations loop seamlessly back to starting pose
+  - Descriptive action sequences (blink, wave, gesture, etc.)
+- **Generic Template:** Adaptable base prompt with looping
+- **Quick Reference Table:** Starting poses and key actions per character
+
+---
+
 ### 🎮 `ui-assets-guide.md`
 
 **Purpose:** Complete prompts for UI elements, platform borders, and menu systems
