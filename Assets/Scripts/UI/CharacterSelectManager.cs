@@ -161,9 +161,10 @@ public class CharacterSelectManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Confirm button - proceed to level select
+    /// Confirm button - proceed to level select.
+    /// Public so it can be assigned to Button.onClick in the Unity Inspector.
     /// </summary>
-    void OnConfirmButtonClicked()
+    public void OnConfirmButtonClicked()
     {
         if (GameManager.Instance == null || GameManager.Instance.selectedCharacter == null)
         {
@@ -176,9 +177,10 @@ public class CharacterSelectManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Back button - return to start menu
+    /// Back button - return to start menu.
+    /// Public so it can be assigned to Button.onClick in the Unity Inspector.
     /// </summary>
-    void OnBackButtonClicked()
+    public void OnBackButtonClicked()
     {
         Debug.Log("Returning to start menu");
         SceneManager.LoadScene(startSceneName);

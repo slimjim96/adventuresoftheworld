@@ -22,7 +22,8 @@ public class StartButton : MonoBehaviour
     }
 
     /// <summary>
-    /// Load the next scene (Character Select)
+    /// Load the next scene (Character Select).
+    /// Public so it can be assigned to Button.onClick in the Unity Inspector.
     /// </summary>
     public void OnStartClicked()
     {

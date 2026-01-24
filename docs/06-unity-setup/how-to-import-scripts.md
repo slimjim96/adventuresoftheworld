@@ -165,6 +165,93 @@ public class CartController : MonoBehaviour
 
 ---
 
+## Public Methods for Unity Events (IMPORTANT)
+
+**Unity requires methods to be `public` to appear in the Inspector.**
+
+When assigning methods to UI events (like Button.onClick) through the Unity Inspector, only `public` methods are visible. This is a Unity standard.
+
+### The Rule
+
+| Access Modifier | Visible in Inspector? | Can Use with AddListener()? |
+|-----------------|----------------------|----------------------------|
+| `public void MyMethod()` | ✅ Yes | ✅ Yes |
+| `void MyMethod()` (private) | ❌ No | ✅ Yes |
+| `private void MyMethod()` | ❌ No | ✅ Yes |
+
+### Why This Matters
+
+**Two ways to wire up button clicks:**
+
+**Option 1: Via Inspector (requires `public`)**
+```csharp
+// This method MUST be public to show up in Button.onClick dropdown
+public void OnStartClicked()
+{
+    SceneManager.LoadScene("NextScene");
+}
+```
+
+**Option 2: Via Code (works with private)**
+```csharp
+void Start()
+{
+    // AddListener works with private methods
+    button.onClick.AddListener(OnStartClicked);
+}
+
+void OnStartClicked()  // Can be private when using AddListener
+{
+    SceneManager.LoadScene("NextScene");
+}
+```
+
+### Our Convention
+
+**All UI event handler methods should be `public`** for flexibility:
+
+```csharp
+/// <summary>
+/// Handle button click.
+/// Public so it can be assigned to Button.onClick in the Unity Inspector.
+/// </summary>
+public void OnStartClicked()
+{
+    // ...
+}
+```
+
+This allows you to:
+- Wire up events in the Inspector (drag & drop)
+- OR use AddListener() in code
+- OR both (Inspector assignment + code reference)
+
+### Methods That Should Be Public
+
+| Script | Method | Purpose |
+|--------|--------|---------|
+| StartButton | `OnStartClicked()` | Start button → load character select |
+| CharacterSelectManager | `OnConfirmButtonClicked()` | Confirm → load level select |
+| CharacterSelectManager | `OnBackButtonClicked()` | Back → return to start menu |
+| CharacterSlot | `OnSlotClicked()` | Character slot → select/unlock |
+| LevelSlot | `OnLevelClicked()` | Level slot → load level |
+| HUDManager | `TogglePause()` | Pause button → toggle pause |
+| HUDManager | `Resume()` | Resume button → unpause |
+| HUDManager | `RestartLevel()` | Restart button → reload level |
+| HUDManager | `ReturnToLevelSelect()` | Return button → level select |
+
+### Quick Fix for "Method Not Showing in Inspector"
+
+If a method doesn't appear in Button.onClick dropdown:
+
+1. Check if the method is `public`
+2. Change `void MyMethod()` to `public void MyMethod()`
+3. Save the script
+4. Return to Unity (it will recompile)
+5. Method should now appear in the dropdown
+
+---
+
 ## Quick Setup Script
 
 **If you want to automate copying (Bash/Terminal):**
