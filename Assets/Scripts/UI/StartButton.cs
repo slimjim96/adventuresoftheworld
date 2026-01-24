@@ -24,7 +24,7 @@ public class StartButton : MonoBehaviour
     /// <summary>
     /// Load the next scene (Character Select)
     /// </summary>
-    void OnStartClicked()
+    public void OnStartClicked()
     {
         Debug.Log($"Start button clicked. Loading {nextSceneName}");
         SceneManager.LoadScene(nextSceneName);
