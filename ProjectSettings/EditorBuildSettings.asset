@@ -6,11 +6,53 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/StartScene.unity
     guid: c595be9929672a94d8f1e003e1200cd9
+  - enabled: 1
+    path: Assets/Scenes/CharacterSelectScene.unity
+    guid: 3421ea4675b42734188150a1876e3e5a
+  - enabled: 1
+    path: Assets/Scenes/LevelSelectScene.unity
+    guid: 179179db96eaa5f41a86b74620f8c035
   - enabled: 1
     path: Assets/Scenes/TestGameplay.unity
     guid: 705a935159343ff419f5bb3c561a3676
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level101_Forest.unity
+    guid: 2649a58c8e14b5e45a235346605188a1
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level102_Forest.unity
+    guid: 0769360a49e82f04f8b0357d6c730b23
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level103_Forest.unity
+    guid: 883c839294c2b2f4d99d77c0930d7428
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level104_Mountain.unity
+    guid: e3b1324c04a4f7f4aaf5d703dd76c13e
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level105_Mountain.unity
+    guid: 787385acebba2e5449e46666c3539552
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level106_Mountain.unity
+    guid: 8cbc9f6c57dc7d740a0aa6e317be199b
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level107_Desert.unity
+    guid: f449a902d54db7449bada92ffd790525
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level108_Desert.unity
+    guid: c102529bc5161d649870b9bc6fadf839
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level109_Desert.unity
+    guid: a04b0846f5c8008498ffde703256bd02
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level110_Underwater.unity
+    guid: 77b4cee9aca67c34ca7bd8073cf65e75
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level111_Underwater.unity
+    guid: 6ec4600e7b6785549920d2a1fd3f5ca2
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level112_Ocean.unity
+    guid: 69b6177b056469346adb1dd7c689fc8d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: df889efb6c5d14146943ed647845f49c, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: bb372880b3a44b542aadf5515bd49c2f, type: 3}
