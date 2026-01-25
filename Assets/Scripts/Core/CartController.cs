@@ -73,17 +73,10 @@ public class CartController : MonoBehaviour
         // Check if on ground
         CheckGroundStatus();
 
-        // Jump input
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
-        {
-            Jump();
-        }
-
-        // Mobile jump (tap anywhere on screen)
-        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began && isGrounded)
-        {
-            Jump();
-        }
+        // Note: Jump input is handled by PlayerInput component
+        // which calls the public Jump() method on this controller.
+        // This separation allows for flexible input handling
+        // (keyboard, touch, gamepad) via Unity's new Input System.
     }
 
     void FixedUpdate()

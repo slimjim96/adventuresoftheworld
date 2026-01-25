@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 using UnityEngine.UI;
+using AdventuresOfTheWorld.Managers;
 
 /// <summary>
 /// Manages the in-game HUD (Heads-Up Display).
 /// Displays lives, coins, level number, and other gameplay info.
 /// Attach to a UI GameObject in each level scene.
+/// Uses Unity's new Input System for pause input.
 /// </summary>
 public class HUDManager : MonoBehaviour
 {
@@ -61,8 +64,13 @@ public class HUDManager : MonoBehaviour
         // Update HUD every frame (could optimize to only update when values change)
         UpdateHUD();
 
-        // ESC key to pause (PC)
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Pause input via InputManager (new Input System)
+        if (InputManager.Instance != null && InputManager.Instance.GetPauseDown())
+        {
+            TogglePause();
+        }
+        // Fallback: Direct keyboard check using new Input System
+        else if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             TogglePause();
         }
