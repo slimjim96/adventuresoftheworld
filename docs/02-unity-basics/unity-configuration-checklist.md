@@ -60,10 +60,16 @@ Use this checklist to ensure your Unity project is properly configured for Adven
 - [ ] Obstacles (Layer 10)
 - [ ] Collectibles (Layer 11)
 
-### Input System
+### Input System (IMPORTANT)
 
-- [ ] **Active Input Handling**: Both (legacy + new)
+- [ ] **Install Input System Package**
+  - Window → Package Manager → Input System → Install
+- [ ] **Active Input Handling**: Both (or "Input System Package (New)")
+  - Edit → Project Settings → Player → Active Input Handling
 - [ ] Restarted Unity after changing (if prompted)
+- [ ] **InputManager script** added to scene (creates input actions)
+
+See [input-system-setup.md](../06-unity-setup/input-system-setup.md) for complete setup guide.
 
 ### Editor Settings
 
@@ -119,41 +125,73 @@ Verify these packages are installed (**Window → Package Manager**):
 
 ## ✅ Scripts Imported
 
-### Core Scripts
-- [ ] `CartController.cs`
-- [ ] `GameManager.cs`
+### Core Scripts (Assets/Scripts/Core/)
+- [ ] `CartController.cs` - Cart movement and jumping
+- [ ] `PlayerInput.cs` - Connects Input System to cart (requires CartController)
+- [ ] `CameraFollow.cs` - Camera following with look-ahead
 
-### Managers
-- [ ] `InputManager.cs`
-- [ ] `AudioManager.cs`
-- [ ] `LivesManager.cs`
-- [ ] `CoinManager.cs`
+### Managers (Assets/Scripts/Managers/)
+- [ ] `GameManager.cs` - Global singleton, character selection, level progression
+- [ ] `InputManager.cs` - **NEW INPUT SYSTEM** - Cross-platform input handling
+- [ ] `LevelManager.cs` - Per-level logic, goal detection
+- [ ] `AudioManager.cs` - Music and SFX management
+- [ ] `LivesManager.cs` - Lives/health system
+- [ ] `CoinManager.cs` - Coin tracking
 
-### Utilities
-- [ ] `CameraFollow.cs`
+### UI Scripts (Assets/Scripts/UI/)
+- [ ] `StartButton.cs` - Start menu button
+- [ ] `CharacterSelectManager.cs` - Character selection screen
+- [ ] `CharacterSlot.cs` - Individual character slot
+- [ ] `LevelSlot.cs` - Individual level slot
+- [ ] `HUDManager.cs` - In-game HUD (lives, coins, pause)
+
+### ScriptableObjects (Assets/Scripts/ScriptableObjects/)
+- [ ] `CharacterData.cs` - Character properties
+- [ ] `LevelData.cs` - Level configuration
+- [ ] `DecorationData.cs` - Decoration metadata
 
 **Verify scripts compile:**
-- [ ] No errors in Console
+- [ ] No errors in Console (check for `UnityEngine.InputSystem` errors)
 - [ ] Scripts appear in Add Component menu
+- [ ] All UI event methods are `public` (for Inspector visibility)
 
 ---
 
 ## ✅ Player Cart Setup
 
-**PlayerCart GameObject:**
+**Cart GameObject structure:**
+```
+Cart (GameObject)
+├── CartBody (SpriteRenderer)
+├── WheelLeft (SpriteRenderer or Animated)
+├── WheelRight (SpriteRenderer or Animated)
+├── GroundCheck (empty GameObject at bottom)
+└── AnimalMount (SpriteRenderer for character)
+```
+
+**Cart parent GameObject:**
 - [ ] Tag set to "Player"
 - [ ] Layer set to "Player"
+- [ ] **Transform Position Z = 0** (not behind camera!)
 - [ ] **Rigidbody2D** component added
   - Gravity Scale: 2
   - Freeze Rotation Z: ✅
   - Collision Detection: Continuous
 - [ ] **BoxCollider2D** component added
-  - Size matches sprite
+  - Size matches cart body (not wheels)
+  - Offset Y adjusted if needed
 - [ ] **CartController** script added
   - Move Speed: 5
   - Jump Force: 12
   - Ground Layer: "Ground"
-- [ ] Placeholder sprite (Square, colored)
+  - Ground Check: (assign GroundCheck child)
+- [ ] **PlayerInput** script added
+  - Use Input Manager: ✅ (checked)
+
+**GroundCheck child:**
+- [ ] Empty GameObject
+- [ ] Position at bottom of cart (where wheels touch ground)
+- [ ] Assigned to CartController's Ground Check field
 
 ---
 
@@ -274,10 +312,21 @@ Verify these packages are installed (**Window → Package Manager**):
 If something isn't working, check these:
 
 ### Cart won't jump
-- [ ] InputManager in scene?
+- [ ] **PlayerInput** script on Cart? (handles input)
+- [ ] **InputManager** in scene? (or auto-creates if missing)
+- [ ] Input System package installed?
+- [ ] Active Input Handling set to "Both" in Player Settings?
 - [ ] Ground layer assigned in CartController?
 - [ ] Ground platforms have "Ground" layer?
+- [ ] GroundCheck child positioned at bottom of cart?
 - [ ] Cart has Rigidbody2D?
+
+### Cart floating / invisible / behind platforms
+- [ ] **Camera Z = -10** (negative, in front of objects)
+- [ ] **Cart Z = 0**
+- [ ] **Platforms Z = 0**
+- [ ] If using Cinemachine: Virtual Camera → Body → Camera Distance = 10
+- [ ] Cart collider offset correct? (not floating above sprite)
 
 ### Cart falls through ground
 - [ ] Collision Matrix: Player collides with Ground?
@@ -285,13 +334,27 @@ If something isn't working, check these:
 - [ ] Rigidbody2D Collision Detection: Continuous?
 
 ### Camera doesn't follow
-- [ ] CameraFollow script on camera?
+- [ ] CameraFollow script on camera? (or Cinemachine Virtual Camera)
 - [ ] Target assigned (or Player tag set on cart)?
-- [ ] Camera not parented to anything?
+- [ ] If Cinemachine: Virtual Camera → Follow = Cart transform
+- [ ] If Cinemachine: Body = Framing Transposer (for 2D)
+
+### Input not responding
+- [ ] Input System package installed?
+- [ ] Active Input Handling = "Both" or "Input System Package"?
+- [ ] Restarted Unity after changing input setting?
+- [ ] InputManager script in scene and enabled?
+- [ ] PlayerInput script on Cart and enabled?
+
+### Method not showing in Button.onClick dropdown
+- [ ] Method is `public`? (not just `void`)
+- [ ] Script saved and compiled?
+- [ ] See [how-to-import-scripts.md](../06-unity-setup/how-to-import-scripts.md)
 
 ### Scripts won't compile
 - [ ] Check Console for errors
-- [ ] All scripts have correct namespace?
+- [ ] Input System errors? Install package: Window → Package Manager → Input System
+- [ ] Missing namespace? Add `using UnityEngine.InputSystem;`
 - [ ] IDE integration set up?
 - [ ] Try: Assets → Reimport All
 
@@ -318,4 +381,4 @@ Once all checkboxes are complete:
 
 ---
 
-*Last Updated: 2025-11-22*
+*Last Updated: 2026-01-25*

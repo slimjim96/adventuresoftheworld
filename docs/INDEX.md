@@ -3,7 +3,7 @@
 **Project:** 2D Side-Scrolling Platformer Game
 **Engine:** Unity 2022.3 LTS
 **Timeline:** 3 months (12 weeks)
-**Last Updated:** 2025-12-29
+**Last Updated:** 2026-01-25
 
 ---
 
@@ -17,6 +17,7 @@ This index organizes all documentation by **development phase**. Start at the be
 - [Core Gameplay](#%EF%B8%8F-03-core-gameplay-weeks-3-4) - Lives, coins, obstacles
 - [Procedural Generation](#-04-procedural-generation-week-5) - Dynamic levels
 - [Art Assets](#-05-art-assets-weeks-6-8) - Ludo.ai graphics
+- [Unity Setup & Scripts](#%EF%B8%8F-06-unity-setup--architecture) - Scene setup, Input System, scripts
 
 ---
 
@@ -104,7 +105,10 @@ This index organizes all documentation by **development phase**. Start at the be
 |----------|-------------|---------------|--------|
 | [📋 /ludo/ludo-ai-project-brief.md](../ludo/ludo-ai-project-brief.md) | **⭐ START HERE** - Single-page reference for asset generation | All critical settings, color palettes, lighting standards, prompt templates, quality checklist | ✅ Complete |
 | [📝 /ludo/prompt-templates.md](../ludo/prompt-templates.md) | Copy-paste ready templates | Cart, animals, environmental decoration templates with troubleshooting | ✅ Complete |
-| [🎮 /ludo/ui-assets-guide.md](../ludo/ui-assets-guide.md) | **NEW** - UI & platform assets guide | Platform borders (15), player icons (14), menu UI (8-10), welcome screen (2) | ✅ Complete |
+| [🌲 /ludo/background-assets-prompts.md](../ludo/background-assets-prompts.md) | **⭐ NEW** - Comprehensive background assets | 100+ prompts: Cross-theme reusable (boulders, cliffs, clouds), Per-theme Far/Mid/Near layers | ✅ Complete |
+| [🧱 /ludo/platform-patterns-prompts.md](../ludo/platform-patterns-prompts.md) | **⭐ NEW** - Platform patterns & curves | 25 tileable patterns, 25 vector curved platforms, weathering/glow modifiers | ✅ Complete |
+| [🎬 /ludo/character-animation-prompts.md](../ludo/character-animation-prompts.md) | **⭐ NEW** - Character select animations | 13 looping animations with personality-driven actions | ✅ Complete |
+| [🎮 /ludo/ui-assets-guide.md](../ludo/ui-assets-guide.md) | UI & platform assets guide | Platform borders (15), player icons (14), menu UI (8-10), welcome screen (2) | ✅ Complete |
 | [/ludo/README.md](../ludo/README.md) | Ludo.ai resources overview | Directory guide, quick start, workflow | ✅ Complete |
 
 ### Detailed Asset Documentation
@@ -140,33 +144,50 @@ This index organizes all documentation by **development phase**. Start at the be
 
 ---
 
-## 🛠️ 06. Unity Setup & Architecture (NEW)
+## 🛠️ 06. Unity Setup & Architecture
 
-**Purpose:** Step-by-step guides for setting up Unity scenes, UI flow, global systems, and ready-to-use scripts.
+**Purpose:** Step-by-step guides for setting up Unity scenes, UI flow, global systems, input handling, and ready-to-use scripts.
+
+### Essential Setup Guides
 
 | Document | Description | What's Inside | Status |
 |----------|-------------|---------------|--------|
 | [scene-architecture-guide.md](06-unity-setup/scene-architecture-guide.md) | **⭐ ESSENTIAL** - Complete scene setup guide | Scene flow (Start → Character Select → Level Select → Gameplay), Global cart/character system, UI setup for all 4 menu scenes, Level scene template, Prefab organization | ✅ Complete |
-| [unity-basics-setup.md](06-unity-setup/unity-basics-setup.md) | Unity component configuration reference | Project settings, Sprite import, Canvas/UI elements, Prefab creation, Component setup (Rigidbody2D, Colliders, etc.), Build settings, Inspector tips | ✅ Complete |
-| [folder-structure.md](06-unity-setup/folder-structure.md) | Complete Assets folder blueprint | 80+ folder structure with auto-creation script, Import workflow for Ludo.ai assets, Prefab organization strategy | ✅ Complete |
-| [asset-naming-conventions.md](06-unity-setup/asset-naming-conventions.md) | Consistent file naming standards | Naming patterns for all asset types, Search optimization, Ludo.ai file renaming workflow | ✅ Complete |
-| [import-checklist.md](06-unity-setup/import-checklist.md) | Step-by-step asset import workflow | Pre-import prep, Unity import settings, Sprite configuration, Prefab creation, ScriptableObject setup, Testing | ✅ Complete |
-| [how-to-import-scripts.md](06-unity-setup/how-to-import-scripts.md) | Script import troubleshooting guide | Manual copy instructions, No namespaces needed, Folder organization, Common issues | ✅ Complete |
-| [unity-project-structure.md](06-unity-setup/unity-project-structure.md) | **Current Unity project structure** | Actual Assets folder layout (24 custom scripts), Script locations and purposes, Dependencies and namespaces | ✅ Complete |
-| [CLEANUP-SUMMARY.md](06-unity-setup/CLEANUP-SUMMARY.md) | Project cleanup report (2026-01-17) | Duplicates removed, TODOs identified, Current script inventory, Verification checklist | ✅ Complete |
+| [input-system-setup.md](06-unity-setup/input-system-setup.md) | **⭐ NEW** - Unity New Input System guide | Cross-platform input (keyboard, touch, gamepad), InputManager setup, Input bindings, Migration from legacy input | ✅ Complete |
 | [cart-prefab-setup.md](06-unity-setup/cart-prefab-setup.md) | **⭐ Cart Prefab Complete Setup** | Step-by-step cart creation, Component configuration, GroundCheck setup, Debug system integration, Troubleshooting | ✅ Complete |
-| [cart-physics-setup.md](06-unity-setup/cart-physics-setup.md) | Cart physics configuration | Fix bouncing on terrain, Rigidbody2D settings, Physics Material setup, Smooth movement | ✅ Complete |
-| [fix-air-jump-bug.md](06-unity-setup/fix-air-jump-bug.md) | Prevent mid-air jumping | Jump cooldown system, Velocity-based ground detection, Configuration guide | ✅ Complete |
-| [terrain-following-rotation.md](06-unity-setup/terrain-following-rotation.md) | Experimental terrain following | Cart rotation on slopes, Angle limits, Toggle on/off, Testing guide | ✅ Complete |
-| [fix-rotation-jitter.md](06-unity-setup/fix-rotation-jitter.md) | Fix rotation stuttering | Rotation deadzone, Smooth interpolation, Landing stability | ✅ Complete |
-| [developer-debug-system.md](06-unity-setup/developer-debug-system.md) | **⭐ Developer Debug Tools** | Jump distance visualization, HUD overlay, Level design calculations, Keyboard shortcuts (F12/F11/F10) | ✅ Complete |
+| [how-to-import-scripts.md](06-unity-setup/how-to-import-scripts.md) | Script import & public methods guide | Manual copy instructions, Public modifier requirements for Unity Inspector, Folder organization, Common issues | ✅ Complete |
 
-### Unity Scripts Library (Ready-to-Copy)
+### Configuration & Structure
+
+| Document | Description | What's Inside | Status |
+|----------|-------------|---------------|--------|
+| [unity-basics-setup.md](06-unity-setup/unity-basics-setup.md) | Unity component configuration reference | Project settings, Sprite import, Canvas/UI elements, Prefab creation, Component setup | ✅ Complete |
+| [folder-structure.md](06-unity-setup/folder-structure.md) | Complete Assets folder blueprint | 80+ folder structure with auto-creation script, Import workflow for Ludo.ai assets | ✅ Complete |
+| [asset-naming-conventions.md](06-unity-setup/asset-naming-conventions.md) | Consistent file naming standards | Naming patterns for all asset types, Search optimization | ✅ Complete |
+| [import-checklist.md](06-unity-setup/import-checklist.md) | Step-by-step asset import workflow | Pre-import prep, Unity import settings, Sprite configuration | ✅ Complete |
+| [unity-project-structure.md](06-unity-setup/unity-project-structure.md) | **Current Unity project structure** | Actual Assets folder layout (34+ custom scripts), Script locations and purposes | ✅ Complete |
+| [CLEANUP-SUMMARY.md](06-unity-setup/CLEANUP-SUMMARY.md) | Project cleanup report | Duplicates removed, TODOs identified, Current script inventory | ✅ Complete |
+
+### Cart & Physics Setup
+
+| Document | Description | What's Inside | Status |
+|----------|-------------|---------------|--------|
+| [cart-physics-setup.md](06-unity-setup/cart-physics-setup.md) | Cart physics configuration | Fix bouncing on terrain, Rigidbody2D settings, Physics Material setup | ✅ Complete |
+| [fix-air-jump-bug.md](06-unity-setup/fix-air-jump-bug.md) | Prevent mid-air jumping | Jump cooldown system, Velocity-based ground detection | ✅ Complete |
+| [terrain-following-rotation.md](06-unity-setup/terrain-following-rotation.md) | Experimental terrain following | Cart rotation on slopes, Angle limits, Toggle on/off | ✅ Complete |
+| [fix-rotation-jitter.md](06-unity-setup/fix-rotation-jitter.md) | Fix rotation stuttering | Rotation deadzone, Smooth interpolation, Landing stability | ✅ Complete |
+| [developer-debug-system.md](06-unity-setup/developer-debug-system.md) | **⭐ Developer Debug Tools** | Jump distance visualization, HUD overlay, Keyboard shortcuts (F12/F11/F10) | ✅ Complete |
+
+### Unity Scripts Library
 
 | Location | Description | Scripts Included | Status |
 |----------|-------------|------------------|--------|
-| [📂 /unity-scripts/](../unity-scripts/) | **16 complete C# scripts** ready to copy into Unity | GameManager, CartController, CharacterData, UI scripts (CharacterSlot, LevelSlot, HUDManager), Gameplay scripts (CoinCollector, Hazard, GoalTrigger, LevelManager), Environment scripts (ParallaxLayer, BackgroundSpawner), ScriptableObjects (LevelData, DecorationData) | ✅ Complete |
-| [unity-scripts/README.md](../unity-scripts/README.md) | Script library guide | Setup instructions, Script organization by folder, Dependencies & prerequisites, Customization tips, Troubleshooting | ✅ Complete |
+| [📂 Assets/Scripts/](../Assets/Scripts/) | **34+ custom C# scripts** organized by function | Core (CartController, PlayerInput, CameraFollow), Managers (GameManager, InputManager, LevelManager, AudioManager), UI (HUDManager, CharacterSlot, LevelSlot, StartButton), Collectibles, Obstacles, Environment, ScriptableObjects | ✅ Complete |
+
+**Key Script Features:**
+- **New Input System** - Cross-platform input via InputManager (keyboard, touch, gamepad)
+- **Public Methods** - All UI event methods properly exposed for Inspector
+- **Singleton Pattern** - GameManager, InputManager persist across scenes
 
 **Start here if:** Setting up scenes, creating UI flow, or configuring the global cart that persists across all 12 levels.
 
@@ -241,10 +262,21 @@ This index organizes all documentation by **development phase**. Start at the be
 
 **Unity Setup Issues:**
 - See [unity-configuration-checklist.md](02-unity-basics/unity-configuration-checklist.md)
+- Input not working: [input-system-setup.md](06-unity-setup/input-system-setup.md) Troubleshooting section
+
+**Input System Issues:**
+- Jump/pause not responding: Check InputManager is in scene, Input System package installed
+- Method not showing in Inspector: Make method `public` - see [how-to-import-scripts.md](06-unity-setup/how-to-import-scripts.md)
+- Touch not working on mobile: Enable EnhancedTouchSupport in InputManager
 
 **Gameplay Bugs:**
 - Cart not moving/jumping: [test-level-guide.md](03-week-3-4-core-gameplay/test-level-guide.md) Part 12
+- Cart floating/invisible: Check Z positions (Camera Z = -10, Cart Z = 0, Platforms Z = 0)
 - Coins/obstacles not working: [obstacles-setup-guide.md](03-week-3-4-core-gameplay/obstacles-setup-guide.md) Part 10
+
+**Camera Issues:**
+- Cinemachine wrong Z position: Set Virtual Camera Body → Framing Transposer, Camera Distance = 10
+- Objects behind camera: Ensure camera Z is negative (-10), objects at Z = 0
 
 **Procedural Generation:**
 - Chunks not spawning: [procedural-generation-unity-setup.md](04-week-5-procedural/procedural-generation-unity-setup.md) Part 8
@@ -252,6 +284,7 @@ This index organizes all documentation by **development phase**. Start at the be
 
 **Ludo.ai Art Issues:**
 - Getting 3D/isometric instead of 2D: See [ludo-ai-asset-guide.md](05-art-assets/ludo-ai-asset-guide.md) negative prompts and settings
+- Animation not looping: Add "returns to starting pose and loops seamlessly" to prompt
 
 ---
 
