@@ -62,6 +62,8 @@ public class CartController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
 
+        Debug.Log("Rigidbody2D JJV component found and assigned.");
+
         // Load selected character from GameManager
         LoadSelectedCharacter();
     }
@@ -200,6 +202,9 @@ public class CartController : MonoBehaviour
         {
             return; // Too soon to jump again
         }
+
+        //debug log
+        Debug.Log("Attempting to jump");
 
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         isGrounded = false;
