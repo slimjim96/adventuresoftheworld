@@ -132,15 +132,18 @@ public class CartController : MonoBehaviour
     {
         if (groundCheck != null)
         {
-            // Only set grounded to true if we're moving downward or stationary (prevents air jumps)
+            // Check if we're touching ground using overlap circle
             bool touchingGround = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
-            if (touchingGround && rb.velocity.y <= 0.1f)
+            // Set grounded based on physical contact with ground
+            // Allow grounding when touching ground and not moving significantly upward (prevents re-grounding mid-jump)
+            if (touchingGround && rb.velocity.y <= 0.5f)
             {
                 isGrounded = true;
             }
-            else if (!touchingGround)
+            else
             {
+                // Not touching ground OR moving upward significantly = not grounded
                 isGrounded = false;
             }
         }
@@ -190,19 +193,30 @@ public class CartController : MonoBehaviour
     /// </summary>
     public void Jump()
     {
-        // Check if enough time has passed since last jump (prevents air jumps)
-        if (Time.time - lastJumpTime < jumpCooldown || !isGrounded)
+        // Check if grounded and cooldown has passed
+        if (!isGrounded)
         {
-            return; // Too soon to jump again
+            Debug.Log("Jump blocked: not grounded");
+            return;
         }
 
-        //debug log
-        Debug.Log("Attempting to jump");
+        if (Time.time - lastJumpTime < jumpCooldown)
+        {
+            Debug.Log("Jump blocked: cooldown active");
+            return;
+        }
 
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        // Reset vertical velocity before applying jump force for consistent jump height
+        rb.velocity = new Vector2(rb.velocity.x, 0f);
+
+        // Apply jump force as impulse for immediate response
+        rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+
+        // Mark as not grounded immediately to prevent double jumps
         isGrounded = false;
-        lastJumpTime = Time.time; // Record jump time
-        Debug.Log("Jump!");
+        lastJumpTime = Time.time;
+
+        Debug.Log($"Jump! Force: {jumpForce}, Velocity: {rb.velocity}");
 
         // Play jump sound (if AudioManager exists)
         // AudioManager.Instance.PlaySFX("Jump");
