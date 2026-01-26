@@ -96,9 +96,10 @@ public class LevelSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// Handle level slot click - load this level
+    /// Handle level slot click - load this level.
+    /// Public so it can be assigned to Button.onClick in the Unity Inspector.
     /// </summary>
-    void OnLevelClicked()
+    public void OnLevelClicked()
     {
         if (!IsLevelUnlocked())
         {

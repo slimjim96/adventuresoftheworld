@@ -95,9 +95,10 @@ public class CharacterSlot : MonoBehaviour
     }
 
     /// <summary>
-    /// Handle slot click - select or unlock character
+    /// Handle slot click - select or unlock character.
+    /// Public so it can be assigned to Button.onClick in the Unity Inspector.
     /// </summary>
-    void OnSlotClicked()
+    public void OnSlotClicked()
     {
         if (character == null) return;
 
