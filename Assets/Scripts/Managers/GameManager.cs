@@ -57,10 +57,33 @@ public class GameManager : MonoBehaviour
     public void LoadLevel(int levelNumber)
     {
         currentLevel = levelNumber;
-        string sceneName = $"Level{levelNumber:00}";
+        // Default naming convention for backwards compatibility
+        string sceneName = $"Level{levelNumber:D3}_{GetThemeName(levelNumber)}";
+        string fullPath = $"Levels/{sceneName}";
 
-        Debug.Log($"Loading level: {sceneName}");
+        Debug.Log($"Loading level: {fullPath}");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(fullPath);
+    }
+
+    /// <summary>
+    /// Load a level by scene name (direct path)
+    /// </summary>
+    public void LoadLevelByName(string sceneName)
+    {
+        Debug.Log($"Loading level scene: {sceneName}");
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
+    }
+
+    /// <summary>
+    /// Get theme name based on level number
+    /// </summary>
+    private string GetThemeName(int levelNumber)
+    {
+        if (levelNumber <= 3) return "Forest";
+        if (levelNumber <= 6) return "Mountain";
+        if (levelNumber <= 9) return "Desert";
+        if (levelNumber <= 11) return "Underwater";
+        return "Ocean";
     }
 
     /// <summary>

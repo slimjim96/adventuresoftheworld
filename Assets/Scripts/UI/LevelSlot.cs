@@ -35,10 +35,17 @@ public class LevelSlot : MonoBehaviour
 
     void Start()
     {
+        Debug.Log($"[LevelSlot] Level {levelNumber} Start() - Scene: {levelSceneName}");
+
         // Setup button click listener
         if (slotButton != null)
         {
+            Debug.Log($"[LevelSlot] Level {levelNumber} button listener added successfully");
             slotButton.onClick.AddListener(OnLevelClicked);
+        }
+        else
+        {
+            Debug.LogError($"[LevelSlot] Level {levelNumber} ERROR: slotButton is NULL! Assign Button component in Inspector!");
         }
 
         // Initialize slot appearance
@@ -101,22 +108,24 @@ public class LevelSlot : MonoBehaviour
     /// </summary>
     public void OnLevelClicked()
     {
+        Debug.Log($"[LevelSlot] Level {levelNumber} button CLICKED!");
+
         if (!IsLevelUnlocked())
         {
-            Debug.Log("Level is locked!");
+            Debug.LogWarning($"[LevelSlot] Level {levelNumber} is LOCKED! (highestUnlocked={GameManager.Instance?.highestUnlockedLevel})");
             return;
         }
 
         if (GameManager.Instance == null)
         {
-            Debug.LogError("GameManager not found!");
+            Debug.LogError("[LevelSlot] GameManager not found!");
             return;
         }
 
         // Check if character is selected
         if (GameManager.Instance.selectedCharacter == null)
         {
-            Debug.LogWarning("No character selected! Returning to character select.");
+            Debug.LogWarning("[LevelSlot] No character selected! Returning to character select.");
             UnityEngine.SceneManagement.SceneManager.LoadScene("CharacterSelectScene");
             return;
         }
@@ -124,8 +133,11 @@ public class LevelSlot : MonoBehaviour
         // Reset lives before starting level
         GameManager.Instance.ResetLives();
 
-        // Load the level
-        Debug.Log($"Loading Level {levelNumber}: {levelSceneName}");
-        GameManager.Instance.LoadLevel(levelNumber);
+        // Update current level before loading
+        GameManager.Instance.currentLevel = levelNumber;
+
+        // Load the level using the scene name from this slot
+        Debug.Log($"[LevelSlot] Loading Level {levelNumber}: {levelSceneName}");
+        GameManager.Instance.LoadLevelByName(levelSceneName);
     }
 }
