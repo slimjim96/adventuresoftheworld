@@ -152,8 +152,8 @@ public class CartController : MonoBehaviour
             bool frontTouching = Physics2D.OverlapCircle(frontWheelPos, groundCheckSize.y, groundLayer);
             bool backTouching = Physics2D.OverlapCircle(backWheelPos, groundCheckSize.y, groundLayer);
 
-            // Grounded only if BOTH wheels are touching (allows natural settling on uneven terrain)
-            bool touchingGround = frontTouching && backTouching;
+            // Grounded if EITHER wheel is touching (allows jumping near platform edges)
+            bool touchingGround = frontTouching || backTouching;
 
             if (touchingGround && rb.velocity.y <= 0.1f)
             {
