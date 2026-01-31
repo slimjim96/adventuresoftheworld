@@ -172,15 +172,15 @@ transparent background PNG, side view, isolated element
 --no ground --no base --no 3D --no isometric --no harsh edges
 ```
 
-### Cloud - Dramatic Storm Cloud
+### Cloud - Sunset Glow Cloud
 
 ```
-Dramatic storm cloud for 2D platformer, Rayman Legends style,
-hand-painted illustration with moody gradient shading,
-dark gray cloud with billowing dramatic shapes,
-deep purple-gray tones, bright edge highlights on top-left,
-ominous but still whimsical, painterly texture,
-soft directional lighting from upper-left, dark undersides,
+Sunset glow cloud for 2D platformer, Rayman Legends style,
+hand-painted illustration with warm gradient shading,
+fluffy cloud with billowing cheerful shapes,
+soft pink and orange sunset tones, bright golden highlights on top-left,
+magical and inviting, painterly texture,
+soft directional lighting from upper-left, warm lavender undersides,
 transparent background PNG, side view, isolated element
 --no ground --no base --no 3D --no isometric --no harsh edges
 ```
@@ -230,11 +230,11 @@ transparent background PNG, side view, isolated element
 
 ---
 
-# THEME 1: FOREST (Enchanted Grove)
+# THEME 1: FOREST (Magical Grove)
 
 **Color Palette:**
 - Primary: Vibrant green `#6ABF4B`
-- Secondary: Dark forest green `#2D5016`
+- Secondary: Deep forest green `#2D5016`
 - Accent: Rich brown `#5C4033`
 - Sky: Soft blue `#87CEEB`
 
@@ -262,8 +262,8 @@ transparent background PNG, side view, isolated element
 Giant ancient tree silhouette for forest platformer far background,
 Rayman Legends style, hand-painted illustration,
 massive towering tree with sprawling canopy,
-dark blue-green silhouette with subtle gradient,
-mystical enchanted forest feel, soft misty edges,
+soft blue-green silhouette with subtle gradient,
+magical whimsical forest feel, soft misty edges,
 atmospheric depth, magical scale,
 very soft directional lighting from upper-left, ethereal glow at edges,
 transparent background PNG, side view, isolated element
@@ -277,7 +277,7 @@ Rolling forest hills for forest platformer far background,
 Rayman Legends style, hand-painted illustration,
 gentle rolling hills with small tree silhouettes,
 dark green to blue-green gradient, layered depth,
-soft misty atmosphere, enchanted woodland,
+soft misty atmosphere, magical woodland,
 painterly soft shapes, whimsical landscape,
 very soft directional lighting from upper-left, atmospheric haze,
 transparent background PNG, side view, isolated element
@@ -291,7 +291,7 @@ Distant misty waterfall cliff for forest platformer far background,
 Rayman Legends style, hand-painted illustration,
 tall cliff silhouette with cascading waterfall,
 blue-green tones with white misty water effect,
-magical enchanted forest atmosphere, dreamlike,
+magical sunny forest atmosphere, dreamlike,
 soft painterly edges, atmospheric depth,
 very soft directional lighting from upper-left, mist catching light,
 transparent background PNG, side view, isolated element
@@ -304,8 +304,8 @@ transparent background PNG, side view, isolated element
 Distant castle tower ruins for forest platformer far background,
 Rayman Legends style, hand-painted illustration,
 crumbling fantasy tower silhouette among trees,
-dark blue-green with purple undertones,
-mysterious enchanted forest atmosphere,
+warm blue-green with golden undertones,
+magical adventure forest atmosphere,
 soft painterly edges, overgrown with vegetation hints,
 very soft directional lighting from upper-left, magical glow,
 transparent background PNG, side view, isolated element
@@ -338,7 +338,7 @@ Tall pine tree for forest platformer midground,
 Rayman Legends style, vibrant hand-painted illustration,
 conical shape with layered dark green needle branches,
 rich brown trunk with textured bark,
-enchanted forest atmosphere, magical woodland,
+magical forest atmosphere, whimsical woodland,
 soft directional lighting from upper-left, needle highlights on left,
 darker shadow on right branch layers,
 transparent background PNG, side view, isolated element
@@ -366,7 +366,7 @@ Giant fantasy mushroom for forest platformer midground,
 Rayman Legends style, vibrant hand-painted illustration,
 oversized red cap with white spots, thick stem,
 gradient shading from bright red to darker red-brown,
-whimsical enchanted forest, magical atmosphere,
+whimsical fantasy forest, magical atmosphere,
 soft directional lighting from upper-left, cap highlight on top-left,
 painterly texture, fantasy woodland feel,
 transparent background PNG, side view, isolated element
@@ -394,7 +394,7 @@ Weeping willow tree for forest platformer midground,
 Rayman Legends style, vibrant hand-painted illustration,
 graceful drooping branches with long trailing leaves,
 light green to dark green gradient foliage,
-magical enchanted atmosphere, dreamy appearance,
+magical whimsical atmosphere, dreamy appearance,
 soft directional lighting from upper-left, leaf highlights cascading down,
 painterly flowing texture,
 transparent background PNG, side view, isolated element
@@ -440,7 +440,7 @@ Fern cluster for forest platformer foreground,
 Rayman Legends style, vibrant hand-painted illustration,
 spreading fern fronds with delicate leaflets,
 bright green to dark green gradient, graceful curves,
-enchanted forest floor atmosphere,
+magical forest floor atmosphere,
 soft directional lighting from upper-left, frond tips catching light,
 painterly organic texture,
 transparent background PNG, side view, isolated element
@@ -468,7 +468,7 @@ Moss-covered rock for forest platformer foreground,
 Rayman Legends style, vibrant hand-painted illustration,
 rounded stone with lush green moss covering,
 gray rock peeking through, vibrant moss patches,
-enchanted forest atmosphere, natural organic shape,
+magical forest atmosphere, natural organic shape,
 soft directional lighting from upper-left, moss bright on top-left,
 painterly texture,
 transparent background PNG, side view, isolated element
@@ -496,7 +496,7 @@ Small mushroom group for forest platformer foreground,
 Rayman Legends style, vibrant hand-painted illustration,
 three to four small mushrooms of varying sizes,
 brown caps with lighter stems, whimsical shapes,
-enchanted forest floor atmosphere,
+magical forest floor atmosphere,
 soft directional lighting from upper-left, cap highlights,
 painterly organic texture,
 transparent background PNG, side view, isolated element
@@ -846,7 +846,7 @@ Distant pyramid ruins for desert platformer far background,
 Rayman Legends style, hand-painted illustration,
 ancient pyramid silhouette partially buried in sand,
 orange-brown with golden highlights,
-mysterious desert atmosphere, sun-bleached appearance,
+ancient adventure atmosphere, sun-bleached appearance,
 painterly soft edges, epic scale,
 soft directional lighting from upper-left, pyramid face catching light,
 transparent background PNG, side view, isolated element
@@ -1079,7 +1079,7 @@ transparent background PNG, side view, isolated element
 
 ---
 
-# THEME 4: UNDERWATER (Mystic Depths)
+# THEME 4: UNDERWATER (Crystal Lagoon)
 
 **Color Palette:**
 - Primary: Aqua blue `#00CED1`
@@ -1097,8 +1097,8 @@ transparent background PNG, side view, isolated element
 Coral reef silhouette for underwater platformer far background,
 Rayman Legends style, hand-painted illustration,
 sprawling coral reef formation in deep blue,
-dark blue-purple silhouette with subtle gradients,
-mysterious underwater depth, diffused aqua light,
+vibrant blue-purple silhouette with subtle gradients,
+magical underwater wonder, diffused aqua light,
 painterly soft edges, oceanic scale,
 very soft directional lighting from upper-left, subtle glow through water,
 transparent background PNG, side view, isolated element
@@ -1111,7 +1111,7 @@ transparent background PNG, side view, isolated element
 Sunken city ruins for underwater platformer far background,
 Rayman Legends style, hand-painted illustration,
 ancient underwater temple or tower silhouettes,
-deep blue-purple with mysterious glow,
+vibrant blue-purple with magical glow,
 lost civilization atmosphere, ethereal underwater light,
 painterly soft edges, dramatic scale,
 very soft directional lighting from upper-left, soft aqua highlights,
@@ -1125,8 +1125,8 @@ transparent background PNG, side view, isolated element
 Giant kelp forest silhouette for underwater platformer far background,
 Rayman Legends style, hand-painted illustration,
 towering kelp strands reaching upward,
-dark green-blue gradient, swaying underwater,
-mysterious ocean depths atmosphere,
+bright green-blue gradient, swaying underwater,
+magical ocean wonderland atmosphere,
 painterly flowing shapes, diffused light filtering through,
 very soft directional lighting from upper-left, kelp edges catching light,
 transparent background PNG, side view, isolated element

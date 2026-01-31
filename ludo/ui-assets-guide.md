@@ -56,7 +56,7 @@ Repeatable patterns that tile horizontally as borders/edges for platforms. Think
 
 ### 🌲 Forest Platform Borders (3 Variations)
 
-**Color Palette:** Vibrant green `#6ABF4B`, Dark forest green `#2D5016`, Rich brown `#5C4033`
+**Color Palette:** Vibrant green `#6ABF4B`, Deep forest green `#2D5016`, Rich brown `#5C4033`
 
 #### Forest Border - Variation 1 (Vines & Leaves)
 
@@ -227,7 +227,7 @@ transparent background PNG, side view, seamless left-right edges
 
 ### 🌊 Underwater Platform Borders (3 Variations)
 
-**Color Palette:** Aqua blue `#00CED1`, Deep blue `#003D5C`, Purple `#9370DB`, Coral pink `#FF6F91`
+**Color Palette:** Aqua blue `#00CED1`, Bright teal `#0891B2`, Purple `#9370DB`, Coral pink `#FF6F91`
 
 #### Underwater Border - Variation 1 (Coral Reef)
 
@@ -251,7 +251,7 @@ transparent background PNG, side view, seamless left-right edges
 Seamless tileable horizontal border pattern for underwater platformer,
 Rayman Legends style, hand-painted illustration,
 flowing seaweed kelp with small bubbles,
-aqua blue #00CED1 kelp, deep blue #003D5C shadows, white bubbles,
+aqua blue #00CED1 kelp, bright teal #0891B2 shadows, white bubbles,
 gradient shading with water movement, painterly texture,
 organic flowing pattern, repeatable aquatic design,
 soft diffused lighting from upper-left, gentle underwater glow,
@@ -640,7 +640,7 @@ Full-screen background images for main menu screens. Each screen has a distinct 
 Title screen background illustration for Adventures of the World platformer game,
 Rayman Legends inspired, hand-painted 2.5D style,
 whimsical fantasy landscape with all five world themes represented,
-left side: enchanted forest with vibrant green trees and magical mushrooms,
+left side: magical forest with vibrant green trees and colorful mushrooms,
 center background: snow-capped alpine mountains under fluffy clouds,
 right side: golden desert dunes with cacti at sunset,
 lower corners: underwater coral reef and tropical beach elements,
@@ -723,7 +723,7 @@ full 16:9 widescreen format, cozy interior composition
 ```
 Character select screen background for fantasy platformer game,
 Rayman Legends inspired, hand-painted 2.5D style,
-enchanted forest clearing with magical animal gathering spot,
+magical forest clearing with cheerful animal gathering spot,
 large ancient tree in background with fairy lights and glowing mushrooms,
 cozy wooden platform or stage area in center (muted for character display overlay),
 forest floor with soft grass and scattered wildflowers in foreground corners,
@@ -758,10 +758,10 @@ full 16:9 widescreen format, magical forest clearing composition
 Level select world map background for fantasy platformer game,
 Rayman Legends inspired, hand-painted 2.5D style,
 panoramic fantasy world map showing five distinct biomes,
-top-left: enchanted forest with vibrant green trees and magical mushrooms,
+top-left: magical forest with vibrant green trees and colorful mushrooms,
 top-center: snow-capped alpine mountains with rocky peaks and pine trees,
 top-right: golden desert with sand dunes and ancient ruins at sunset,
-bottom-left: mysterious underwater realm with coral and bioluminescent glow,
+bottom-left: sparkling underwater realm with coral and glowing sea life,
 bottom-right: tropical beach paradise with palm trees and ocean waves,
 winding adventure path connecting all five regions,
 magical floating islands and clouds in sky background,

@@ -320,7 +320,7 @@ transparent background PNG
 ### Forest
 ```
 Primary: #6ABF4B (vibrant green)
-Secondary: #2D5016 (dark forest green)
+Secondary: #2D5016 (deep forest green)
 Accent: #5C4033 (rich brown)
 Sky: #87CEEB (soft blue)
 ```
@@ -344,7 +344,7 @@ Vegetation: #9CAF88 (sage green)
 ### Underwater
 ```
 Primary: #00CED1 (aqua blue)
-Secondary: #003D5C (deep blue)
+Secondary: #0891B2 (bright teal)
 Accent: #9370DB (purple)
 Coral: #FF6F91 (pink)
 ```

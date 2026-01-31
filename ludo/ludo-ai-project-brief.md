@@ -112,11 +112,11 @@ hand-painted gradient::1 flat colors::-1 3D render::-1 vector style::-1
 
 ## 🌍 World Theme Specifications
 
-### 1. Forest (Levels 1-3) - "Enchanted Grove"
+### 1. Forest (Levels 1-3) - "Magical Grove"
 
 **Color Palette:**
 - Primary: Vibrant green `#6ABF4B`
-- Secondary: Dark forest green `#2D5016`
+- Secondary: Deep forest green `#2D5016`
 - Accent: Rich brown `#5C4033`
 - Sky: Soft blue `#87CEEB`
 
@@ -169,15 +169,15 @@ hand-painted gradient::1 flat colors::-1 3D render::-1 vector style::-1
 
 ---
 
-### 4. Underwater (Levels 10-12) - "Mystic Depths"
+### 4. Underwater (Levels 10-12) - "Crystal Lagoon"
 
 **Color Palette:**
 - Primary: Aqua blue `#00CED1`
-- Secondary: Deep blue `#003D5C`
+- Secondary: Bright teal `#0891B2`
 - Accent: Purple `#9370DB`
 - Coral: Pink `#FF6F91`
 
-**Atmosphere:** Magical underwater world, diffused light, mysterious wonder
+**Atmosphere:** Magical underwater world, diffused light, colorful wonder
 
 **Lighting Notes:** Very soft shadows (water scatter), aqua/blue tones in highlights, ethereal glow
 

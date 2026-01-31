@@ -93,7 +93,7 @@ transparent background PNG, side view
 ### Forest Pattern 4 - Enchanted Brick Path
 
 ```
-Seamless tileable enchanted brick pattern for forest platformer,
+Seamless tileable magical brick pattern for forest platformer,
 Rayman Legends style, hand-painted illustration,
 cobblestone bricks with magical glow between stones,
 gray-green stones with soft cyan magical glow in gaps,
@@ -240,7 +240,7 @@ Seamless tileable hieroglyph stone pattern for desert platformer,
 Rayman Legends style, hand-painted illustration,
 carved stone blocks with stylized hieroglyphic symbols,
 orange-tan stone with carved symbol indentations,
-ancient pyramid aesthetic, mysterious carved details,
+ancient pyramid aesthetic, adventure-themed carved details,
 gradient shading, painterly carved texture,
 soft directional lighting from upper-left, raised areas highlighted,
 edges designed to tile seamlessly horizontally,
@@ -302,9 +302,9 @@ transparent background PNG, side view
 ```
 Seamless tileable sunken stone pattern for underwater platformer,
 Rayman Legends style, hand-painted illustration,
-ancient stone blocks with sea growth attached,
-blue-gray stone with aqua algae and barnacle patches,
-Atlantis ruins aesthetic, underwater weathering,
+ancient stone blocks with colorful sea growth attached,
+bright teal stone with aqua algae and coral patches,
+legendary Atlantis aesthetic, underwater weathering,
 gradient shading, painterly underwater texture,
 soft diffused lighting from upper-left, stone edges highlighted,
 edges designed to tile seamlessly horizontally,
@@ -347,11 +347,11 @@ transparent background PNG, side view
 ```
 Seamless tileable crystal cave pattern for underwater platformer,
 Rayman Legends style, hand-painted illustration,
-dark rock surface with embedded glowing crystals,
-deep blue rock with purple glowing crystal clusters,
+colorful rock surface with embedded glowing crystals,
+bright teal rock with purple and pink glowing crystal clusters,
 magical underwater cave aesthetic, bioluminescent feel,
 gradient shading, painterly crystalline texture,
-soft diffused lighting from upper-left, crystals glowing,
+soft diffused lighting from upper-left, crystals glowing brightly,
 edges designed to tile seamlessly horizontally,
 transparent background PNG, side view
 --no ground --no 3D --no isometric --no harsh edges --no visible seams
@@ -491,7 +491,7 @@ Curved vine-wrapped platform for forest platformer,
 Rayman Legends style, hand-painted illustration with clean vector edges,
 smooth S-curve shape with flowing line,
 green vines over brown wood, leafy organic pattern,
-enchanted forest aesthetic, graceful curved silhouette,
+magical forest aesthetic, graceful curved silhouette,
 gradient shading, painterly fill with clean scalable outline,
 soft directional lighting from upper-left, vine leaves highlighted,
 transparent background PNG, side view, isolated element
@@ -579,7 +579,7 @@ Curved crystal platform for mountain platformer,
 Rayman Legends style, hand-painted illustration with clean vector edges,
 smooth curved crystalline formation,
 purple and blue translucent crystals, magical pattern,
-enchanted mountain aesthetic, faceted curve silhouette,
+magical mountain aesthetic, faceted curve silhouette,
 gradient shading with glow effect, painterly crystalline texture,
 soft directional lighting from upper-left, crystal facets sparkling,
 transparent background PNG, side view, isolated element
@@ -854,7 +854,7 @@ subtle magical glow between elements, soft luminescence
 
 **Strong Glow:**
 ```
-bright magical glow, luminescent cracks, enchanted appearance
+bright magical glow, luminescent cracks, magical appearance
 ```
 
 ## Density Variations
