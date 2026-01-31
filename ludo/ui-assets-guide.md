@@ -609,24 +609,33 @@ empty interior for text content
 
 ---
 
-## 🎨 Part 4: Welcome Screen (1 Asset)
+## 🎨 Part 4: Full Screen Backgrounds (5 Assets)
 
 ### Purpose
-Title/splash screen background that showcases the game's artistic theme and sets the tone.
+Full-screen background images for main menu screens. Each screen has a distinct purpose and visual focus while maintaining the unified hand-painted aesthetic.
 
-### Requirements
-- **Full screen:** 16:9 aspect ratio (1920×1080px recommended)
-- **Also generate mobile:** 9:16 portrait version (1080×1920px)
-- **Layered composition:** Background + midground + foreground elements
+### Requirements (All Backgrounds)
+- **Full screen:** 16:9 aspect ratio (1920×1080px)
+- **UI-friendly:** Darker or muted areas where UI elements will overlay
+- **Layered composition:** Background + midground + foreground depth
+- **Hand-painted style:** Consistent with Rayman Legends aesthetic
+- **Upper-left lighting:** 45° from top-left with soft shadows
+
+---
+
+### 4.1 Welcome/Start Screen Background
+
+**Purpose:** Title/splash screen that showcases the game's artistic theme and sets the tone.
+
+**Requirements:**
 - **Logo space:** Leave clean space in upper/center for game logo
 - **Character showcase:** Optional - can include silhouettes of animals
 - **Whimsical atmosphere:** Inviting, magical, adventurous
 
 ---
 
-### Welcome Screen Prompt (Desktop 16:9)
+**Prompt (Desktop 16:9):**
 
-**Using `--no`:**
 ```
 Title screen background illustration for Adventures of the World platformer game,
 Rayman Legends inspired, hand-painted 2.5D style,
@@ -664,23 +673,141 @@ welcoming title screen atmosphere, family-friendly fantasy art
 --no isometric --no harsh shadows --no dark tone
 ```
 
-### Welcome Screen Prompt (Mobile 9:16)
+---
+
+### 4.2 Settings Screen Background
+
+**Purpose:** Calm, focused background for game settings/options. Should feel cozy and functional without distracting from UI controls.
+
+**Requirements:**
+- **Calm atmosphere:** Less visual activity than other screens
+- **Warm tones:** Cozy workshop/library aesthetic
+- **Central focus area:** Darker/muted center for settings panel overlay
+- **Mechanical hints:** Gears, dials, or workshop elements suggest "adjustable" theme
+
+**Prompt (Desktop 16:9):**
 
 ```
-Title screen background illustration for Adventures of the World mobile game,
-Rayman Legends inspired, hand-painted 2.5D style, vertical portrait format,
-whimsical fantasy landscape with layered composition,
-upper third: sky with puffy clouds and distant mountains,
-middle third: vibrant forest and desert elements blended together,
-lower third: underwater coral and tropical beach elements,
-vertical layered composition with atmospheric depth,
-magical adventure aesthetic, clean open space in upper-middle for logo,
-vibrant hand-painted illustration, rich gradients, painterly texture,
+Settings menu background illustration for fantasy platformer game,
+Rayman Legends inspired, hand-painted 2.5D style,
+cozy fantasy workshop interior with magical atmosphere,
+wooden walls with decorative carved panels and shelving,
+soft warm lighting from lanterns and candles, evening ambiance,
+large wooden workbench in center-right (muted for UI overlay area),
+decorative gears, dials, and mechanical elements on walls suggesting adjustability,
+bottles, books, and magical trinkets on shelves in corners,
+rich brown wood tones with warm orange candlelight accents,
+gradient shading throughout, painterly texture on all surfaces,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+darker central area for settings panel placement,
+warm inviting craftsman workshop atmosphere, fantasy game aesthetic,
+full 16:9 widescreen format, cozy interior composition
+--no characters --no text --no UI elements --no 3D render --no isometric
+--no harsh shadows --no bright center --no exterior views --no cold tones
+```
+
+---
+
+### 4.3 Choose Your Player Screen Background
+
+**Purpose:** Character selection screen showcasing the animal theme. Should feel like a gathering place where characters await selection.
+
+**Requirements:**
+- **Character showcase space:** Central area for character portraits/carousel
+- **Gathering atmosphere:** Cozy barn, stable, or camp where animals would gather
+- **Warm lighting:** Inviting, friendly feeling
+- **Forest theme dominance:** First world theme as primary aesthetic
+
+**Prompt (Desktop 16:9):**
+
+```
+Character select screen background for fantasy platformer game,
+Rayman Legends inspired, hand-painted 2.5D style,
+enchanted forest clearing with magical animal gathering spot,
+large ancient tree in background with fairy lights and glowing mushrooms,
+cozy wooden platform or stage area in center (muted for character display overlay),
+forest floor with soft grass and scattered wildflowers in foreground corners,
+warm dappled sunlight filtering through canopy, morning forest atmosphere,
+vibrant green #6ABF4B foliage, rich brown #5C4033 wood tones,
+small wooden sign posts and carved animal totems on sides,
+magical sparkles and fireflies floating in background,
+gradient shading throughout, painterly texture on all elements,
+soft directional lighting from upper-left, gentle shadows to lower-right,
+darker muted center-stage area for character showcase UI,
+welcoming animal sanctuary atmosphere, fantasy adventure aesthetic,
+full 16:9 widescreen format, magical forest clearing composition
+--no characters --no animals visible --no text --no UI elements --no 3D render
+--no isometric --no harsh shadows --no busy center --no dark atmosphere
+```
+
+---
+
+### 4.4 Choose Your Level/World Screen Background
+
+**Purpose:** Level selection screen that previews all five themed worlds. Should feel like a world map or journey overview.
+
+**Requirements:**
+- **All 5 themes represented:** Forest, Mountain, Desert, Underwater, Ocean visible
+- **Map/journey aesthetic:** Paths connecting different areas
+- **Adventure feeling:** Exciting destinations awaiting exploration
+- **Central navigation space:** Area for level select UI/carousel
+
+**Prompt (Desktop 16:9):**
+
+```
+Level select world map background for fantasy platformer game,
+Rayman Legends inspired, hand-painted 2.5D style,
+panoramic fantasy world map showing five distinct biomes,
+top-left: enchanted forest with vibrant green trees and magical mushrooms,
+top-center: snow-capped alpine mountains with rocky peaks and pine trees,
+top-right: golden desert with sand dunes and ancient ruins at sunset,
+bottom-left: mysterious underwater realm with coral and bioluminescent glow,
+bottom-right: tropical beach paradise with palm trees and ocean waves,
+winding adventure path connecting all five regions,
+magical floating islands and clouds in sky background,
+treasure map aesthetic with hand-painted terrain textures,
+central area slightly muted for level selection UI overlay,
+vibrant colors for each biome matching theme palettes,
+gradient shading throughout, painterly storybook texture,
+soft directional lighting from upper-left, warm adventure glow,
+exciting destinations atmosphere, journey ahead feeling,
+full 16:9 widescreen format, world map overview composition
+--no characters --no text --no UI elements --no 3D render --no isometric
+--no harsh shadows --no single theme dominance --no realistic map style
+```
+
+---
+
+### 4.5 Shop/Store Screen Background (Bonus)
+
+**Purpose:** In-game shop where players unlock characters with coins. Should feel like a magical marketplace.
+
+**Requirements:**
+- **Merchant/shop aesthetic:** Market stall or magical emporium
+- **Coin/treasure accents:** Hints of currency and rewards
+- **Display areas:** Shelving/display spots suggesting items for sale
+- **Warm inviting atmosphere:** Encouraging exploration and purchase
+
+**Prompt (Desktop 16:9):**
+
+```
+Shop menu background for fantasy platformer game,
+Rayman Legends inspired, hand-painted 2.5D style,
+magical fantasy marketplace stall interior,
+colorful wooden market booth with carved decorations and fabric canopy,
+display shelves on left and right sides with glowing magical items,
+treasure chests and scattered gold coins in foreground corners,
+warm lantern lighting creating inviting merchant atmosphere,
+vibrant purple and gold fabric accents, rich wood tones,
+magical sparkles and floating price tags aesthetic,
+central counter area muted for shop UI overlay,
+whimsical fantasy bazaar feeling, storybook merchant booth,
+gradient shading throughout, painterly texture on all surfaces,
 soft directional lighting from upper-left, warm golden glow,
-welcoming title screen atmosphere, family-friendly visual,
-full 9:16 vertical mobile format, inviting composition
---no characters --no text --no logos --no UI --no 3D --no isometric
---no harsh shadows --no busy center --no horizontal layout
+treasure and rewards atmosphere, exciting unlock anticipation,
+full 16:9 widescreen format, fantasy shop interior composition
+--no characters --no merchants visible --no text --no UI elements --no 3D render
+--no isometric --no harsh shadows --no busy center --no modern store aesthetic
 ```
 
 ---
@@ -694,8 +821,8 @@ full 9:16 vertical mobile format, inviting composition
 | Platform Borders | 15 (3 per theme × 5) | 30-40 |
 | Player Select Icons | 14 (13 animals + cart) | 20-30 |
 | Menu UI Elements | 8-10 | 15-25 |
-| Welcome Screen | 2 (desktop + mobile) | 10-15 |
-| **TOTAL** | **39-41 UI assets** | **75-110 credits** |
+| Full Screen Backgrounds | 5 (start, settings, player, level, shop) | 25-35 |
+| **TOTAL** | **42-44 UI assets** | **100-130 credits** |
 
 ---
 
@@ -716,10 +843,12 @@ full 9:16 vertical mobile format, inviting composition
 2. Test 9-slice scaling in Unity
 3. Generate remaining UI elements (6-8 more)
 
-### Phase 4: Welcome Screen (Week 9)
-1. Generate **Desktop version** (16:9)
-2. Test composition with logo overlay
-3. Generate **Mobile version** (9:16)
+### Phase 4: Full Screen Backgrounds (Week 9-10)
+1. Generate **Start/Welcome Screen** (16:9) - test logo placement
+2. Generate **Settings Screen** - test with settings panel overlay
+3. Generate **Choose Player Screen** - test with character carousel
+4. Generate **Choose Level Screen** - test with level select UI
+5. Generate **Shop Screen** - test with shop UI overlay
 
 ---
 
@@ -752,14 +881,20 @@ full 9:16 vertical mobile format, inviting composition
 - [ ] Consistent style across all elements
 - [ ] Scales well without distortion
 
-### Welcome Screen
-- [ ] Clean logo space in composition
-- [ ] All 5 themes represented or suggested
-- [ ] Correct aspect ratio (16:9 or 9:16)
-- [ ] Inviting, whimsical atmosphere
-- [ ] No characters or text (background only)
+### Full Screen Backgrounds
+- [ ] Correct aspect ratio (16:9 at 1920×1080px)
+- [ ] Clean UI overlay area (muted center where needed)
 - [ ] Hand-painted gradient shading throughout
+- [ ] Upper-left lighting applied consistently
+- [ ] No characters or text (background only)
+- [ ] Inviting, whimsical atmosphere
 - [ ] Welcoming family-friendly tone
+- [ ] Screen-specific theme applied:
+  - Start Screen: Logo space, all 5 themes hinted
+  - Settings: Cozy workshop, mechanical elements
+  - Player Select: Forest clearing, animal gathering spot
+  - Level Select: World map with all 5 biomes visible
+  - Shop: Magical marketplace, treasure accents
 
 ---
 
@@ -783,11 +918,14 @@ full 9:16 vertical mobile format, inviting composition
 - **Test scaling:** Import to Unity and test 9-slice immediately
 - **Generate states separately:** Normal, hover, pressed can be separate assets
 
-### Welcome Screen
-- **Leave breathing room:** Logo space should be clean and uncluttered
+### Full Screen Backgrounds
+- **Leave breathing room:** UI overlay areas should be clean and uncluttered
 - **Layer depth:** Clear foreground, midground, background separation
 - **Avoid symmetry:** Natural, organic composition feels more alive
-- **Test with logo overlay:** Import and place logo to verify composition
+- **Test with UI overlay:** Import and place actual UI elements to verify composition
+- **Consistent lighting:** All backgrounds use upper-left 45° lighting
+- **Muted centers:** Where UI overlays, keep background slightly darker/less busy
+- **Theme matching:** Each screen should match its purpose (cozy for settings, adventurous for levels)
 
 ---
 
